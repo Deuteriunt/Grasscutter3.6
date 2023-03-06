@@ -124,6 +124,21 @@
       "no_account": "계정을 찾을 수 없습니다.",
       "description": "사용자 계정을 수정합니다"
     },
+    "achievement": {
+      "success": {
+        "grant": "🇺🇸Granted the achievement to %s.",
+        "revoke": "🇺🇸Revoked the achievement from %s.",
+        "progress": "🇺🇸Set progress of %s's achievement(id: %s) to %s.",
+        "grantall": "🇺🇸Granted %s achievement(s) to %s.",
+        "revokeall": "🇺🇸Revoked %s achievement(s) from %s."
+      },
+      "fail": {
+        "achievement_not_found": "🇺🇸Achievement not found.",
+        "already_achieved": "🇺🇸%s has already achieved the achievement.",
+        "not_yet_achieved": "🇺🇸%s hasn't achieved the achievement yet."
+      },
+      "description": "🇺🇸Grant, Revoke or Progress achievements."
+    },
     "announce": {
       "send_success": "공지 발송에 성공했습니다, 취소하고 싶으면 /a revoke %s를 입력하세요.",
       "refresh_success": "공지 구성파일을 새로 고쳤습니다. [Total %s]",
@@ -306,7 +321,7 @@
     "team": {
       "invalid_usage": "잘못된 사용.",
       "invalid_index": "잘못된 목차.",
-      "add_too_much": "팀에 넣을 수 있는 캐릭터 수의 최대는 %d 명 입니다.",
+      "add_too_much": "팀에 넣을 수 있는 캐릭터 수의 최대는 %s 명 입니다.",
       "failed_to_add_avatar": "추가하는데 실패했습니다 캐릭터 ID %s.",
       "failed_to_parse_index": "분석에 실패함 index: %s",
       "remove_too_much": "팀에는 최소 1명의 캐릭터가 편성 되어야 합니다.",
@@ -314,7 +329,7 @@
       "index_out_of_range": "지정된 목차는 범위 밖에 있습니다.",
       "failed_parse_avatar_id": "분석에 실패한 캐릭터 ID: %s",
       "avatar_already_in_team": "해당 캐릭터는 이미 팀에 포함되어 있습니다.",
-      "avatar_not_found": "캐릭터 %d 발견되지 않음.",
+      "avatar_not_found": "캐릭터 %s 발견되지 않음.",
       "description": "당신의 팀을 수정으로 수정합니다."
     },
     "teleportAll": {

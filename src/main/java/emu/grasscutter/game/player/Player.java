@@ -10,6 +10,7 @@ import emu.grasscutter.database.DatabaseHelper;
 import emu.grasscutter.game.Account;
 import emu.grasscutter.game.CoopRequest;
 import emu.grasscutter.game.ability.AbilityManager;
+import emu.grasscutter.game.achievement.Achievements;
 import emu.grasscutter.game.activity.ActivityManager;
 import emu.grasscutter.game.avatar.Avatar;
 import emu.grasscutter.game.avatar.AvatarStorage;
@@ -29,6 +30,7 @@ import emu.grasscutter.game.managers.cooking.CookingCompoundManager;
 import emu.grasscutter.game.managers.cooking.CookingManager;
 import emu.grasscutter.game.managers.FurnitureManager;
 import emu.grasscutter.game.managers.ResinManager;
+import emu.grasscutter.game.managers.SatiationManager;
 import emu.grasscutter.game.managers.deforestation.DeforestationManager;
 import emu.grasscutter.game.managers.energy.EnergyManager;
 import emu.grasscutter.game.managers.forging.ActiveForgeData;
@@ -97,6 +99,7 @@ public class Player {
     @Getter private int headImage;
     @Getter private int nameCardId = 210001;
     @Getter private Position position;
+    @Getter @Setter private Position prevPos;
     @Getter private Position rotation;
     @Getter private PlayerBirthday birthday;
     @Getter private PlayerCodex codex;
@@ -116,7 +119,9 @@ public class Player {
     @Getter private Set<Integer> flyCloakList;
     @Getter private Set<Integer> costumeList;
     @Getter @Setter private Set<Integer> rewardedLevels;
+    @Getter @Setter private Set<Integer> homeRewardedLevels;
     @Getter @Setter private Set<Integer> realmList;
+    @Getter @Setter private Set<Integer> seenRealmList;
     @Getter private Set<Integer> unlockedForgingBlueprints;
     @Getter private Set<Integer> unlockedCombines;
     @Getter private Set<Integer> unlockedFurniture;
@@ -161,8 +166,10 @@ public class Player {
     @Getter private transient ActivityManager activityManager;
     @Getter private transient PlayerBuffManager buffManager;
     @Getter private transient PlayerProgressManager progressManager;
+    @Getter private transient SatiationManager satiationManager;
 
     // Manager data (Save-able to the database)
+    @Getter private transient Achievements achievements;
     private PlayerProfile playerProfile;  // Getter has null-check
     @Getter private TeamManager teamManager;
     private TowerData towerData;  // Getter has null-check
@@ -208,6 +215,7 @@ public class Player {
         this.questManager = new QuestManager(this);
         this.buffManager = new PlayerBuffManager(this);
         this.position = new Position(GameConstants.START_POSITION);
+        this.prevPos = new Position();
         this.rotation = new Position(0, 307, 0);
         this.sceneId = 3;
         this.regionId = 1;
@@ -246,6 +254,8 @@ public class Player {
 
         this.birthday = new PlayerBirthday();
         this.rewardedLevels = new HashSet<>();
+        this.homeRewardedLevels = new HashSet<>();
+        this.seenRealmList = new HashSet<>();
         this.moonCardGetTimes = new HashSet<>();
         this.codex = new PlayerCodex(this);
         this.progressManager = new PlayerProgressManager(this);
@@ -262,6 +272,7 @@ public class Player {
         this.furnitureManager = new FurnitureManager(this);
         this.cookingManager = new CookingManager(this);
         this.cookingCompoundManager=new CookingCompoundManager(this);
+        this.satiationManager = new SatiationManager(this);
     }
 
     // On player creation
@@ -297,6 +308,7 @@ public class Player {
         this.furnitureManager = new FurnitureManager(this);
         this.cookingManager = new CookingManager(this);
         this.cookingCompoundManager=new CookingCompoundManager(this);
+        this.satiationManager = new SatiationManager(this);
     }
 
     public int getUid() {
@@ -386,6 +398,21 @@ public class Player {
             return;
         }
         this.realmList.add(realmId);
+
+        // Tell the client the realm is unlocked
+        if (realmId > 3) { // Realms 3 and below are default 'unlocked'
+            this.sendPacket(new PacketHomeModuleUnlockNotify(realmId));
+            this.getHome().onClaimReward(this);
+        }
+    }
+
+    public void addSeenRealmList(int seenId) {
+        if (this.seenRealmList == null) {
+            this.seenRealmList = new HashSet<>();
+        } else if (this.seenRealmList.contains(seenId)) {
+            return;
+        }
+        this.seenRealmList.add(seenId);
     }
 
     public int getExpeditionLimit() {
@@ -948,9 +975,13 @@ public class Player {
                 .setIsShowAvatar(this.isShowAvatars())
                 .addAllShowAvatarInfoList(socialShowAvatarInfoList)
                 .addAllShowNameCardIdList(this.getShowNameCardInfoList())
-                .setFinishAchievementNum(0)
+                .setFinishAchievementNum(this.getFinishedAchievementNum())
                 .setFriendEnterHomeOptionValue(this.getHome() == null ? 0 : this.getHome().getEnterHomeOption());
         return social;
+    }
+
+    public int getFinishedAchievementNum() {
+        return Achievements.getByPlayer(this).getFinishedAchievementNum();
     }
 
     public List<ShowAvatarInfoOuterClass.ShowAvatarInfo> getShowAvatarInfoList() {
@@ -1079,6 +1110,12 @@ public class Player {
 
         // Recharge resin.
         this.getResinManager().rechargeResin();
+
+        // Satiation
+        this.getSatiationManager().reduceSatiation();
+
+        // Home resources
+        this.getHome().updateHourlyResources(this);
     }
 
     private synchronized void doDailyReset() {
@@ -1141,15 +1178,15 @@ public class Player {
         }
 
         // Load from db
+        this.achievements = Achievements.getByPlayer(this);
         this.getAvatars().loadFromDatabase();
         this.getInventory().loadFromDatabase();
+        this.loadBattlePassManager(); // Call before avatar postLoad to avoid null pointer
         this.getAvatars().postLoad(); // Needs to be called after inventory is handled
 
         this.getFriendsList().loadFromDatabase();
         this.getMailHandler().loadFromDatabase();
         this.getQuestManager().loadFromDatabase();
-
-        this.loadBattlePassManager();
     }
 
     public void onLogin() {
@@ -1194,6 +1231,10 @@ public class Player {
         session.send(new PacketQuestListNotify(this));
         session.send(new PacketCodexDataFullNotify(this));
         session.send(new PacketAllWidgetDataNotify(this));
+
+        //Achievements
+        this.achievements.onLogin(this);
+
         session.send(new PacketWidgetGadgetAllDataNotify());
         session.send(new PacketCombineDataNotify(this.unlockedCombines));
         session.send(new PacketGetChatEmojiCollectionRsp(this.getChatEmojiIdList()));

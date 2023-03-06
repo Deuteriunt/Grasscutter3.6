@@ -8,5 +8,5 @@ import lombok.ToString;
 public class SceneInitConfig {
 	public int suite;
 	public int end_suite;
-	public int rand_suite;
+	public boolean rand_suite;
 }

@@ -124,6 +124,21 @@
       "no_account": "Compte introuvable.",
       "description": "Modifie les comptes utilisateurs"
     },
+    "achievement": {
+      "success": {
+        "grant": "🇺🇸Granted the achievement to %s.",
+        "revoke": "🇺🇸Revoked the achievement from %s.",
+        "progress": "🇺🇸Set progress of %s's achievement(id: %s) to %s.",
+        "grantall": "🇺🇸Granted %s achievement(s) to %s.",
+        "revokeall": "🇺🇸Revoked %s achievement(s) from %s."
+      },
+      "fail": {
+        "achievement_not_found": "🇺🇸Achievement not found.",
+        "already_achieved": "🇺🇸%s has already achieved the achievement.",
+        "not_yet_achieved": "🇺🇸%s hasn't achieved the achievement yet."
+      },
+      "description": "🇺🇸Grant, Revoke or Progress achievements."
+    },
     "announce": {
       "send_success": "L'annonce à bien été envoyée, vous pouvez la révoquer en utilisant /a revoke %s.",
       "refresh_success": "Le fichier de configuration des annonces à bien été actualisée. [Total : %s]",
@@ -306,7 +321,7 @@
     "team": {
       "invalid_usage": "Utilisation invalide.",
       "invalid_index": "Index invalide.",
-      "add_too_much": "Ce serveur autorise à avoir au maximum %d avatar(s) dans votre équipe.",
+      "add_too_much": "Ce serveur autorise à avoir au maximum %s avatar(s) dans votre équipe.",
       "failed_to_add_avatar": "Echec de l'ajout de l'avatar a l'ID %s dans votre équipe.",
       "failed_to_parse_index": "Echec de l'analyse de l'index index: %s",
       "remove_too_much": "Vous ne pouvez pas retirer tous les avatars.",
@@ -314,7 +329,7 @@
       "index_out_of_range": "L'index spécifié est en dehors du champ.",
       "failed_parse_avatar_id": "Echec de l'analyse de l'ID de l'avatar: %s",
       "avatar_already_in_team": "L'avatar est déjà dans votre équipe.",
-      "avatar_not_found": "L'avatar %d est introuvable.",
+      "avatar_not_found": "L'avatar %s est introuvable.",
       "description": "Modifie votre équipe manuellement."
     },
     "teleportAll": {

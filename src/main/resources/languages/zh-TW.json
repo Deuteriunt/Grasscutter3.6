@@ -124,6 +124,21 @@
       "no_account": "帳號不存在。",
       "description": "建立或刪除帳號。"
     },
+    "achievement": {
+      "success": {
+        "grant": "🇺🇸Granted the achievement to %s.",
+        "revoke": "🇺🇸Revoked the achievement from %s.",
+        "progress": "🇺🇸Set progress of %s's achievement(id: %s) to %s.",
+        "grantall": "🇺🇸Granted %s achievement(s) to %s.",
+        "revokeall": "🇺🇸Revoked %s achievement(s) from %s."
+      },
+      "fail": {
+        "achievement_not_found": "🇺🇸Achievement not found.",
+        "already_achieved": "🇺🇸%s has already achieved the achievement.",
+        "not_yet_achieved": "🇺🇸%s hasn't achieved the achievement yet."
+      },
+      "description": "🇺🇸Grant, Revoke or Progress achievements."
+    },
     "announce": {
       "send_success": "成功發送了一則公告，你可以通過 /a revoke %s 撤銷。",
       "refresh_success": "已重新整理了%s個公告。",
@@ -306,7 +321,7 @@
     "team": {
       "invalid_usage": "無效的用法。",
       "invalid_index": "無效索引。",
-      "add_too_much": "服務端只允許您的隊伍裡最多 %d 名角色。",
+      "add_too_much": "服務端只允許您的隊伍裡最多 %s 名角色。",
       "failed_to_add_avatar": "無法根據ID %s 添加角色。",
       "failed_to_parse_index": "無法解析的索引：%s",
       "remove_too_much": "您不能删除那麼多的角色，因為您的隊伍列表角色會全部被刪除。",
@@ -314,7 +329,7 @@
       "index_out_of_range": "您指定的索引超出了範圍。",
       "failed_parse_avatar_id": "無法解析的角色ID：%s",
       "avatar_already_in_team": "該角色已經在您的隊伍當中了。",
-      "avatar_not_found": "無法找到該角色：%d",
+      "avatar_not_found": "無法找到該角色：%s",
       "description": "手動修改您的隊伍配置。"
     },
     "teleportAll": {

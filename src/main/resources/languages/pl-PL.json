@@ -124,6 +124,21 @@
       "no_account": "Nie znaleziono konta.",
       "description": "Twórz lub usuń konta."
     },
+    "achievement": {
+      "success": {
+        "grant": "🇺🇸Granted the achievement to %s.",
+        "revoke": "🇺🇸Revoked the achievement from %s.",
+        "progress": "🇺🇸Set progress of %s's achievement(id: %s) to %s.",
+        "grantall": "🇺🇸Granted %s achievement(s) to %s.",
+        "revokeall": "🇺🇸Revoked %s achievement(s) from %s."
+      },
+      "fail": {
+        "achievement_not_found": "🇺🇸Achievement not found.",
+        "already_achieved": "🇺🇸%s has already achieved the achievement.",
+        "not_yet_achieved": "🇺🇸%s hasn't achieved the achievement yet."
+      },
+      "description": "🇺🇸Grant, Revoke or Progress achievements."
+    },
     "announce": {
       "send_success": "Ogłoszenie zostało pomyślnie wysłane. Możesz je odwołać używając \"announce revoke %s\".",
       "refresh_success": "Odświeżono konfigurację ogłoszeń (w sumie jest ich %s).",
@@ -306,7 +321,7 @@
     "team": {
       "invalid_usage": "Nieprawidłowe użycie komendy.",
       "invalid_index": "Błędny indeks.",
-      "add_too_much": "Można mieć maksymalnie %d postaci w zespole.",
+      "add_too_much": "Można mieć maksymalnie %s postaci w zespole.",
       "failed_to_add_avatar": "Błąd podczas dodawania awatara o ID \"%s\".",
       "failed_to_parse_index": "Błąd podczas przetwarzania indeksu \"%s\".",
       "remove_too_much": "Nie możesz usunąć wszystkich awatarów w zespole.",
@@ -314,7 +329,7 @@
       "index_out_of_range": "Podany indeks nie mieści się w swoim zakresie.",
       "failed_parse_avatar_id": "Błędny ID awatara \"%s\".",
       "avatar_already_in_team": "Podany awatar jest już w zespole wybranego gracza.",
-      "avatar_not_found": "Awatar o ID \"%d\" nie istnieje.",
+      "avatar_not_found": "Awatar o ID \"%s\" nie istnieje.",
       "description": "Modyfikuj zespół wybranego gracza."
     },
     "teleportAll": {
