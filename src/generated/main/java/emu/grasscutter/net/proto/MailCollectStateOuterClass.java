@@ -15,6 +15,10 @@ public final class MailCollectStateOuterClass {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   /**
+   * <pre>
+   * Name: COONHFJFEHG
+   * </pre>
+   *
    * Protobuf enum {@code MailCollectState}
    */
   public enum MailCollectState

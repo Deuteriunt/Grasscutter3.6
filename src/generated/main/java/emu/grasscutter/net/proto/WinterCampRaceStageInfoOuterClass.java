@@ -19,41 +19,41 @@ public final class WinterCampRaceStageInfoOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>.Vector pos = 2;</code>
-     * @return Whether the pos field is set.
+     * <code>uint32 max_score = 9;</code>
+     * @return The maxScore.
      */
-    boolean hasPos();
-    /**
-     * <code>.Vector pos = 2;</code>
-     * @return The pos.
-     */
-    emu.grasscutter.net.proto.VectorOuterClass.Vector getPos();
-    /**
-     * <code>.Vector pos = 2;</code>
-     */
-    emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder getPosOrBuilder();
+    int getMaxScore();
 
     /**
-     * <code>uint32 open_time = 13;</code>
+     * <code>uint32 open_time = 8;</code>
      * @return The openTime.
      */
     int getOpenTime();
 
     /**
-     * <code>uint32 id = 12;</code>
+     * <code>.Vector pos = 1;</code>
+     * @return Whether the pos field is set.
+     */
+    boolean hasPos();
+    /**
+     * <code>.Vector pos = 1;</code>
+     * @return The pos.
+     */
+    emu.grasscutter.net.proto.VectorOuterClass.Vector getPos();
+    /**
+     * <code>.Vector pos = 1;</code>
+     */
+    emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder getPosOrBuilder();
+
+    /**
+     * <code>uint32 id = 10;</code>
      * @return The id.
      */
     int getId();
-
-    /**
-     * <code>uint32 max_score = 15;</code>
-     * @return The maxScore.
-     */
-    int getMaxScore();
   }
   /**
    * <pre>
-   * Name: LINIENJBJIL
+   * Name: HGFJKBCKJFE
    * </pre>
    *
    * Protobuf type {@code WinterCampRaceStageInfo}
@@ -82,6 +82,71 @@ public final class WinterCampRaceStageInfoOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private WinterCampRaceStageInfo(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder subBuilder = null;
+              if (pos_ != null) {
+                subBuilder = pos_.toBuilder();
+              }
+              pos_ = input.readMessage(emu.grasscutter.net.proto.VectorOuterClass.Vector.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(pos_);
+                pos_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 64: {
+
+              openTime_ = input.readUInt32();
+              break;
+            }
+            case 72: {
+
+              maxScore_ = input.readUInt32();
+              break;
+            }
+            case 80: {
+
+              id_ = input.readUInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.WinterCampRaceStageInfoOuterClass.internal_static_WinterCampRaceStageInfo_descriptor;
@@ -95,36 +160,21 @@ public final class WinterCampRaceStageInfoOuterClass {
               emu.grasscutter.net.proto.WinterCampRaceStageInfoOuterClass.WinterCampRaceStageInfo.class, emu.grasscutter.net.proto.WinterCampRaceStageInfoOuterClass.WinterCampRaceStageInfo.Builder.class);
     }
 
-    public static final int POS_FIELD_NUMBER = 2;
-    private emu.grasscutter.net.proto.VectorOuterClass.Vector pos_;
+    public static final int MAX_SCORE_FIELD_NUMBER = 9;
+    private int maxScore_;
     /**
-     * <code>.Vector pos = 2;</code>
-     * @return Whether the pos field is set.
+     * <code>uint32 max_score = 9;</code>
+     * @return The maxScore.
      */
     @java.lang.Override
-    public boolean hasPos() {
-      return pos_ != null;
-    }
-    /**
-     * <code>.Vector pos = 2;</code>
-     * @return The pos.
-     */
-    @java.lang.Override
-    public emu.grasscutter.net.proto.VectorOuterClass.Vector getPos() {
-      return pos_ == null ? emu.grasscutter.net.proto.VectorOuterClass.Vector.getDefaultInstance() : pos_;
-    }
-    /**
-     * <code>.Vector pos = 2;</code>
-     */
-    @java.lang.Override
-    public emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder getPosOrBuilder() {
-      return pos_ == null ? emu.grasscutter.net.proto.VectorOuterClass.Vector.getDefaultInstance() : pos_;
+    public int getMaxScore() {
+      return maxScore_;
     }
 
-    public static final int OPEN_TIME_FIELD_NUMBER = 13;
-    private int openTime_ = 0;
+    public static final int OPEN_TIME_FIELD_NUMBER = 8;
+    private int openTime_;
     /**
-     * <code>uint32 open_time = 13;</code>
+     * <code>uint32 open_time = 8;</code>
      * @return The openTime.
      */
     @java.lang.Override
@@ -132,26 +182,41 @@ public final class WinterCampRaceStageInfoOuterClass {
       return openTime_;
     }
 
-    public static final int ID_FIELD_NUMBER = 12;
-    private int id_ = 0;
+    public static final int POS_FIELD_NUMBER = 1;
+    private emu.grasscutter.net.proto.VectorOuterClass.Vector pos_;
     /**
-     * <code>uint32 id = 12;</code>
+     * <code>.Vector pos = 1;</code>
+     * @return Whether the pos field is set.
+     */
+    @java.lang.Override
+    public boolean hasPos() {
+      return pos_ != null;
+    }
+    /**
+     * <code>.Vector pos = 1;</code>
+     * @return The pos.
+     */
+    @java.lang.Override
+    public emu.grasscutter.net.proto.VectorOuterClass.Vector getPos() {
+      return pos_ == null ? emu.grasscutter.net.proto.VectorOuterClass.Vector.getDefaultInstance() : pos_;
+    }
+    /**
+     * <code>.Vector pos = 1;</code>
+     */
+    @java.lang.Override
+    public emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder getPosOrBuilder() {
+      return getPos();
+    }
+
+    public static final int ID_FIELD_NUMBER = 10;
+    private int id_;
+    /**
+     * <code>uint32 id = 10;</code>
      * @return The id.
      */
     @java.lang.Override
     public int getId() {
       return id_;
-    }
-
-    public static final int MAX_SCORE_FIELD_NUMBER = 15;
-    private int maxScore_ = 0;
-    /**
-     * <code>uint32 max_score = 15;</code>
-     * @return The maxScore.
-     */
-    @java.lang.Override
-    public int getMaxScore() {
-      return maxScore_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -169,18 +234,18 @@ public final class WinterCampRaceStageInfoOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (pos_ != null) {
-        output.writeMessage(2, getPos());
-      }
-      if (id_ != 0) {
-        output.writeUInt32(12, id_);
+        output.writeMessage(1, getPos());
       }
       if (openTime_ != 0) {
-        output.writeUInt32(13, openTime_);
+        output.writeUInt32(8, openTime_);
       }
       if (maxScore_ != 0) {
-        output.writeUInt32(15, maxScore_);
+        output.writeUInt32(9, maxScore_);
       }
-      getUnknownFields().writeTo(output);
+      if (id_ != 0) {
+        output.writeUInt32(10, id_);
+      }
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -191,21 +256,21 @@ public final class WinterCampRaceStageInfoOuterClass {
       size = 0;
       if (pos_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, getPos());
-      }
-      if (id_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(12, id_);
+          .computeMessageSize(1, getPos());
       }
       if (openTime_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(13, openTime_);
+          .computeUInt32Size(8, openTime_);
       }
       if (maxScore_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(15, maxScore_);
+          .computeUInt32Size(9, maxScore_);
       }
-      size += getUnknownFields().getSerializedSize();
+      if (id_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(10, id_);
+      }
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -220,18 +285,18 @@ public final class WinterCampRaceStageInfoOuterClass {
       }
       emu.grasscutter.net.proto.WinterCampRaceStageInfoOuterClass.WinterCampRaceStageInfo other = (emu.grasscutter.net.proto.WinterCampRaceStageInfoOuterClass.WinterCampRaceStageInfo) obj;
 
+      if (getMaxScore()
+          != other.getMaxScore()) return false;
+      if (getOpenTime()
+          != other.getOpenTime()) return false;
       if (hasPos() != other.hasPos()) return false;
       if (hasPos()) {
         if (!getPos()
             .equals(other.getPos())) return false;
       }
-      if (getOpenTime()
-          != other.getOpenTime()) return false;
       if (getId()
           != other.getId()) return false;
-      if (getMaxScore()
-          != other.getMaxScore()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -242,17 +307,17 @@ public final class WinterCampRaceStageInfoOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + MAX_SCORE_FIELD_NUMBER;
+      hash = (53 * hash) + getMaxScore();
+      hash = (37 * hash) + OPEN_TIME_FIELD_NUMBER;
+      hash = (53 * hash) + getOpenTime();
       if (hasPos()) {
         hash = (37 * hash) + POS_FIELD_NUMBER;
         hash = (53 * hash) + getPos().hashCode();
       }
-      hash = (37 * hash) + OPEN_TIME_FIELD_NUMBER;
-      hash = (53 * hash) + getOpenTime();
       hash = (37 * hash) + ID_FIELD_NUMBER;
       hash = (53 * hash) + getId();
-      hash = (37 * hash) + MAX_SCORE_FIELD_NUMBER;
-      hash = (53 * hash) + getMaxScore();
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -349,7 +414,7 @@ public final class WinterCampRaceStageInfoOuterClass {
     }
     /**
      * <pre>
-     * Name: LINIENJBJIL
+     * Name: HGFJKBCKJFE
      * </pre>
      *
      * Protobuf type {@code WinterCampRaceStageInfo}
@@ -373,26 +438,34 @@ public final class WinterCampRaceStageInfoOuterClass {
 
       // Construct using emu.grasscutter.net.proto.WinterCampRaceStageInfoOuterClass.WinterCampRaceStageInfo.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        bitField0_ = 0;
-        pos_ = null;
-        if (posBuilder_ != null) {
-          posBuilder_.dispose();
+        maxScore_ = 0;
+
+        openTime_ = 0;
+
+        if (posBuilder_ == null) {
+          pos_ = null;
+        } else {
+          pos_ = null;
           posBuilder_ = null;
         }
-        openTime_ = 0;
         id_ = 0;
-        maxScore_ = 0;
+
         return this;
       }
 
@@ -419,27 +492,16 @@ public final class WinterCampRaceStageInfoOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.WinterCampRaceStageInfoOuterClass.WinterCampRaceStageInfo buildPartial() {
         emu.grasscutter.net.proto.WinterCampRaceStageInfoOuterClass.WinterCampRaceStageInfo result = new emu.grasscutter.net.proto.WinterCampRaceStageInfoOuterClass.WinterCampRaceStageInfo(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
+        result.maxScore_ = maxScore_;
+        result.openTime_ = openTime_;
+        if (posBuilder_ == null) {
+          result.pos_ = pos_;
+        } else {
+          result.pos_ = posBuilder_.build();
+        }
+        result.id_ = id_;
         onBuilt();
         return result;
-      }
-
-      private void buildPartial0(emu.grasscutter.net.proto.WinterCampRaceStageInfoOuterClass.WinterCampRaceStageInfo result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.pos_ = posBuilder_ == null
-              ? pos_
-              : posBuilder_.build();
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.openTime_ = openTime_;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.id_ = id_;
-        }
-        if (((from_bitField0_ & 0x00000008) != 0)) {
-          result.maxScore_ = maxScore_;
-        }
       }
 
       @java.lang.Override
@@ -486,19 +548,19 @@ public final class WinterCampRaceStageInfoOuterClass {
 
       public Builder mergeFrom(emu.grasscutter.net.proto.WinterCampRaceStageInfoOuterClass.WinterCampRaceStageInfo other) {
         if (other == emu.grasscutter.net.proto.WinterCampRaceStageInfoOuterClass.WinterCampRaceStageInfo.getDefaultInstance()) return this;
-        if (other.hasPos()) {
-          mergePos(other.getPos());
+        if (other.getMaxScore() != 0) {
+          setMaxScore(other.getMaxScore());
         }
         if (other.getOpenTime() != 0) {
           setOpenTime(other.getOpenTime());
         }
+        if (other.hasPos()) {
+          mergePos(other.getPos());
+        }
         if (other.getId() != 0) {
           setId(other.getId());
         }
-        if (other.getMaxScore() != 0) {
-          setMaxScore(other.getMaxScore());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -513,68 +575,94 @@ public final class WinterCampRaceStageInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.WinterCampRaceStageInfoOuterClass.WinterCampRaceStageInfo parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 18: {
-                input.readMessage(
-                    getPosFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 18
-              case 96: {
-                id_ = input.readUInt32();
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 96
-              case 104: {
-                openTime_ = input.readUInt32();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 104
-              case 120: {
-                maxScore_ = input.readUInt32();
-                bitField0_ |= 0x00000008;
-                break;
-              } // case 120
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.WinterCampRaceStageInfoOuterClass.WinterCampRaceStageInfo) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
-      private int bitField0_;
+
+      private int maxScore_ ;
+      /**
+       * <code>uint32 max_score = 9;</code>
+       * @return The maxScore.
+       */
+      @java.lang.Override
+      public int getMaxScore() {
+        return maxScore_;
+      }
+      /**
+       * <code>uint32 max_score = 9;</code>
+       * @param value The maxScore to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMaxScore(int value) {
+        
+        maxScore_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 max_score = 9;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMaxScore() {
+        
+        maxScore_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int openTime_ ;
+      /**
+       * <code>uint32 open_time = 8;</code>
+       * @return The openTime.
+       */
+      @java.lang.Override
+      public int getOpenTime() {
+        return openTime_;
+      }
+      /**
+       * <code>uint32 open_time = 8;</code>
+       * @param value The openTime to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOpenTime(int value) {
+        
+        openTime_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 open_time = 8;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOpenTime() {
+        
+        openTime_ = 0;
+        onChanged();
+        return this;
+      }
 
       private emu.grasscutter.net.proto.VectorOuterClass.Vector pos_;
       private com.google.protobuf.SingleFieldBuilderV3<
           emu.grasscutter.net.proto.VectorOuterClass.Vector, emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder, emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder> posBuilder_;
       /**
-       * <code>.Vector pos = 2;</code>
+       * <code>.Vector pos = 1;</code>
        * @return Whether the pos field is set.
        */
       public boolean hasPos() {
-        return ((bitField0_ & 0x00000001) != 0);
+        return posBuilder_ != null || pos_ != null;
       }
       /**
-       * <code>.Vector pos = 2;</code>
+       * <code>.Vector pos = 1;</code>
        * @return The pos.
        */
       public emu.grasscutter.net.proto.VectorOuterClass.Vector getPos() {
@@ -585,7 +673,7 @@ public final class WinterCampRaceStageInfoOuterClass {
         }
       }
       /**
-       * <code>.Vector pos = 2;</code>
+       * <code>.Vector pos = 1;</code>
        */
       public Builder setPos(emu.grasscutter.net.proto.VectorOuterClass.Vector value) {
         if (posBuilder_ == null) {
@@ -593,69 +681,69 @@ public final class WinterCampRaceStageInfoOuterClass {
             throw new NullPointerException();
           }
           pos_ = value;
+          onChanged();
         } else {
           posBuilder_.setMessage(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+
         return this;
       }
       /**
-       * <code>.Vector pos = 2;</code>
+       * <code>.Vector pos = 1;</code>
        */
       public Builder setPos(
           emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder builderForValue) {
         if (posBuilder_ == null) {
           pos_ = builderForValue.build();
+          onChanged();
         } else {
           posBuilder_.setMessage(builderForValue.build());
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+
         return this;
       }
       /**
-       * <code>.Vector pos = 2;</code>
+       * <code>.Vector pos = 1;</code>
        */
       public Builder mergePos(emu.grasscutter.net.proto.VectorOuterClass.Vector value) {
         if (posBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0) &&
-            pos_ != null &&
-            pos_ != emu.grasscutter.net.proto.VectorOuterClass.Vector.getDefaultInstance()) {
-            getPosBuilder().mergeFrom(value);
+          if (pos_ != null) {
+            pos_ =
+              emu.grasscutter.net.proto.VectorOuterClass.Vector.newBuilder(pos_).mergeFrom(value).buildPartial();
           } else {
             pos_ = value;
           }
+          onChanged();
         } else {
           posBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+
         return this;
       }
       /**
-       * <code>.Vector pos = 2;</code>
+       * <code>.Vector pos = 1;</code>
        */
       public Builder clearPos() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        pos_ = null;
-        if (posBuilder_ != null) {
-          posBuilder_.dispose();
+        if (posBuilder_ == null) {
+          pos_ = null;
+          onChanged();
+        } else {
+          pos_ = null;
           posBuilder_ = null;
         }
-        onChanged();
+
         return this;
       }
       /**
-       * <code>.Vector pos = 2;</code>
+       * <code>.Vector pos = 1;</code>
        */
       public emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder getPosBuilder() {
-        bitField0_ |= 0x00000001;
+        
         onChanged();
         return getPosFieldBuilder().getBuilder();
       }
       /**
-       * <code>.Vector pos = 2;</code>
+       * <code>.Vector pos = 1;</code>
        */
       public emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder getPosOrBuilder() {
         if (posBuilder_ != null) {
@@ -666,7 +754,7 @@ public final class WinterCampRaceStageInfoOuterClass {
         }
       }
       /**
-       * <code>.Vector pos = 2;</code>
+       * <code>.Vector pos = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
           emu.grasscutter.net.proto.VectorOuterClass.Vector, emu.grasscutter.net.proto.VectorOuterClass.Vector.Builder, emu.grasscutter.net.proto.VectorOuterClass.VectorOrBuilder> 
@@ -682,41 +770,9 @@ public final class WinterCampRaceStageInfoOuterClass {
         return posBuilder_;
       }
 
-      private int openTime_ ;
-      /**
-       * <code>uint32 open_time = 13;</code>
-       * @return The openTime.
-       */
-      @java.lang.Override
-      public int getOpenTime() {
-        return openTime_;
-      }
-      /**
-       * <code>uint32 open_time = 13;</code>
-       * @param value The openTime to set.
-       * @return This builder for chaining.
-       */
-      public Builder setOpenTime(int value) {
-        
-        openTime_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint32 open_time = 13;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearOpenTime() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        openTime_ = 0;
-        onChanged();
-        return this;
-      }
-
       private int id_ ;
       /**
-       * <code>uint32 id = 12;</code>
+       * <code>uint32 id = 10;</code>
        * @return The id.
        */
       @java.lang.Override
@@ -724,56 +780,23 @@ public final class WinterCampRaceStageInfoOuterClass {
         return id_;
       }
       /**
-       * <code>uint32 id = 12;</code>
+       * <code>uint32 id = 10;</code>
        * @param value The id to set.
        * @return This builder for chaining.
        */
       public Builder setId(int value) {
         
         id_ = value;
-        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
       /**
-       * <code>uint32 id = 12;</code>
+       * <code>uint32 id = 10;</code>
        * @return This builder for chaining.
        */
       public Builder clearId() {
-        bitField0_ = (bitField0_ & ~0x00000004);
-        id_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private int maxScore_ ;
-      /**
-       * <code>uint32 max_score = 15;</code>
-       * @return The maxScore.
-       */
-      @java.lang.Override
-      public int getMaxScore() {
-        return maxScore_;
-      }
-      /**
-       * <code>uint32 max_score = 15;</code>
-       * @param value The maxScore to set.
-       * @return This builder for chaining.
-       */
-      public Builder setMaxScore(int value) {
         
-        maxScore_ = value;
-        bitField0_ |= 0x00000008;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint32 max_score = 15;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearMaxScore() {
-        bitField0_ = (bitField0_ & ~0x00000008);
-        maxScore_ = 0;
+        id_ = 0;
         onChanged();
         return this;
       }
@@ -810,18 +833,7 @@ public final class WinterCampRaceStageInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new WinterCampRaceStageInfo(input, extensionRegistry);
       }
     };
 
@@ -856,9 +868,9 @@ public final class WinterCampRaceStageInfoOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\035WinterCampRaceStageInfo.proto\032\014Vector." +
-      "proto\"a\n\027WinterCampRaceStageInfo\022\024\n\003pos\030" +
-      "\002 \001(\0132\007.Vector\022\021\n\topen_time\030\r \001(\r\022\n\n\002id\030" +
-      "\014 \001(\r\022\021\n\tmax_score\030\017 \001(\rB\033\n\031emu.grasscut" +
+      "proto\"a\n\027WinterCampRaceStageInfo\022\021\n\tmax_" +
+      "score\030\t \001(\r\022\021\n\topen_time\030\010 \001(\r\022\024\n\003pos\030\001 " +
+      "\001(\0132\007.Vector\022\n\n\002id\030\n \001(\rB\033\n\031emu.grasscut" +
       "ter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
@@ -871,7 +883,7 @@ public final class WinterCampRaceStageInfoOuterClass {
     internal_static_WinterCampRaceStageInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_WinterCampRaceStageInfo_descriptor,
-        new java.lang.String[] { "Pos", "OpenTime", "Id", "MaxScore", });
+        new java.lang.String[] { "MaxScore", "OpenTime", "Pos", "Id", });
     emu.grasscutter.net.proto.VectorOuterClass.getDescriptor();
   }
 

@@ -19,27 +19,27 @@ public final class PullPrivateChatReqOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint32 target_uid = 9;</code>
+     * <code>uint32 FGFEAACHHME = 2;</code>
+     * @return The fGFEAACHHME.
+     */
+    int getFGFEAACHHME();
+
+    /**
+     * <code>uint32 LMHJHHFEHOL = 11;</code>
+     * @return The lMHJHHFEHOL.
+     */
+    int getLMHJHHFEHOL();
+
+    /**
+     * <code>uint32 target_uid = 4;</code>
      * @return The targetUid.
      */
     int getTargetUid();
-
-    /**
-     * <code>uint32 JBKDCKFOAGH = 11;</code>
-     * @return The jBKDCKFOAGH.
-     */
-    int getJBKDCKFOAGH();
-
-    /**
-     * <code>uint32 JJDCBKLFOGK = 7;</code>
-     * @return The jJDCBKLFOGK.
-     */
-    int getJJDCBKLFOGK();
   }
   /**
    * <pre>
-   * Name: PDOKMDBACPA
-   * CmdId: 4984
+   * CmdId: 5006
+   * Name: IIHMACNLDCN
    * </pre>
    *
    * Protobuf type {@code PullPrivateChatReq}
@@ -86,19 +86,19 @@ public final class PullPrivateChatReqOuterClass {
             case 0:
               done = true;
               break;
-            case 56: {
+            case 16: {
 
-              jJDCBKLFOGK_ = input.readUInt32();
+              fGFEAACHHME_ = input.readUInt32();
               break;
             }
-            case 72: {
+            case 32: {
 
               targetUid_ = input.readUInt32();
               break;
             }
             case 88: {
 
-              jBKDCKFOAGH_ = input.readUInt32();
+              lMHJHHFEHOL_ = input.readUInt32();
               break;
             }
             default: {
@@ -133,37 +133,37 @@ public final class PullPrivateChatReqOuterClass {
               emu.grasscutter.net.proto.PullPrivateChatReqOuterClass.PullPrivateChatReq.class, emu.grasscutter.net.proto.PullPrivateChatReqOuterClass.PullPrivateChatReq.Builder.class);
     }
 
-    public static final int TARGET_UID_FIELD_NUMBER = 9;
+    public static final int FGFEAACHHME_FIELD_NUMBER = 2;
+    private int fGFEAACHHME_;
+    /**
+     * <code>uint32 FGFEAACHHME = 2;</code>
+     * @return The fGFEAACHHME.
+     */
+    @java.lang.Override
+    public int getFGFEAACHHME() {
+      return fGFEAACHHME_;
+    }
+
+    public static final int LMHJHHFEHOL_FIELD_NUMBER = 11;
+    private int lMHJHHFEHOL_;
+    /**
+     * <code>uint32 LMHJHHFEHOL = 11;</code>
+     * @return The lMHJHHFEHOL.
+     */
+    @java.lang.Override
+    public int getLMHJHHFEHOL() {
+      return lMHJHHFEHOL_;
+    }
+
+    public static final int TARGET_UID_FIELD_NUMBER = 4;
     private int targetUid_;
     /**
-     * <code>uint32 target_uid = 9;</code>
+     * <code>uint32 target_uid = 4;</code>
      * @return The targetUid.
      */
     @java.lang.Override
     public int getTargetUid() {
       return targetUid_;
-    }
-
-    public static final int JBKDCKFOAGH_FIELD_NUMBER = 11;
-    private int jBKDCKFOAGH_;
-    /**
-     * <code>uint32 JBKDCKFOAGH = 11;</code>
-     * @return The jBKDCKFOAGH.
-     */
-    @java.lang.Override
-    public int getJBKDCKFOAGH() {
-      return jBKDCKFOAGH_;
-    }
-
-    public static final int JJDCBKLFOGK_FIELD_NUMBER = 7;
-    private int jJDCBKLFOGK_;
-    /**
-     * <code>uint32 JJDCBKLFOGK = 7;</code>
-     * @return The jJDCBKLFOGK.
-     */
-    @java.lang.Override
-    public int getJJDCBKLFOGK() {
-      return jJDCBKLFOGK_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -180,14 +180,14 @@ public final class PullPrivateChatReqOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (jJDCBKLFOGK_ != 0) {
-        output.writeUInt32(7, jJDCBKLFOGK_);
+      if (fGFEAACHHME_ != 0) {
+        output.writeUInt32(2, fGFEAACHHME_);
       }
       if (targetUid_ != 0) {
-        output.writeUInt32(9, targetUid_);
+        output.writeUInt32(4, targetUid_);
       }
-      if (jBKDCKFOAGH_ != 0) {
-        output.writeUInt32(11, jBKDCKFOAGH_);
+      if (lMHJHHFEHOL_ != 0) {
+        output.writeUInt32(11, lMHJHHFEHOL_);
       }
       unknownFields.writeTo(output);
     }
@@ -198,17 +198,17 @@ public final class PullPrivateChatReqOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (jJDCBKLFOGK_ != 0) {
+      if (fGFEAACHHME_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(7, jJDCBKLFOGK_);
+          .computeUInt32Size(2, fGFEAACHHME_);
       }
       if (targetUid_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(9, targetUid_);
+          .computeUInt32Size(4, targetUid_);
       }
-      if (jBKDCKFOAGH_ != 0) {
+      if (lMHJHHFEHOL_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(11, jBKDCKFOAGH_);
+          .computeUInt32Size(11, lMHJHHFEHOL_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -225,12 +225,12 @@ public final class PullPrivateChatReqOuterClass {
       }
       emu.grasscutter.net.proto.PullPrivateChatReqOuterClass.PullPrivateChatReq other = (emu.grasscutter.net.proto.PullPrivateChatReqOuterClass.PullPrivateChatReq) obj;
 
+      if (getFGFEAACHHME()
+          != other.getFGFEAACHHME()) return false;
+      if (getLMHJHHFEHOL()
+          != other.getLMHJHHFEHOL()) return false;
       if (getTargetUid()
           != other.getTargetUid()) return false;
-      if (getJBKDCKFOAGH()
-          != other.getJBKDCKFOAGH()) return false;
-      if (getJJDCBKLFOGK()
-          != other.getJJDCBKLFOGK()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -242,12 +242,12 @@ public final class PullPrivateChatReqOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + FGFEAACHHME_FIELD_NUMBER;
+      hash = (53 * hash) + getFGFEAACHHME();
+      hash = (37 * hash) + LMHJHHFEHOL_FIELD_NUMBER;
+      hash = (53 * hash) + getLMHJHHFEHOL();
       hash = (37 * hash) + TARGET_UID_FIELD_NUMBER;
       hash = (53 * hash) + getTargetUid();
-      hash = (37 * hash) + JBKDCKFOAGH_FIELD_NUMBER;
-      hash = (53 * hash) + getJBKDCKFOAGH();
-      hash = (37 * hash) + JJDCBKLFOGK_FIELD_NUMBER;
-      hash = (53 * hash) + getJJDCBKLFOGK();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -345,8 +345,8 @@ public final class PullPrivateChatReqOuterClass {
     }
     /**
      * <pre>
-     * Name: PDOKMDBACPA
-     * CmdId: 4984
+     * CmdId: 5006
+     * Name: IIHMACNLDCN
      * </pre>
      *
      * Protobuf type {@code PullPrivateChatReq}
@@ -386,11 +386,11 @@ public final class PullPrivateChatReqOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        fGFEAACHHME_ = 0;
+
+        lMHJHHFEHOL_ = 0;
+
         targetUid_ = 0;
-
-        jBKDCKFOAGH_ = 0;
-
-        jJDCBKLFOGK_ = 0;
 
         return this;
       }
@@ -418,9 +418,9 @@ public final class PullPrivateChatReqOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.PullPrivateChatReqOuterClass.PullPrivateChatReq buildPartial() {
         emu.grasscutter.net.proto.PullPrivateChatReqOuterClass.PullPrivateChatReq result = new emu.grasscutter.net.proto.PullPrivateChatReqOuterClass.PullPrivateChatReq(this);
+        result.fGFEAACHHME_ = fGFEAACHHME_;
+        result.lMHJHHFEHOL_ = lMHJHHFEHOL_;
         result.targetUid_ = targetUid_;
-        result.jBKDCKFOAGH_ = jBKDCKFOAGH_;
-        result.jJDCBKLFOGK_ = jJDCBKLFOGK_;
         onBuilt();
         return result;
       }
@@ -469,14 +469,14 @@ public final class PullPrivateChatReqOuterClass {
 
       public Builder mergeFrom(emu.grasscutter.net.proto.PullPrivateChatReqOuterClass.PullPrivateChatReq other) {
         if (other == emu.grasscutter.net.proto.PullPrivateChatReqOuterClass.PullPrivateChatReq.getDefaultInstance()) return this;
+        if (other.getFGFEAACHHME() != 0) {
+          setFGFEAACHHME(other.getFGFEAACHHME());
+        }
+        if (other.getLMHJHHFEHOL() != 0) {
+          setLMHJHHFEHOL(other.getLMHJHHFEHOL());
+        }
         if (other.getTargetUid() != 0) {
           setTargetUid(other.getTargetUid());
-        }
-        if (other.getJBKDCKFOAGH() != 0) {
-          setJBKDCKFOAGH(other.getJBKDCKFOAGH());
-        }
-        if (other.getJJDCBKLFOGK() != 0) {
-          setJJDCBKLFOGK(other.getJJDCBKLFOGK());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -507,9 +507,71 @@ public final class PullPrivateChatReqOuterClass {
         return this;
       }
 
+      private int fGFEAACHHME_ ;
+      /**
+       * <code>uint32 FGFEAACHHME = 2;</code>
+       * @return The fGFEAACHHME.
+       */
+      @java.lang.Override
+      public int getFGFEAACHHME() {
+        return fGFEAACHHME_;
+      }
+      /**
+       * <code>uint32 FGFEAACHHME = 2;</code>
+       * @param value The fGFEAACHHME to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFGFEAACHHME(int value) {
+        
+        fGFEAACHHME_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 FGFEAACHHME = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFGFEAACHHME() {
+        
+        fGFEAACHHME_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int lMHJHHFEHOL_ ;
+      /**
+       * <code>uint32 LMHJHHFEHOL = 11;</code>
+       * @return The lMHJHHFEHOL.
+       */
+      @java.lang.Override
+      public int getLMHJHHFEHOL() {
+        return lMHJHHFEHOL_;
+      }
+      /**
+       * <code>uint32 LMHJHHFEHOL = 11;</code>
+       * @param value The lMHJHHFEHOL to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLMHJHHFEHOL(int value) {
+        
+        lMHJHHFEHOL_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 LMHJHHFEHOL = 11;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLMHJHHFEHOL() {
+        
+        lMHJHHFEHOL_ = 0;
+        onChanged();
+        return this;
+      }
+
       private int targetUid_ ;
       /**
-       * <code>uint32 target_uid = 9;</code>
+       * <code>uint32 target_uid = 4;</code>
        * @return The targetUid.
        */
       @java.lang.Override
@@ -517,7 +579,7 @@ public final class PullPrivateChatReqOuterClass {
         return targetUid_;
       }
       /**
-       * <code>uint32 target_uid = 9;</code>
+       * <code>uint32 target_uid = 4;</code>
        * @param value The targetUid to set.
        * @return This builder for chaining.
        */
@@ -528,74 +590,12 @@ public final class PullPrivateChatReqOuterClass {
         return this;
       }
       /**
-       * <code>uint32 target_uid = 9;</code>
+       * <code>uint32 target_uid = 4;</code>
        * @return This builder for chaining.
        */
       public Builder clearTargetUid() {
         
         targetUid_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private int jBKDCKFOAGH_ ;
-      /**
-       * <code>uint32 JBKDCKFOAGH = 11;</code>
-       * @return The jBKDCKFOAGH.
-       */
-      @java.lang.Override
-      public int getJBKDCKFOAGH() {
-        return jBKDCKFOAGH_;
-      }
-      /**
-       * <code>uint32 JBKDCKFOAGH = 11;</code>
-       * @param value The jBKDCKFOAGH to set.
-       * @return This builder for chaining.
-       */
-      public Builder setJBKDCKFOAGH(int value) {
-        
-        jBKDCKFOAGH_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint32 JBKDCKFOAGH = 11;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearJBKDCKFOAGH() {
-        
-        jBKDCKFOAGH_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private int jJDCBKLFOGK_ ;
-      /**
-       * <code>uint32 JJDCBKLFOGK = 7;</code>
-       * @return The jJDCBKLFOGK.
-       */
-      @java.lang.Override
-      public int getJJDCBKLFOGK() {
-        return jJDCBKLFOGK_;
-      }
-      /**
-       * <code>uint32 JJDCBKLFOGK = 7;</code>
-       * @param value The jJDCBKLFOGK to set.
-       * @return This builder for chaining.
-       */
-      public Builder setJJDCBKLFOGK(int value) {
-        
-        jJDCBKLFOGK_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint32 JJDCBKLFOGK = 7;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearJJDCBKLFOGK() {
-        
-        jJDCBKLFOGK_ = 0;
         onChanged();
         return this;
       }
@@ -667,8 +667,8 @@ public final class PullPrivateChatReqOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\030PullPrivateChatReq.proto\"R\n\022PullPrivat" +
-      "eChatReq\022\022\n\ntarget_uid\030\t \001(\r\022\023\n\013JBKDCKFO" +
-      "AGH\030\013 \001(\r\022\023\n\013JJDCBKLFOGK\030\007 \001(\rB\033\n\031emu.gr" +
+      "eChatReq\022\023\n\013FGFEAACHHME\030\002 \001(\r\022\023\n\013LMHJHHF" +
+      "EHOL\030\013 \001(\r\022\022\n\ntarget_uid\030\004 \001(\rB\033\n\031emu.gr" +
       "asscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
@@ -680,7 +680,7 @@ public final class PullPrivateChatReqOuterClass {
     internal_static_PullPrivateChatReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_PullPrivateChatReq_descriptor,
-        new java.lang.String[] { "TargetUid", "JBKDCKFOAGH", "JJDCBKLFOGK", });
+        new java.lang.String[] { "FGFEAACHHME", "LMHJHHFEHOL", "TargetUid", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

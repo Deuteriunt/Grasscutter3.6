@@ -19,32 +19,32 @@ public final class HachiStageInfoOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>bool is_open = 8;</code>
-     * @return The isOpen.
-     */
-    boolean getIsOpen();
-
-    /**
-     * <code>uint32 stage_id = 9;</code>
+     * <code>uint32 stage_id = 2;</code>
      * @return The stageId.
      */
     int getStageId();
 
     /**
-     * <code>uint32 open_time = 12;</code>
+     * <code>bool is_open = 7;</code>
+     * @return The isOpen.
+     */
+    boolean getIsOpen();
+
+    /**
+     * <code>uint32 open_time = 13;</code>
      * @return The openTime.
      */
     int getOpenTime();
 
     /**
-     * <code>bool is_finished = 11;</code>
+     * <code>bool is_finished = 4;</code>
      * @return The isFinished.
      */
     boolean getIsFinished();
   }
   /**
    * <pre>
-   * Name: FKIGMKCEDGL
+   * Name: GLCHGFNJFBA
    * </pre>
    *
    * Protobuf type {@code HachiStageInfo}
@@ -73,6 +73,63 @@ public final class HachiStageInfoOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private HachiStageInfo(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 16: {
+
+              stageId_ = input.readUInt32();
+              break;
+            }
+            case 32: {
+
+              isFinished_ = input.readBool();
+              break;
+            }
+            case 56: {
+
+              isOpen_ = input.readBool();
+              break;
+            }
+            case 104: {
+
+              openTime_ = input.readUInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.HachiStageInfoOuterClass.internal_static_HachiStageInfo_descriptor;
@@ -86,21 +143,10 @@ public final class HachiStageInfoOuterClass {
               emu.grasscutter.net.proto.HachiStageInfoOuterClass.HachiStageInfo.class, emu.grasscutter.net.proto.HachiStageInfoOuterClass.HachiStageInfo.Builder.class);
     }
 
-    public static final int IS_OPEN_FIELD_NUMBER = 8;
-    private boolean isOpen_ = false;
+    public static final int STAGE_ID_FIELD_NUMBER = 2;
+    private int stageId_;
     /**
-     * <code>bool is_open = 8;</code>
-     * @return The isOpen.
-     */
-    @java.lang.Override
-    public boolean getIsOpen() {
-      return isOpen_;
-    }
-
-    public static final int STAGE_ID_FIELD_NUMBER = 9;
-    private int stageId_ = 0;
-    /**
-     * <code>uint32 stage_id = 9;</code>
+     * <code>uint32 stage_id = 2;</code>
      * @return The stageId.
      */
     @java.lang.Override
@@ -108,10 +154,21 @@ public final class HachiStageInfoOuterClass {
       return stageId_;
     }
 
-    public static final int OPEN_TIME_FIELD_NUMBER = 12;
-    private int openTime_ = 0;
+    public static final int IS_OPEN_FIELD_NUMBER = 7;
+    private boolean isOpen_;
     /**
-     * <code>uint32 open_time = 12;</code>
+     * <code>bool is_open = 7;</code>
+     * @return The isOpen.
+     */
+    @java.lang.Override
+    public boolean getIsOpen() {
+      return isOpen_;
+    }
+
+    public static final int OPEN_TIME_FIELD_NUMBER = 13;
+    private int openTime_;
+    /**
+     * <code>uint32 open_time = 13;</code>
      * @return The openTime.
      */
     @java.lang.Override
@@ -119,10 +176,10 @@ public final class HachiStageInfoOuterClass {
       return openTime_;
     }
 
-    public static final int IS_FINISHED_FIELD_NUMBER = 11;
-    private boolean isFinished_ = false;
+    public static final int IS_FINISHED_FIELD_NUMBER = 4;
+    private boolean isFinished_;
     /**
-     * <code>bool is_finished = 11;</code>
+     * <code>bool is_finished = 4;</code>
      * @return The isFinished.
      */
     @java.lang.Override
@@ -144,19 +201,19 @@ public final class HachiStageInfoOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (isOpen_ != false) {
-        output.writeBool(8, isOpen_);
-      }
       if (stageId_ != 0) {
-        output.writeUInt32(9, stageId_);
+        output.writeUInt32(2, stageId_);
       }
       if (isFinished_ != false) {
-        output.writeBool(11, isFinished_);
+        output.writeBool(4, isFinished_);
+      }
+      if (isOpen_ != false) {
+        output.writeBool(7, isOpen_);
       }
       if (openTime_ != 0) {
-        output.writeUInt32(12, openTime_);
+        output.writeUInt32(13, openTime_);
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -165,23 +222,23 @@ public final class HachiStageInfoOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (isOpen_ != false) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(8, isOpen_);
-      }
       if (stageId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(9, stageId_);
+          .computeUInt32Size(2, stageId_);
       }
       if (isFinished_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(11, isFinished_);
+          .computeBoolSize(4, isFinished_);
+      }
+      if (isOpen_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(7, isOpen_);
       }
       if (openTime_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(12, openTime_);
+          .computeUInt32Size(13, openTime_);
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -196,15 +253,15 @@ public final class HachiStageInfoOuterClass {
       }
       emu.grasscutter.net.proto.HachiStageInfoOuterClass.HachiStageInfo other = (emu.grasscutter.net.proto.HachiStageInfoOuterClass.HachiStageInfo) obj;
 
-      if (getIsOpen()
-          != other.getIsOpen()) return false;
       if (getStageId()
           != other.getStageId()) return false;
+      if (getIsOpen()
+          != other.getIsOpen()) return false;
       if (getOpenTime()
           != other.getOpenTime()) return false;
       if (getIsFinished()
           != other.getIsFinished()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -215,17 +272,17 @@ public final class HachiStageInfoOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + STAGE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getStageId();
       hash = (37 * hash) + IS_OPEN_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getIsOpen());
-      hash = (37 * hash) + STAGE_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getStageId();
       hash = (37 * hash) + OPEN_TIME_FIELD_NUMBER;
       hash = (53 * hash) + getOpenTime();
       hash = (37 * hash) + IS_FINISHED_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getIsFinished());
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -322,7 +379,7 @@ public final class HachiStageInfoOuterClass {
     }
     /**
      * <pre>
-     * Name: FKIGMKCEDGL
+     * Name: GLCHGFNJFBA
      * </pre>
      *
      * Protobuf type {@code HachiStageInfo}
@@ -346,22 +403,30 @@ public final class HachiStageInfoOuterClass {
 
       // Construct using emu.grasscutter.net.proto.HachiStageInfoOuterClass.HachiStageInfo.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        bitField0_ = 0;
-        isOpen_ = false;
         stageId_ = 0;
+
+        isOpen_ = false;
+
         openTime_ = 0;
+
         isFinished_ = false;
+
         return this;
       }
 
@@ -388,25 +453,12 @@ public final class HachiStageInfoOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.HachiStageInfoOuterClass.HachiStageInfo buildPartial() {
         emu.grasscutter.net.proto.HachiStageInfoOuterClass.HachiStageInfo result = new emu.grasscutter.net.proto.HachiStageInfoOuterClass.HachiStageInfo(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
+        result.stageId_ = stageId_;
+        result.isOpen_ = isOpen_;
+        result.openTime_ = openTime_;
+        result.isFinished_ = isFinished_;
         onBuilt();
         return result;
-      }
-
-      private void buildPartial0(emu.grasscutter.net.proto.HachiStageInfoOuterClass.HachiStageInfo result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.isOpen_ = isOpen_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.stageId_ = stageId_;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.openTime_ = openTime_;
-        }
-        if (((from_bitField0_ & 0x00000008) != 0)) {
-          result.isFinished_ = isFinished_;
-        }
       }
 
       @java.lang.Override
@@ -453,11 +505,11 @@ public final class HachiStageInfoOuterClass {
 
       public Builder mergeFrom(emu.grasscutter.net.proto.HachiStageInfoOuterClass.HachiStageInfo other) {
         if (other == emu.grasscutter.net.proto.HachiStageInfoOuterClass.HachiStageInfo.getDefaultInstance()) return this;
-        if (other.getIsOpen() != false) {
-          setIsOpen(other.getIsOpen());
-        }
         if (other.getStageId() != 0) {
           setStageId(other.getStageId());
+        }
+        if (other.getIsOpen() != false) {
+          setIsOpen(other.getIsOpen());
         }
         if (other.getOpenTime() != 0) {
           setOpenTime(other.getOpenTime());
@@ -465,7 +517,7 @@ public final class HachiStageInfoOuterClass {
         if (other.getIsFinished() != false) {
           setIsFinished(other.getIsFinished());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -480,89 +532,23 @@ public final class HachiStageInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.HachiStageInfoOuterClass.HachiStageInfo parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 64: {
-                isOpen_ = input.readBool();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 64
-              case 72: {
-                stageId_ = input.readUInt32();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 72
-              case 88: {
-                isFinished_ = input.readBool();
-                bitField0_ |= 0x00000008;
-                break;
-              } // case 88
-              case 96: {
-                openTime_ = input.readUInt32();
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 96
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.HachiStageInfoOuterClass.HachiStageInfo) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private boolean isOpen_ ;
-      /**
-       * <code>bool is_open = 8;</code>
-       * @return The isOpen.
-       */
-      @java.lang.Override
-      public boolean getIsOpen() {
-        return isOpen_;
-      }
-      /**
-       * <code>bool is_open = 8;</code>
-       * @param value The isOpen to set.
-       * @return This builder for chaining.
-       */
-      public Builder setIsOpen(boolean value) {
-        
-        isOpen_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>bool is_open = 8;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearIsOpen() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        isOpen_ = false;
-        onChanged();
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
 
       private int stageId_ ;
       /**
-       * <code>uint32 stage_id = 9;</code>
+       * <code>uint32 stage_id = 2;</code>
        * @return The stageId.
        */
       @java.lang.Override
@@ -570,31 +556,61 @@ public final class HachiStageInfoOuterClass {
         return stageId_;
       }
       /**
-       * <code>uint32 stage_id = 9;</code>
+       * <code>uint32 stage_id = 2;</code>
        * @param value The stageId to set.
        * @return This builder for chaining.
        */
       public Builder setStageId(int value) {
         
         stageId_ = value;
-        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
       /**
-       * <code>uint32 stage_id = 9;</code>
+       * <code>uint32 stage_id = 2;</code>
        * @return This builder for chaining.
        */
       public Builder clearStageId() {
-        bitField0_ = (bitField0_ & ~0x00000002);
+        
         stageId_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private boolean isOpen_ ;
+      /**
+       * <code>bool is_open = 7;</code>
+       * @return The isOpen.
+       */
+      @java.lang.Override
+      public boolean getIsOpen() {
+        return isOpen_;
+      }
+      /**
+       * <code>bool is_open = 7;</code>
+       * @param value The isOpen to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIsOpen(boolean value) {
+        
+        isOpen_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool is_open = 7;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIsOpen() {
+        
+        isOpen_ = false;
         onChanged();
         return this;
       }
 
       private int openTime_ ;
       /**
-       * <code>uint32 open_time = 12;</code>
+       * <code>uint32 open_time = 13;</code>
        * @return The openTime.
        */
       @java.lang.Override
@@ -602,23 +618,22 @@ public final class HachiStageInfoOuterClass {
         return openTime_;
       }
       /**
-       * <code>uint32 open_time = 12;</code>
+       * <code>uint32 open_time = 13;</code>
        * @param value The openTime to set.
        * @return This builder for chaining.
        */
       public Builder setOpenTime(int value) {
         
         openTime_ = value;
-        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
       /**
-       * <code>uint32 open_time = 12;</code>
+       * <code>uint32 open_time = 13;</code>
        * @return This builder for chaining.
        */
       public Builder clearOpenTime() {
-        bitField0_ = (bitField0_ & ~0x00000004);
+        
         openTime_ = 0;
         onChanged();
         return this;
@@ -626,7 +641,7 @@ public final class HachiStageInfoOuterClass {
 
       private boolean isFinished_ ;
       /**
-       * <code>bool is_finished = 11;</code>
+       * <code>bool is_finished = 4;</code>
        * @return The isFinished.
        */
       @java.lang.Override
@@ -634,23 +649,22 @@ public final class HachiStageInfoOuterClass {
         return isFinished_;
       }
       /**
-       * <code>bool is_finished = 11;</code>
+       * <code>bool is_finished = 4;</code>
        * @param value The isFinished to set.
        * @return This builder for chaining.
        */
       public Builder setIsFinished(boolean value) {
         
         isFinished_ = value;
-        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
       /**
-       * <code>bool is_finished = 11;</code>
+       * <code>bool is_finished = 4;</code>
        * @return This builder for chaining.
        */
       public Builder clearIsFinished() {
-        bitField0_ = (bitField0_ & ~0x00000008);
+        
         isFinished_ = false;
         onChanged();
         return this;
@@ -688,18 +702,7 @@ public final class HachiStageInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new HachiStageInfo(input, extensionRegistry);
       }
     };
 
@@ -734,8 +737,8 @@ public final class HachiStageInfoOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\024HachiStageInfo.proto\"[\n\016HachiStageInfo" +
-      "\022\017\n\007is_open\030\010 \001(\010\022\020\n\010stage_id\030\t \001(\r\022\021\n\to" +
-      "pen_time\030\014 \001(\r\022\023\n\013is_finished\030\013 \001(\010B\033\n\031e" +
+      "\022\020\n\010stage_id\030\002 \001(\r\022\017\n\007is_open\030\007 \001(\010\022\021\n\to" +
+      "pen_time\030\r \001(\r\022\023\n\013is_finished\030\004 \001(\010B\033\n\031e" +
       "mu.grasscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
@@ -747,7 +750,7 @@ public final class HachiStageInfoOuterClass {
     internal_static_HachiStageInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_HachiStageInfo_descriptor,
-        new java.lang.String[] { "IsOpen", "StageId", "OpenTime", "IsFinished", });
+        new java.lang.String[] { "StageId", "IsOpen", "OpenTime", "IsFinished", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

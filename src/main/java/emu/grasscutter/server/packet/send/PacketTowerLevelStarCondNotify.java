@@ -14,11 +14,17 @@ public class PacketTowerLevelStarCondNotify extends BasePacket {
 				.setFloorId(floorId)
 				.setLevelIndex(levelIndex)
 				.addCondDataList(TowerLevelStarCondData.newBuilder()
-						.build())
+						//.setCondValue(1)
+						.build()
+				)
 				.addCondDataList(TowerLevelStarCondData.newBuilder()
-						.build())
+						//.setCondValue(2)
+						.build()
+				)
 				.addCondDataList(TowerLevelStarCondData.newBuilder()
-						.build())
+						//.setCondValue(3)
+						.build()
+				)
 				.build();
 
 		this.setData(proto);

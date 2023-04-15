@@ -19,7 +19,7 @@ public final class QuestOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint32 questId = 1;</code>
+     * <code>uint32 quest_id = 1;</code>
      * @return The questId.
      */
     int getQuestId();
@@ -31,98 +31,98 @@ public final class QuestOuterClass {
     int getState();
 
     /**
-     * <code>uint32 startTime = 4;</code>
+     * <code>uint32 start_time = 4;</code>
      * @return The startTime.
      */
     int getStartTime();
 
     /**
-     * <code>bool isRandom = 5;</code>
+     * <code>bool is_random = 5;</code>
      * @return The isRandom.
      */
     boolean getIsRandom();
 
     /**
-     * <code>uint32 parentQuestId = 6;</code>
+     * <code>uint32 parent_quest_id = 6;</code>
      * @return The parentQuestId.
      */
     int getParentQuestId();
 
     /**
-     * <code>uint32 questConfigId = 7;</code>
+     * <code>uint32 quest_config_id = 7;</code>
      * @return The questConfigId.
      */
     int getQuestConfigId();
 
     /**
-     * <code>uint32 startGameTime = 8;</code>
+     * <code>uint32 start_game_time = 8;</code>
      * @return The startGameTime.
      */
     int getStartGameTime();
 
     /**
-     * <code>uint32 acceptTime = 9;</code>
+     * <code>uint32 accept_time = 9;</code>
      * @return The acceptTime.
      */
     int getAcceptTime();
 
     /**
-     * <code>repeated uint32 lackedNpcList = 10;</code>
+     * <code>repeated uint32 lacked_npc_list = 10;</code>
      * @return A list containing the lackedNpcList.
      */
     java.util.List<java.lang.Integer> getLackedNpcListList();
     /**
-     * <code>repeated uint32 lackedNpcList = 10;</code>
+     * <code>repeated uint32 lacked_npc_list = 10;</code>
      * @return The count of lackedNpcList.
      */
     int getLackedNpcListCount();
     /**
-     * <code>repeated uint32 lackedNpcList = 10;</code>
+     * <code>repeated uint32 lacked_npc_list = 10;</code>
      * @param index The index of the element to return.
      * @return The lackedNpcList at the given index.
      */
     int getLackedNpcList(int index);
 
     /**
-     * <code>repeated uint32 finishProgressList = 11;</code>
+     * <code>repeated uint32 finish_progress_list = 11;</code>
      * @return A list containing the finishProgressList.
      */
     java.util.List<java.lang.Integer> getFinishProgressListList();
     /**
-     * <code>repeated uint32 finishProgressList = 11;</code>
+     * <code>repeated uint32 finish_progress_list = 11;</code>
      * @return The count of finishProgressList.
      */
     int getFinishProgressListCount();
     /**
-     * <code>repeated uint32 finishProgressList = 11;</code>
+     * <code>repeated uint32 finish_progress_list = 11;</code>
      * @param index The index of the element to return.
      * @return The finishProgressList at the given index.
      */
     int getFinishProgressList(int index);
 
     /**
-     * <code>repeated uint32 failProgressList = 12;</code>
+     * <code>repeated uint32 fail_progress_list = 12;</code>
      * @return A list containing the failProgressList.
      */
     java.util.List<java.lang.Integer> getFailProgressListList();
     /**
-     * <code>repeated uint32 failProgressList = 12;</code>
+     * <code>repeated uint32 fail_progress_list = 12;</code>
      * @return The count of failProgressList.
      */
     int getFailProgressListCount();
     /**
-     * <code>repeated uint32 failProgressList = 12;</code>
+     * <code>repeated uint32 fail_progress_list = 12;</code>
      * @param index The index of the element to return.
      * @return The failProgressList at the given index.
      */
     int getFailProgressList(int index);
 
     /**
-     * <code>map&lt;uint32, uint32&gt; lackedNpcMap = 13;</code>
+     * <code>map&lt;uint32, uint32&gt; lacked_npc_map = 13;</code>
      */
     int getLackedNpcMapCount();
     /**
-     * <code>map&lt;uint32, uint32&gt; lackedNpcMap = 13;</code>
+     * <code>map&lt;uint32, uint32&gt; lacked_npc_map = 13;</code>
      */
     boolean containsLackedNpcMap(
         int key);
@@ -133,47 +133,47 @@ public final class QuestOuterClass {
     java.util.Map<java.lang.Integer, java.lang.Integer>
     getLackedNpcMap();
     /**
-     * <code>map&lt;uint32, uint32&gt; lackedNpcMap = 13;</code>
+     * <code>map&lt;uint32, uint32&gt; lacked_npc_map = 13;</code>
      */
     java.util.Map<java.lang.Integer, java.lang.Integer>
     getLackedNpcMapMap();
     /**
-     * <code>map&lt;uint32, uint32&gt; lackedNpcMap = 13;</code>
+     * <code>map&lt;uint32, uint32&gt; lacked_npc_map = 13;</code>
      */
 
     int getLackedNpcMapOrDefault(
         int key,
         int defaultValue);
     /**
-     * <code>map&lt;uint32, uint32&gt; lackedNpcMap = 13;</code>
+     * <code>map&lt;uint32, uint32&gt; lacked_npc_map = 13;</code>
      */
 
     int getLackedNpcMapOrThrow(
         int key);
 
     /**
-     * <code>repeated uint32 lackedPlaceList = 14;</code>
+     * <code>repeated uint32 lacked_place_list = 14;</code>
      * @return A list containing the lackedPlaceList.
      */
     java.util.List<java.lang.Integer> getLackedPlaceListList();
     /**
-     * <code>repeated uint32 lackedPlaceList = 14;</code>
+     * <code>repeated uint32 lacked_place_list = 14;</code>
      * @return The count of lackedPlaceList.
      */
     int getLackedPlaceListCount();
     /**
-     * <code>repeated uint32 lackedPlaceList = 14;</code>
+     * <code>repeated uint32 lacked_place_list = 14;</code>
      * @param index The index of the element to return.
      * @return The lackedPlaceList at the given index.
      */
     int getLackedPlaceList(int index);
 
     /**
-     * <code>map&lt;uint32, uint32&gt; lackedPlaceMap = 15;</code>
+     * <code>map&lt;uint32, uint32&gt; lacked_place_map = 15;</code>
      */
     int getLackedPlaceMapCount();
     /**
-     * <code>map&lt;uint32, uint32&gt; lackedPlaceMap = 15;</code>
+     * <code>map&lt;uint32, uint32&gt; lacked_place_map = 15;</code>
      */
     boolean containsLackedPlaceMap(
         int key);
@@ -184,19 +184,19 @@ public final class QuestOuterClass {
     java.util.Map<java.lang.Integer, java.lang.Integer>
     getLackedPlaceMap();
     /**
-     * <code>map&lt;uint32, uint32&gt; lackedPlaceMap = 15;</code>
+     * <code>map&lt;uint32, uint32&gt; lacked_place_map = 15;</code>
      */
     java.util.Map<java.lang.Integer, java.lang.Integer>
     getLackedPlaceMapMap();
     /**
-     * <code>map&lt;uint32, uint32&gt; lackedPlaceMap = 15;</code>
+     * <code>map&lt;uint32, uint32&gt; lacked_place_map = 15;</code>
      */
 
     int getLackedPlaceMapOrDefault(
         int key,
         int defaultValue);
     /**
-     * <code>map&lt;uint32, uint32&gt; lackedPlaceMap = 15;</code>
+     * <code>map&lt;uint32, uint32&gt; lacked_place_map = 15;</code>
      */
 
     int getLackedPlaceMapOrThrow(
@@ -204,7 +204,7 @@ public final class QuestOuterClass {
   }
   /**
    * <pre>
-   * Name: IBPHKCENHNF
+   * Name: HPOLMCEHFAC
    * </pre>
    *
    * Protobuf type {@code Quest}
@@ -464,10 +464,10 @@ public final class QuestOuterClass {
               emu.grasscutter.net.proto.QuestOuterClass.Quest.class, emu.grasscutter.net.proto.QuestOuterClass.Quest.Builder.class);
     }
 
-    public static final int QUESTID_FIELD_NUMBER = 1;
+    public static final int QUEST_ID_FIELD_NUMBER = 1;
     private int questId_;
     /**
-     * <code>uint32 questId = 1;</code>
+     * <code>uint32 quest_id = 1;</code>
      * @return The questId.
      */
     @java.lang.Override
@@ -486,10 +486,10 @@ public final class QuestOuterClass {
       return state_;
     }
 
-    public static final int STARTTIME_FIELD_NUMBER = 4;
+    public static final int START_TIME_FIELD_NUMBER = 4;
     private int startTime_;
     /**
-     * <code>uint32 startTime = 4;</code>
+     * <code>uint32 start_time = 4;</code>
      * @return The startTime.
      */
     @java.lang.Override
@@ -497,10 +497,10 @@ public final class QuestOuterClass {
       return startTime_;
     }
 
-    public static final int ISRANDOM_FIELD_NUMBER = 5;
+    public static final int IS_RANDOM_FIELD_NUMBER = 5;
     private boolean isRandom_;
     /**
-     * <code>bool isRandom = 5;</code>
+     * <code>bool is_random = 5;</code>
      * @return The isRandom.
      */
     @java.lang.Override
@@ -508,10 +508,10 @@ public final class QuestOuterClass {
       return isRandom_;
     }
 
-    public static final int PARENTQUESTID_FIELD_NUMBER = 6;
+    public static final int PARENT_QUEST_ID_FIELD_NUMBER = 6;
     private int parentQuestId_;
     /**
-     * <code>uint32 parentQuestId = 6;</code>
+     * <code>uint32 parent_quest_id = 6;</code>
      * @return The parentQuestId.
      */
     @java.lang.Override
@@ -519,10 +519,10 @@ public final class QuestOuterClass {
       return parentQuestId_;
     }
 
-    public static final int QUESTCONFIGID_FIELD_NUMBER = 7;
+    public static final int QUEST_CONFIG_ID_FIELD_NUMBER = 7;
     private int questConfigId_;
     /**
-     * <code>uint32 questConfigId = 7;</code>
+     * <code>uint32 quest_config_id = 7;</code>
      * @return The questConfigId.
      */
     @java.lang.Override
@@ -530,10 +530,10 @@ public final class QuestOuterClass {
       return questConfigId_;
     }
 
-    public static final int STARTGAMETIME_FIELD_NUMBER = 8;
+    public static final int START_GAME_TIME_FIELD_NUMBER = 8;
     private int startGameTime_;
     /**
-     * <code>uint32 startGameTime = 8;</code>
+     * <code>uint32 start_game_time = 8;</code>
      * @return The startGameTime.
      */
     @java.lang.Override
@@ -541,10 +541,10 @@ public final class QuestOuterClass {
       return startGameTime_;
     }
 
-    public static final int ACCEPTTIME_FIELD_NUMBER = 9;
+    public static final int ACCEPT_TIME_FIELD_NUMBER = 9;
     private int acceptTime_;
     /**
-     * <code>uint32 acceptTime = 9;</code>
+     * <code>uint32 accept_time = 9;</code>
      * @return The acceptTime.
      */
     @java.lang.Override
@@ -552,10 +552,10 @@ public final class QuestOuterClass {
       return acceptTime_;
     }
 
-    public static final int LACKEDNPCLIST_FIELD_NUMBER = 10;
+    public static final int LACKED_NPC_LIST_FIELD_NUMBER = 10;
     private com.google.protobuf.Internal.IntList lackedNpcList_;
     /**
-     * <code>repeated uint32 lackedNpcList = 10;</code>
+     * <code>repeated uint32 lacked_npc_list = 10;</code>
      * @return A list containing the lackedNpcList.
      */
     @java.lang.Override
@@ -564,14 +564,14 @@ public final class QuestOuterClass {
       return lackedNpcList_;
     }
     /**
-     * <code>repeated uint32 lackedNpcList = 10;</code>
+     * <code>repeated uint32 lacked_npc_list = 10;</code>
      * @return The count of lackedNpcList.
      */
     public int getLackedNpcListCount() {
       return lackedNpcList_.size();
     }
     /**
-     * <code>repeated uint32 lackedNpcList = 10;</code>
+     * <code>repeated uint32 lacked_npc_list = 10;</code>
      * @param index The index of the element to return.
      * @return The lackedNpcList at the given index.
      */
@@ -580,10 +580,10 @@ public final class QuestOuterClass {
     }
     private int lackedNpcListMemoizedSerializedSize = -1;
 
-    public static final int FINISHPROGRESSLIST_FIELD_NUMBER = 11;
+    public static final int FINISH_PROGRESS_LIST_FIELD_NUMBER = 11;
     private com.google.protobuf.Internal.IntList finishProgressList_;
     /**
-     * <code>repeated uint32 finishProgressList = 11;</code>
+     * <code>repeated uint32 finish_progress_list = 11;</code>
      * @return A list containing the finishProgressList.
      */
     @java.lang.Override
@@ -592,14 +592,14 @@ public final class QuestOuterClass {
       return finishProgressList_;
     }
     /**
-     * <code>repeated uint32 finishProgressList = 11;</code>
+     * <code>repeated uint32 finish_progress_list = 11;</code>
      * @return The count of finishProgressList.
      */
     public int getFinishProgressListCount() {
       return finishProgressList_.size();
     }
     /**
-     * <code>repeated uint32 finishProgressList = 11;</code>
+     * <code>repeated uint32 finish_progress_list = 11;</code>
      * @param index The index of the element to return.
      * @return The finishProgressList at the given index.
      */
@@ -608,10 +608,10 @@ public final class QuestOuterClass {
     }
     private int finishProgressListMemoizedSerializedSize = -1;
 
-    public static final int FAILPROGRESSLIST_FIELD_NUMBER = 12;
+    public static final int FAIL_PROGRESS_LIST_FIELD_NUMBER = 12;
     private com.google.protobuf.Internal.IntList failProgressList_;
     /**
-     * <code>repeated uint32 failProgressList = 12;</code>
+     * <code>repeated uint32 fail_progress_list = 12;</code>
      * @return A list containing the failProgressList.
      */
     @java.lang.Override
@@ -620,14 +620,14 @@ public final class QuestOuterClass {
       return failProgressList_;
     }
     /**
-     * <code>repeated uint32 failProgressList = 12;</code>
+     * <code>repeated uint32 fail_progress_list = 12;</code>
      * @return The count of failProgressList.
      */
     public int getFailProgressListCount() {
       return failProgressList_.size();
     }
     /**
-     * <code>repeated uint32 failProgressList = 12;</code>
+     * <code>repeated uint32 fail_progress_list = 12;</code>
      * @param index The index of the element to return.
      * @return The failProgressList at the given index.
      */
@@ -636,7 +636,7 @@ public final class QuestOuterClass {
     }
     private int failProgressListMemoizedSerializedSize = -1;
 
-    public static final int LACKEDNPCMAP_FIELD_NUMBER = 13;
+    public static final int LACKED_NPC_MAP_FIELD_NUMBER = 13;
     private static final class LackedNpcMapDefaultEntryHolder {
       static final com.google.protobuf.MapEntry<
           java.lang.Integer, java.lang.Integer> defaultEntry =
@@ -663,7 +663,7 @@ public final class QuestOuterClass {
       return internalGetLackedNpcMap().getMap().size();
     }
     /**
-     * <code>map&lt;uint32, uint32&gt; lackedNpcMap = 13;</code>
+     * <code>map&lt;uint32, uint32&gt; lacked_npc_map = 13;</code>
      */
 
     @java.lang.Override
@@ -681,7 +681,7 @@ public final class QuestOuterClass {
       return getLackedNpcMapMap();
     }
     /**
-     * <code>map&lt;uint32, uint32&gt; lackedNpcMap = 13;</code>
+     * <code>map&lt;uint32, uint32&gt; lacked_npc_map = 13;</code>
      */
     @java.lang.Override
 
@@ -689,7 +689,7 @@ public final class QuestOuterClass {
       return internalGetLackedNpcMap().getMap();
     }
     /**
-     * <code>map&lt;uint32, uint32&gt; lackedNpcMap = 13;</code>
+     * <code>map&lt;uint32, uint32&gt; lacked_npc_map = 13;</code>
      */
     @java.lang.Override
 
@@ -702,7 +702,7 @@ public final class QuestOuterClass {
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
-     * <code>map&lt;uint32, uint32&gt; lackedNpcMap = 13;</code>
+     * <code>map&lt;uint32, uint32&gt; lacked_npc_map = 13;</code>
      */
     @java.lang.Override
 
@@ -717,10 +717,10 @@ public final class QuestOuterClass {
       return map.get(key);
     }
 
-    public static final int LACKEDPLACELIST_FIELD_NUMBER = 14;
+    public static final int LACKED_PLACE_LIST_FIELD_NUMBER = 14;
     private com.google.protobuf.Internal.IntList lackedPlaceList_;
     /**
-     * <code>repeated uint32 lackedPlaceList = 14;</code>
+     * <code>repeated uint32 lacked_place_list = 14;</code>
      * @return A list containing the lackedPlaceList.
      */
     @java.lang.Override
@@ -729,14 +729,14 @@ public final class QuestOuterClass {
       return lackedPlaceList_;
     }
     /**
-     * <code>repeated uint32 lackedPlaceList = 14;</code>
+     * <code>repeated uint32 lacked_place_list = 14;</code>
      * @return The count of lackedPlaceList.
      */
     public int getLackedPlaceListCount() {
       return lackedPlaceList_.size();
     }
     /**
-     * <code>repeated uint32 lackedPlaceList = 14;</code>
+     * <code>repeated uint32 lacked_place_list = 14;</code>
      * @param index The index of the element to return.
      * @return The lackedPlaceList at the given index.
      */
@@ -745,7 +745,7 @@ public final class QuestOuterClass {
     }
     private int lackedPlaceListMemoizedSerializedSize = -1;
 
-    public static final int LACKEDPLACEMAP_FIELD_NUMBER = 15;
+    public static final int LACKED_PLACE_MAP_FIELD_NUMBER = 15;
     private static final class LackedPlaceMapDefaultEntryHolder {
       static final com.google.protobuf.MapEntry<
           java.lang.Integer, java.lang.Integer> defaultEntry =
@@ -772,7 +772,7 @@ public final class QuestOuterClass {
       return internalGetLackedPlaceMap().getMap().size();
     }
     /**
-     * <code>map&lt;uint32, uint32&gt; lackedPlaceMap = 15;</code>
+     * <code>map&lt;uint32, uint32&gt; lacked_place_map = 15;</code>
      */
 
     @java.lang.Override
@@ -790,7 +790,7 @@ public final class QuestOuterClass {
       return getLackedPlaceMapMap();
     }
     /**
-     * <code>map&lt;uint32, uint32&gt; lackedPlaceMap = 15;</code>
+     * <code>map&lt;uint32, uint32&gt; lacked_place_map = 15;</code>
      */
     @java.lang.Override
 
@@ -798,7 +798,7 @@ public final class QuestOuterClass {
       return internalGetLackedPlaceMap().getMap();
     }
     /**
-     * <code>map&lt;uint32, uint32&gt; lackedPlaceMap = 15;</code>
+     * <code>map&lt;uint32, uint32&gt; lacked_place_map = 15;</code>
      */
     @java.lang.Override
 
@@ -811,7 +811,7 @@ public final class QuestOuterClass {
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
-     * <code>map&lt;uint32, uint32&gt; lackedPlaceMap = 15;</code>
+     * <code>map&lt;uint32, uint32&gt; lacked_place_map = 15;</code>
      */
     @java.lang.Override
 
@@ -1076,45 +1076,45 @@ public final class QuestOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + QUESTID_FIELD_NUMBER;
+      hash = (37 * hash) + QUEST_ID_FIELD_NUMBER;
       hash = (53 * hash) + getQuestId();
       hash = (37 * hash) + STATE_FIELD_NUMBER;
       hash = (53 * hash) + getState();
-      hash = (37 * hash) + STARTTIME_FIELD_NUMBER;
+      hash = (37 * hash) + START_TIME_FIELD_NUMBER;
       hash = (53 * hash) + getStartTime();
-      hash = (37 * hash) + ISRANDOM_FIELD_NUMBER;
+      hash = (37 * hash) + IS_RANDOM_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getIsRandom());
-      hash = (37 * hash) + PARENTQUESTID_FIELD_NUMBER;
+      hash = (37 * hash) + PARENT_QUEST_ID_FIELD_NUMBER;
       hash = (53 * hash) + getParentQuestId();
-      hash = (37 * hash) + QUESTCONFIGID_FIELD_NUMBER;
+      hash = (37 * hash) + QUEST_CONFIG_ID_FIELD_NUMBER;
       hash = (53 * hash) + getQuestConfigId();
-      hash = (37 * hash) + STARTGAMETIME_FIELD_NUMBER;
+      hash = (37 * hash) + START_GAME_TIME_FIELD_NUMBER;
       hash = (53 * hash) + getStartGameTime();
-      hash = (37 * hash) + ACCEPTTIME_FIELD_NUMBER;
+      hash = (37 * hash) + ACCEPT_TIME_FIELD_NUMBER;
       hash = (53 * hash) + getAcceptTime();
       if (getLackedNpcListCount() > 0) {
-        hash = (37 * hash) + LACKEDNPCLIST_FIELD_NUMBER;
+        hash = (37 * hash) + LACKED_NPC_LIST_FIELD_NUMBER;
         hash = (53 * hash) + getLackedNpcListList().hashCode();
       }
       if (getFinishProgressListCount() > 0) {
-        hash = (37 * hash) + FINISHPROGRESSLIST_FIELD_NUMBER;
+        hash = (37 * hash) + FINISH_PROGRESS_LIST_FIELD_NUMBER;
         hash = (53 * hash) + getFinishProgressListList().hashCode();
       }
       if (getFailProgressListCount() > 0) {
-        hash = (37 * hash) + FAILPROGRESSLIST_FIELD_NUMBER;
+        hash = (37 * hash) + FAIL_PROGRESS_LIST_FIELD_NUMBER;
         hash = (53 * hash) + getFailProgressListList().hashCode();
       }
       if (!internalGetLackedNpcMap().getMap().isEmpty()) {
-        hash = (37 * hash) + LACKEDNPCMAP_FIELD_NUMBER;
+        hash = (37 * hash) + LACKED_NPC_MAP_FIELD_NUMBER;
         hash = (53 * hash) + internalGetLackedNpcMap().hashCode();
       }
       if (getLackedPlaceListCount() > 0) {
-        hash = (37 * hash) + LACKEDPLACELIST_FIELD_NUMBER;
+        hash = (37 * hash) + LACKED_PLACE_LIST_FIELD_NUMBER;
         hash = (53 * hash) + getLackedPlaceListList().hashCode();
       }
       if (!internalGetLackedPlaceMap().getMap().isEmpty()) {
-        hash = (37 * hash) + LACKEDPLACEMAP_FIELD_NUMBER;
+        hash = (37 * hash) + LACKED_PLACE_MAP_FIELD_NUMBER;
         hash = (53 * hash) + internalGetLackedPlaceMap().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
@@ -1214,7 +1214,7 @@ public final class QuestOuterClass {
     }
     /**
      * <pre>
-     * Name: IBPHKCENHNF
+     * Name: HPOLMCEHFAC
      * </pre>
      *
      * Protobuf type {@code Quest}
@@ -1513,7 +1513,7 @@ public final class QuestOuterClass {
 
       private int questId_ ;
       /**
-       * <code>uint32 questId = 1;</code>
+       * <code>uint32 quest_id = 1;</code>
        * @return The questId.
        */
       @java.lang.Override
@@ -1521,7 +1521,7 @@ public final class QuestOuterClass {
         return questId_;
       }
       /**
-       * <code>uint32 questId = 1;</code>
+       * <code>uint32 quest_id = 1;</code>
        * @param value The questId to set.
        * @return This builder for chaining.
        */
@@ -1532,7 +1532,7 @@ public final class QuestOuterClass {
         return this;
       }
       /**
-       * <code>uint32 questId = 1;</code>
+       * <code>uint32 quest_id = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearQuestId() {
@@ -1575,7 +1575,7 @@ public final class QuestOuterClass {
 
       private int startTime_ ;
       /**
-       * <code>uint32 startTime = 4;</code>
+       * <code>uint32 start_time = 4;</code>
        * @return The startTime.
        */
       @java.lang.Override
@@ -1583,7 +1583,7 @@ public final class QuestOuterClass {
         return startTime_;
       }
       /**
-       * <code>uint32 startTime = 4;</code>
+       * <code>uint32 start_time = 4;</code>
        * @param value The startTime to set.
        * @return This builder for chaining.
        */
@@ -1594,7 +1594,7 @@ public final class QuestOuterClass {
         return this;
       }
       /**
-       * <code>uint32 startTime = 4;</code>
+       * <code>uint32 start_time = 4;</code>
        * @return This builder for chaining.
        */
       public Builder clearStartTime() {
@@ -1606,7 +1606,7 @@ public final class QuestOuterClass {
 
       private boolean isRandom_ ;
       /**
-       * <code>bool isRandom = 5;</code>
+       * <code>bool is_random = 5;</code>
        * @return The isRandom.
        */
       @java.lang.Override
@@ -1614,7 +1614,7 @@ public final class QuestOuterClass {
         return isRandom_;
       }
       /**
-       * <code>bool isRandom = 5;</code>
+       * <code>bool is_random = 5;</code>
        * @param value The isRandom to set.
        * @return This builder for chaining.
        */
@@ -1625,7 +1625,7 @@ public final class QuestOuterClass {
         return this;
       }
       /**
-       * <code>bool isRandom = 5;</code>
+       * <code>bool is_random = 5;</code>
        * @return This builder for chaining.
        */
       public Builder clearIsRandom() {
@@ -1637,7 +1637,7 @@ public final class QuestOuterClass {
 
       private int parentQuestId_ ;
       /**
-       * <code>uint32 parentQuestId = 6;</code>
+       * <code>uint32 parent_quest_id = 6;</code>
        * @return The parentQuestId.
        */
       @java.lang.Override
@@ -1645,7 +1645,7 @@ public final class QuestOuterClass {
         return parentQuestId_;
       }
       /**
-       * <code>uint32 parentQuestId = 6;</code>
+       * <code>uint32 parent_quest_id = 6;</code>
        * @param value The parentQuestId to set.
        * @return This builder for chaining.
        */
@@ -1656,7 +1656,7 @@ public final class QuestOuterClass {
         return this;
       }
       /**
-       * <code>uint32 parentQuestId = 6;</code>
+       * <code>uint32 parent_quest_id = 6;</code>
        * @return This builder for chaining.
        */
       public Builder clearParentQuestId() {
@@ -1668,7 +1668,7 @@ public final class QuestOuterClass {
 
       private int questConfigId_ ;
       /**
-       * <code>uint32 questConfigId = 7;</code>
+       * <code>uint32 quest_config_id = 7;</code>
        * @return The questConfigId.
        */
       @java.lang.Override
@@ -1676,7 +1676,7 @@ public final class QuestOuterClass {
         return questConfigId_;
       }
       /**
-       * <code>uint32 questConfigId = 7;</code>
+       * <code>uint32 quest_config_id = 7;</code>
        * @param value The questConfigId to set.
        * @return This builder for chaining.
        */
@@ -1687,7 +1687,7 @@ public final class QuestOuterClass {
         return this;
       }
       /**
-       * <code>uint32 questConfigId = 7;</code>
+       * <code>uint32 quest_config_id = 7;</code>
        * @return This builder for chaining.
        */
       public Builder clearQuestConfigId() {
@@ -1699,7 +1699,7 @@ public final class QuestOuterClass {
 
       private int startGameTime_ ;
       /**
-       * <code>uint32 startGameTime = 8;</code>
+       * <code>uint32 start_game_time = 8;</code>
        * @return The startGameTime.
        */
       @java.lang.Override
@@ -1707,7 +1707,7 @@ public final class QuestOuterClass {
         return startGameTime_;
       }
       /**
-       * <code>uint32 startGameTime = 8;</code>
+       * <code>uint32 start_game_time = 8;</code>
        * @param value The startGameTime to set.
        * @return This builder for chaining.
        */
@@ -1718,7 +1718,7 @@ public final class QuestOuterClass {
         return this;
       }
       /**
-       * <code>uint32 startGameTime = 8;</code>
+       * <code>uint32 start_game_time = 8;</code>
        * @return This builder for chaining.
        */
       public Builder clearStartGameTime() {
@@ -1730,7 +1730,7 @@ public final class QuestOuterClass {
 
       private int acceptTime_ ;
       /**
-       * <code>uint32 acceptTime = 9;</code>
+       * <code>uint32 accept_time = 9;</code>
        * @return The acceptTime.
        */
       @java.lang.Override
@@ -1738,7 +1738,7 @@ public final class QuestOuterClass {
         return acceptTime_;
       }
       /**
-       * <code>uint32 acceptTime = 9;</code>
+       * <code>uint32 accept_time = 9;</code>
        * @param value The acceptTime to set.
        * @return This builder for chaining.
        */
@@ -1749,7 +1749,7 @@ public final class QuestOuterClass {
         return this;
       }
       /**
-       * <code>uint32 acceptTime = 9;</code>
+       * <code>uint32 accept_time = 9;</code>
        * @return This builder for chaining.
        */
       public Builder clearAcceptTime() {
@@ -1767,7 +1767,7 @@ public final class QuestOuterClass {
          }
       }
       /**
-       * <code>repeated uint32 lackedNpcList = 10;</code>
+       * <code>repeated uint32 lacked_npc_list = 10;</code>
        * @return A list containing the lackedNpcList.
        */
       public java.util.List<java.lang.Integer>
@@ -1776,14 +1776,14 @@ public final class QuestOuterClass {
                  java.util.Collections.unmodifiableList(lackedNpcList_) : lackedNpcList_;
       }
       /**
-       * <code>repeated uint32 lackedNpcList = 10;</code>
+       * <code>repeated uint32 lacked_npc_list = 10;</code>
        * @return The count of lackedNpcList.
        */
       public int getLackedNpcListCount() {
         return lackedNpcList_.size();
       }
       /**
-       * <code>repeated uint32 lackedNpcList = 10;</code>
+       * <code>repeated uint32 lacked_npc_list = 10;</code>
        * @param index The index of the element to return.
        * @return The lackedNpcList at the given index.
        */
@@ -1791,7 +1791,7 @@ public final class QuestOuterClass {
         return lackedNpcList_.getInt(index);
       }
       /**
-       * <code>repeated uint32 lackedNpcList = 10;</code>
+       * <code>repeated uint32 lacked_npc_list = 10;</code>
        * @param index The index to set the value at.
        * @param value The lackedNpcList to set.
        * @return This builder for chaining.
@@ -1804,7 +1804,7 @@ public final class QuestOuterClass {
         return this;
       }
       /**
-       * <code>repeated uint32 lackedNpcList = 10;</code>
+       * <code>repeated uint32 lacked_npc_list = 10;</code>
        * @param value The lackedNpcList to add.
        * @return This builder for chaining.
        */
@@ -1815,7 +1815,7 @@ public final class QuestOuterClass {
         return this;
       }
       /**
-       * <code>repeated uint32 lackedNpcList = 10;</code>
+       * <code>repeated uint32 lacked_npc_list = 10;</code>
        * @param values The lackedNpcList to add.
        * @return This builder for chaining.
        */
@@ -1828,7 +1828,7 @@ public final class QuestOuterClass {
         return this;
       }
       /**
-       * <code>repeated uint32 lackedNpcList = 10;</code>
+       * <code>repeated uint32 lacked_npc_list = 10;</code>
        * @return This builder for chaining.
        */
       public Builder clearLackedNpcList() {
@@ -1846,7 +1846,7 @@ public final class QuestOuterClass {
          }
       }
       /**
-       * <code>repeated uint32 finishProgressList = 11;</code>
+       * <code>repeated uint32 finish_progress_list = 11;</code>
        * @return A list containing the finishProgressList.
        */
       public java.util.List<java.lang.Integer>
@@ -1855,14 +1855,14 @@ public final class QuestOuterClass {
                  java.util.Collections.unmodifiableList(finishProgressList_) : finishProgressList_;
       }
       /**
-       * <code>repeated uint32 finishProgressList = 11;</code>
+       * <code>repeated uint32 finish_progress_list = 11;</code>
        * @return The count of finishProgressList.
        */
       public int getFinishProgressListCount() {
         return finishProgressList_.size();
       }
       /**
-       * <code>repeated uint32 finishProgressList = 11;</code>
+       * <code>repeated uint32 finish_progress_list = 11;</code>
        * @param index The index of the element to return.
        * @return The finishProgressList at the given index.
        */
@@ -1870,7 +1870,7 @@ public final class QuestOuterClass {
         return finishProgressList_.getInt(index);
       }
       /**
-       * <code>repeated uint32 finishProgressList = 11;</code>
+       * <code>repeated uint32 finish_progress_list = 11;</code>
        * @param index The index to set the value at.
        * @param value The finishProgressList to set.
        * @return This builder for chaining.
@@ -1883,7 +1883,7 @@ public final class QuestOuterClass {
         return this;
       }
       /**
-       * <code>repeated uint32 finishProgressList = 11;</code>
+       * <code>repeated uint32 finish_progress_list = 11;</code>
        * @param value The finishProgressList to add.
        * @return This builder for chaining.
        */
@@ -1894,7 +1894,7 @@ public final class QuestOuterClass {
         return this;
       }
       /**
-       * <code>repeated uint32 finishProgressList = 11;</code>
+       * <code>repeated uint32 finish_progress_list = 11;</code>
        * @param values The finishProgressList to add.
        * @return This builder for chaining.
        */
@@ -1907,7 +1907,7 @@ public final class QuestOuterClass {
         return this;
       }
       /**
-       * <code>repeated uint32 finishProgressList = 11;</code>
+       * <code>repeated uint32 finish_progress_list = 11;</code>
        * @return This builder for chaining.
        */
       public Builder clearFinishProgressList() {
@@ -1925,7 +1925,7 @@ public final class QuestOuterClass {
          }
       }
       /**
-       * <code>repeated uint32 failProgressList = 12;</code>
+       * <code>repeated uint32 fail_progress_list = 12;</code>
        * @return A list containing the failProgressList.
        */
       public java.util.List<java.lang.Integer>
@@ -1934,14 +1934,14 @@ public final class QuestOuterClass {
                  java.util.Collections.unmodifiableList(failProgressList_) : failProgressList_;
       }
       /**
-       * <code>repeated uint32 failProgressList = 12;</code>
+       * <code>repeated uint32 fail_progress_list = 12;</code>
        * @return The count of failProgressList.
        */
       public int getFailProgressListCount() {
         return failProgressList_.size();
       }
       /**
-       * <code>repeated uint32 failProgressList = 12;</code>
+       * <code>repeated uint32 fail_progress_list = 12;</code>
        * @param index The index of the element to return.
        * @return The failProgressList at the given index.
        */
@@ -1949,7 +1949,7 @@ public final class QuestOuterClass {
         return failProgressList_.getInt(index);
       }
       /**
-       * <code>repeated uint32 failProgressList = 12;</code>
+       * <code>repeated uint32 fail_progress_list = 12;</code>
        * @param index The index to set the value at.
        * @param value The failProgressList to set.
        * @return This builder for chaining.
@@ -1962,7 +1962,7 @@ public final class QuestOuterClass {
         return this;
       }
       /**
-       * <code>repeated uint32 failProgressList = 12;</code>
+       * <code>repeated uint32 fail_progress_list = 12;</code>
        * @param value The failProgressList to add.
        * @return This builder for chaining.
        */
@@ -1973,7 +1973,7 @@ public final class QuestOuterClass {
         return this;
       }
       /**
-       * <code>repeated uint32 failProgressList = 12;</code>
+       * <code>repeated uint32 fail_progress_list = 12;</code>
        * @param values The failProgressList to add.
        * @return This builder for chaining.
        */
@@ -1986,7 +1986,7 @@ public final class QuestOuterClass {
         return this;
       }
       /**
-       * <code>repeated uint32 failProgressList = 12;</code>
+       * <code>repeated uint32 fail_progress_list = 12;</code>
        * @return This builder for chaining.
        */
       public Builder clearFailProgressList() {
@@ -2023,7 +2023,7 @@ public final class QuestOuterClass {
         return internalGetLackedNpcMap().getMap().size();
       }
       /**
-       * <code>map&lt;uint32, uint32&gt; lackedNpcMap = 13;</code>
+       * <code>map&lt;uint32, uint32&gt; lacked_npc_map = 13;</code>
        */
 
       @java.lang.Override
@@ -2041,7 +2041,7 @@ public final class QuestOuterClass {
         return getLackedNpcMapMap();
       }
       /**
-       * <code>map&lt;uint32, uint32&gt; lackedNpcMap = 13;</code>
+       * <code>map&lt;uint32, uint32&gt; lacked_npc_map = 13;</code>
        */
       @java.lang.Override
 
@@ -2049,7 +2049,7 @@ public final class QuestOuterClass {
         return internalGetLackedNpcMap().getMap();
       }
       /**
-       * <code>map&lt;uint32, uint32&gt; lackedNpcMap = 13;</code>
+       * <code>map&lt;uint32, uint32&gt; lacked_npc_map = 13;</code>
        */
       @java.lang.Override
 
@@ -2062,7 +2062,7 @@ public final class QuestOuterClass {
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
-       * <code>map&lt;uint32, uint32&gt; lackedNpcMap = 13;</code>
+       * <code>map&lt;uint32, uint32&gt; lacked_npc_map = 13;</code>
        */
       @java.lang.Override
 
@@ -2083,7 +2083,7 @@ public final class QuestOuterClass {
         return this;
       }
       /**
-       * <code>map&lt;uint32, uint32&gt; lackedNpcMap = 13;</code>
+       * <code>map&lt;uint32, uint32&gt; lacked_npc_map = 13;</code>
        */
 
       public Builder removeLackedNpcMap(
@@ -2102,7 +2102,7 @@ public final class QuestOuterClass {
         return internalGetMutableLackedNpcMap().getMutableMap();
       }
       /**
-       * <code>map&lt;uint32, uint32&gt; lackedNpcMap = 13;</code>
+       * <code>map&lt;uint32, uint32&gt; lacked_npc_map = 13;</code>
        */
       public Builder putLackedNpcMap(
           int key,
@@ -2114,7 +2114,7 @@ public final class QuestOuterClass {
         return this;
       }
       /**
-       * <code>map&lt;uint32, uint32&gt; lackedNpcMap = 13;</code>
+       * <code>map&lt;uint32, uint32&gt; lacked_npc_map = 13;</code>
        */
 
       public Builder putAllLackedNpcMap(
@@ -2132,7 +2132,7 @@ public final class QuestOuterClass {
          }
       }
       /**
-       * <code>repeated uint32 lackedPlaceList = 14;</code>
+       * <code>repeated uint32 lacked_place_list = 14;</code>
        * @return A list containing the lackedPlaceList.
        */
       public java.util.List<java.lang.Integer>
@@ -2141,14 +2141,14 @@ public final class QuestOuterClass {
                  java.util.Collections.unmodifiableList(lackedPlaceList_) : lackedPlaceList_;
       }
       /**
-       * <code>repeated uint32 lackedPlaceList = 14;</code>
+       * <code>repeated uint32 lacked_place_list = 14;</code>
        * @return The count of lackedPlaceList.
        */
       public int getLackedPlaceListCount() {
         return lackedPlaceList_.size();
       }
       /**
-       * <code>repeated uint32 lackedPlaceList = 14;</code>
+       * <code>repeated uint32 lacked_place_list = 14;</code>
        * @param index The index of the element to return.
        * @return The lackedPlaceList at the given index.
        */
@@ -2156,7 +2156,7 @@ public final class QuestOuterClass {
         return lackedPlaceList_.getInt(index);
       }
       /**
-       * <code>repeated uint32 lackedPlaceList = 14;</code>
+       * <code>repeated uint32 lacked_place_list = 14;</code>
        * @param index The index to set the value at.
        * @param value The lackedPlaceList to set.
        * @return This builder for chaining.
@@ -2169,7 +2169,7 @@ public final class QuestOuterClass {
         return this;
       }
       /**
-       * <code>repeated uint32 lackedPlaceList = 14;</code>
+       * <code>repeated uint32 lacked_place_list = 14;</code>
        * @param value The lackedPlaceList to add.
        * @return This builder for chaining.
        */
@@ -2180,7 +2180,7 @@ public final class QuestOuterClass {
         return this;
       }
       /**
-       * <code>repeated uint32 lackedPlaceList = 14;</code>
+       * <code>repeated uint32 lacked_place_list = 14;</code>
        * @param values The lackedPlaceList to add.
        * @return This builder for chaining.
        */
@@ -2193,7 +2193,7 @@ public final class QuestOuterClass {
         return this;
       }
       /**
-       * <code>repeated uint32 lackedPlaceList = 14;</code>
+       * <code>repeated uint32 lacked_place_list = 14;</code>
        * @return This builder for chaining.
        */
       public Builder clearLackedPlaceList() {
@@ -2230,7 +2230,7 @@ public final class QuestOuterClass {
         return internalGetLackedPlaceMap().getMap().size();
       }
       /**
-       * <code>map&lt;uint32, uint32&gt; lackedPlaceMap = 15;</code>
+       * <code>map&lt;uint32, uint32&gt; lacked_place_map = 15;</code>
        */
 
       @java.lang.Override
@@ -2248,7 +2248,7 @@ public final class QuestOuterClass {
         return getLackedPlaceMapMap();
       }
       /**
-       * <code>map&lt;uint32, uint32&gt; lackedPlaceMap = 15;</code>
+       * <code>map&lt;uint32, uint32&gt; lacked_place_map = 15;</code>
        */
       @java.lang.Override
 
@@ -2256,7 +2256,7 @@ public final class QuestOuterClass {
         return internalGetLackedPlaceMap().getMap();
       }
       /**
-       * <code>map&lt;uint32, uint32&gt; lackedPlaceMap = 15;</code>
+       * <code>map&lt;uint32, uint32&gt; lacked_place_map = 15;</code>
        */
       @java.lang.Override
 
@@ -2269,7 +2269,7 @@ public final class QuestOuterClass {
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
-       * <code>map&lt;uint32, uint32&gt; lackedPlaceMap = 15;</code>
+       * <code>map&lt;uint32, uint32&gt; lacked_place_map = 15;</code>
        */
       @java.lang.Override
 
@@ -2290,7 +2290,7 @@ public final class QuestOuterClass {
         return this;
       }
       /**
-       * <code>map&lt;uint32, uint32&gt; lackedPlaceMap = 15;</code>
+       * <code>map&lt;uint32, uint32&gt; lacked_place_map = 15;</code>
        */
 
       public Builder removeLackedPlaceMap(
@@ -2309,7 +2309,7 @@ public final class QuestOuterClass {
         return internalGetMutableLackedPlaceMap().getMutableMap();
       }
       /**
-       * <code>map&lt;uint32, uint32&gt; lackedPlaceMap = 15;</code>
+       * <code>map&lt;uint32, uint32&gt; lacked_place_map = 15;</code>
        */
       public Builder putLackedPlaceMap(
           int key,
@@ -2321,7 +2321,7 @@ public final class QuestOuterClass {
         return this;
       }
       /**
-       * <code>map&lt;uint32, uint32&gt; lackedPlaceMap = 15;</code>
+       * <code>map&lt;uint32, uint32&gt; lacked_place_map = 15;</code>
        */
 
       public Builder putAllLackedPlaceMap(
@@ -2407,20 +2407,20 @@ public final class QuestOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\013Quest.proto\"\333\003\n\005Quest\022\017\n\007questId\030\001 \001(\r" +
-      "\022\r\n\005state\030\002 \001(\r\022\021\n\tstartTime\030\004 \001(\r\022\020\n\010is" +
-      "Random\030\005 \001(\010\022\025\n\rparentQuestId\030\006 \001(\r\022\025\n\rq" +
-      "uestConfigId\030\007 \001(\r\022\025\n\rstartGameTime\030\010 \001(" +
-      "\r\022\022\n\nacceptTime\030\t \001(\r\022\025\n\rlackedNpcList\030\n" +
-      " \003(\r\022\032\n\022finishProgressList\030\013 \003(\r\022\030\n\020fail" +
-      "ProgressList\030\014 \003(\r\022.\n\014lackedNpcMap\030\r \003(\013" +
-      "2\030.Quest.LackedNpcMapEntry\022\027\n\017lackedPlac" +
-      "eList\030\016 \003(\r\0222\n\016lackedPlaceMap\030\017 \003(\0132\032.Qu" +
-      "est.LackedPlaceMapEntry\0323\n\021LackedNpcMapE" +
-      "ntry\022\013\n\003key\030\001 \001(\r\022\r\n\005value\030\002 \001(\r:\0028\001\0325\n\023" +
-      "LackedPlaceMapEntry\022\013\n\003key\030\001 \001(\r\022\r\n\005valu" +
-      "e\030\002 \001(\r:\0028\001B\033\n\031emu.grasscutter.net.proto" +
-      "b\006proto3"
+      "\n\013Quest.proto\"\361\003\n\005Quest\022\020\n\010quest_id\030\001 \001(" +
+      "\r\022\r\n\005state\030\002 \001(\r\022\022\n\nstart_time\030\004 \001(\r\022\021\n\t" +
+      "is_random\030\005 \001(\010\022\027\n\017parent_quest_id\030\006 \001(\r" +
+      "\022\027\n\017quest_config_id\030\007 \001(\r\022\027\n\017start_game_" +
+      "time\030\010 \001(\r\022\023\n\013accept_time\030\t \001(\r\022\027\n\017lacke" +
+      "d_npc_list\030\n \003(\r\022\034\n\024finish_progress_list" +
+      "\030\013 \003(\r\022\032\n\022fail_progress_list\030\014 \003(\r\0220\n\016la" +
+      "cked_npc_map\030\r \003(\0132\030.Quest.LackedNpcMapE" +
+      "ntry\022\031\n\021lacked_place_list\030\016 \003(\r\0224\n\020lacke" +
+      "d_place_map\030\017 \003(\0132\032.Quest.LackedPlaceMap" +
+      "Entry\0323\n\021LackedNpcMapEntry\022\013\n\003key\030\001 \001(\r\022" +
+      "\r\n\005value\030\002 \001(\r:\0028\001\0325\n\023LackedPlaceMapEntr" +
+      "y\022\013\n\003key\030\001 \001(\r\022\r\n\005value\030\002 \001(\r:\0028\001B\033\n\031emu" +
+      ".grasscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

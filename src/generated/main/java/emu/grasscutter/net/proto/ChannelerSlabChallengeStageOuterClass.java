@@ -19,65 +19,65 @@ public final class ChannelerSlabChallengeStageOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>bool is_open = 7;</code>
-     * @return The isOpen.
-     */
-    boolean getIsOpen();
-
-    /**
-     * <code>uint32 stage_id = 12;</code>
-     * @return The stageId.
-     */
-    int getStageId();
-
-    /**
-     * <code>uint32 open_time = 3;</code>
+     * <code>uint32 open_time = 15;</code>
      * @return The openTime.
      */
     int getOpenTime();
 
     /**
-     * <code>.ChannelerSlabOneoffDungeon dungeon_info = 15;</code>
-     * @return Whether the dungeonInfo field is set.
+     * <code>uint32 stage_id = 4;</code>
+     * @return The stageId.
      */
-    boolean hasDungeonInfo();
-    /**
-     * <code>.ChannelerSlabOneoffDungeon dungeon_info = 15;</code>
-     * @return The dungeonInfo.
-     */
-    emu.grasscutter.net.proto.ChannelerSlabOneoffDungeonOuterClass.ChannelerSlabOneoffDungeon getDungeonInfo();
-    /**
-     * <code>.ChannelerSlabOneoffDungeon dungeon_info = 15;</code>
-     */
-    emu.grasscutter.net.proto.ChannelerSlabOneoffDungeonOuterClass.ChannelerSlabOneoffDungeonOrBuilder getDungeonInfoOrBuilder();
+    int getStageId();
 
     /**
-     * <code>repeated .ChannelerSlabChallenge challenge_list = 11;</code>
+     * <code>bool is_open = 9;</code>
+     * @return The isOpen.
+     */
+    boolean getIsOpen();
+
+    /**
+     * <code>repeated .ChannelerSlabChallenge challenge_list = 8;</code>
      */
     java.util.List<emu.grasscutter.net.proto.ChannelerSlabChallengeOuterClass.ChannelerSlabChallenge> 
         getChallengeListList();
     /**
-     * <code>repeated .ChannelerSlabChallenge challenge_list = 11;</code>
+     * <code>repeated .ChannelerSlabChallenge challenge_list = 8;</code>
      */
     emu.grasscutter.net.proto.ChannelerSlabChallengeOuterClass.ChannelerSlabChallenge getChallengeList(int index);
     /**
-     * <code>repeated .ChannelerSlabChallenge challenge_list = 11;</code>
+     * <code>repeated .ChannelerSlabChallenge challenge_list = 8;</code>
      */
     int getChallengeListCount();
     /**
-     * <code>repeated .ChannelerSlabChallenge challenge_list = 11;</code>
+     * <code>repeated .ChannelerSlabChallenge challenge_list = 8;</code>
      */
     java.util.List<? extends emu.grasscutter.net.proto.ChannelerSlabChallengeOuterClass.ChannelerSlabChallengeOrBuilder> 
         getChallengeListOrBuilderList();
     /**
-     * <code>repeated .ChannelerSlabChallenge challenge_list = 11;</code>
+     * <code>repeated .ChannelerSlabChallenge challenge_list = 8;</code>
      */
     emu.grasscutter.net.proto.ChannelerSlabChallengeOuterClass.ChannelerSlabChallengeOrBuilder getChallengeListOrBuilder(
         int index);
+
+    /**
+     * <code>.ChannelerSlabOneoffDungeon dungeon_info = 13;</code>
+     * @return Whether the dungeonInfo field is set.
+     */
+    boolean hasDungeonInfo();
+    /**
+     * <code>.ChannelerSlabOneoffDungeon dungeon_info = 13;</code>
+     * @return The dungeonInfo.
+     */
+    emu.grasscutter.net.proto.ChannelerSlabOneoffDungeonOuterClass.ChannelerSlabOneoffDungeon getDungeonInfo();
+    /**
+     * <code>.ChannelerSlabOneoffDungeon dungeon_info = 13;</code>
+     */
+    emu.grasscutter.net.proto.ChannelerSlabOneoffDungeonOuterClass.ChannelerSlabOneoffDungeonOrBuilder getDungeonInfoOrBuilder();
   }
   /**
    * <pre>
-   * Name: HJBDMAOCNLB
+   * Name: AOLLDEBHDJM
    * </pre>
    *
    * Protobuf type {@code ChannelerSlabChallengeStage}
@@ -107,6 +107,84 @@ public final class ChannelerSlabChallengeStageOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private ChannelerSlabChallengeStage(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 32: {
+
+              stageId_ = input.readUInt32();
+              break;
+            }
+            case 66: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                challengeList_ = new java.util.ArrayList<emu.grasscutter.net.proto.ChannelerSlabChallengeOuterClass.ChannelerSlabChallenge>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              challengeList_.add(
+                  input.readMessage(emu.grasscutter.net.proto.ChannelerSlabChallengeOuterClass.ChannelerSlabChallenge.parser(), extensionRegistry));
+              break;
+            }
+            case 72: {
+
+              isOpen_ = input.readBool();
+              break;
+            }
+            case 106: {
+              emu.grasscutter.net.proto.ChannelerSlabOneoffDungeonOuterClass.ChannelerSlabOneoffDungeon.Builder subBuilder = null;
+              if (dungeonInfo_ != null) {
+                subBuilder = dungeonInfo_.toBuilder();
+              }
+              dungeonInfo_ = input.readMessage(emu.grasscutter.net.proto.ChannelerSlabOneoffDungeonOuterClass.ChannelerSlabOneoffDungeon.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(dungeonInfo_);
+                dungeonInfo_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 120: {
+
+              openTime_ = input.readUInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          challengeList_ = java.util.Collections.unmodifiableList(challengeList_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.ChannelerSlabChallengeStageOuterClass.internal_static_ChannelerSlabChallengeStage_descriptor;
@@ -120,32 +198,10 @@ public final class ChannelerSlabChallengeStageOuterClass {
               emu.grasscutter.net.proto.ChannelerSlabChallengeStageOuterClass.ChannelerSlabChallengeStage.class, emu.grasscutter.net.proto.ChannelerSlabChallengeStageOuterClass.ChannelerSlabChallengeStage.Builder.class);
     }
 
-    public static final int IS_OPEN_FIELD_NUMBER = 7;
-    private boolean isOpen_ = false;
+    public static final int OPEN_TIME_FIELD_NUMBER = 15;
+    private int openTime_;
     /**
-     * <code>bool is_open = 7;</code>
-     * @return The isOpen.
-     */
-    @java.lang.Override
-    public boolean getIsOpen() {
-      return isOpen_;
-    }
-
-    public static final int STAGE_ID_FIELD_NUMBER = 12;
-    private int stageId_ = 0;
-    /**
-     * <code>uint32 stage_id = 12;</code>
-     * @return The stageId.
-     */
-    @java.lang.Override
-    public int getStageId() {
-      return stageId_;
-    }
-
-    public static final int OPEN_TIME_FIELD_NUMBER = 3;
-    private int openTime_ = 0;
-    /**
-     * <code>uint32 open_time = 3;</code>
+     * <code>uint32 open_time = 15;</code>
      * @return The openTime.
      */
     @java.lang.Override
@@ -153,44 +209,39 @@ public final class ChannelerSlabChallengeStageOuterClass {
       return openTime_;
     }
 
-    public static final int DUNGEON_INFO_FIELD_NUMBER = 15;
-    private emu.grasscutter.net.proto.ChannelerSlabOneoffDungeonOuterClass.ChannelerSlabOneoffDungeon dungeonInfo_;
+    public static final int STAGE_ID_FIELD_NUMBER = 4;
+    private int stageId_;
     /**
-     * <code>.ChannelerSlabOneoffDungeon dungeon_info = 15;</code>
-     * @return Whether the dungeonInfo field is set.
+     * <code>uint32 stage_id = 4;</code>
+     * @return The stageId.
      */
     @java.lang.Override
-    public boolean hasDungeonInfo() {
-      return dungeonInfo_ != null;
-    }
-    /**
-     * <code>.ChannelerSlabOneoffDungeon dungeon_info = 15;</code>
-     * @return The dungeonInfo.
-     */
-    @java.lang.Override
-    public emu.grasscutter.net.proto.ChannelerSlabOneoffDungeonOuterClass.ChannelerSlabOneoffDungeon getDungeonInfo() {
-      return dungeonInfo_ == null ? emu.grasscutter.net.proto.ChannelerSlabOneoffDungeonOuterClass.ChannelerSlabOneoffDungeon.getDefaultInstance() : dungeonInfo_;
-    }
-    /**
-     * <code>.ChannelerSlabOneoffDungeon dungeon_info = 15;</code>
-     */
-    @java.lang.Override
-    public emu.grasscutter.net.proto.ChannelerSlabOneoffDungeonOuterClass.ChannelerSlabOneoffDungeonOrBuilder getDungeonInfoOrBuilder() {
-      return dungeonInfo_ == null ? emu.grasscutter.net.proto.ChannelerSlabOneoffDungeonOuterClass.ChannelerSlabOneoffDungeon.getDefaultInstance() : dungeonInfo_;
+    public int getStageId() {
+      return stageId_;
     }
 
-    public static final int CHALLENGE_LIST_FIELD_NUMBER = 11;
-    @SuppressWarnings("serial")
+    public static final int IS_OPEN_FIELD_NUMBER = 9;
+    private boolean isOpen_;
+    /**
+     * <code>bool is_open = 9;</code>
+     * @return The isOpen.
+     */
+    @java.lang.Override
+    public boolean getIsOpen() {
+      return isOpen_;
+    }
+
+    public static final int CHALLENGE_LIST_FIELD_NUMBER = 8;
     private java.util.List<emu.grasscutter.net.proto.ChannelerSlabChallengeOuterClass.ChannelerSlabChallenge> challengeList_;
     /**
-     * <code>repeated .ChannelerSlabChallenge challenge_list = 11;</code>
+     * <code>repeated .ChannelerSlabChallenge challenge_list = 8;</code>
      */
     @java.lang.Override
     public java.util.List<emu.grasscutter.net.proto.ChannelerSlabChallengeOuterClass.ChannelerSlabChallenge> getChallengeListList() {
       return challengeList_;
     }
     /**
-     * <code>repeated .ChannelerSlabChallenge challenge_list = 11;</code>
+     * <code>repeated .ChannelerSlabChallenge challenge_list = 8;</code>
      */
     @java.lang.Override
     public java.util.List<? extends emu.grasscutter.net.proto.ChannelerSlabChallengeOuterClass.ChannelerSlabChallengeOrBuilder> 
@@ -198,26 +249,52 @@ public final class ChannelerSlabChallengeStageOuterClass {
       return challengeList_;
     }
     /**
-     * <code>repeated .ChannelerSlabChallenge challenge_list = 11;</code>
+     * <code>repeated .ChannelerSlabChallenge challenge_list = 8;</code>
      */
     @java.lang.Override
     public int getChallengeListCount() {
       return challengeList_.size();
     }
     /**
-     * <code>repeated .ChannelerSlabChallenge challenge_list = 11;</code>
+     * <code>repeated .ChannelerSlabChallenge challenge_list = 8;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.ChannelerSlabChallengeOuterClass.ChannelerSlabChallenge getChallengeList(int index) {
       return challengeList_.get(index);
     }
     /**
-     * <code>repeated .ChannelerSlabChallenge challenge_list = 11;</code>
+     * <code>repeated .ChannelerSlabChallenge challenge_list = 8;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.ChannelerSlabChallengeOuterClass.ChannelerSlabChallengeOrBuilder getChallengeListOrBuilder(
         int index) {
       return challengeList_.get(index);
+    }
+
+    public static final int DUNGEON_INFO_FIELD_NUMBER = 13;
+    private emu.grasscutter.net.proto.ChannelerSlabOneoffDungeonOuterClass.ChannelerSlabOneoffDungeon dungeonInfo_;
+    /**
+     * <code>.ChannelerSlabOneoffDungeon dungeon_info = 13;</code>
+     * @return Whether the dungeonInfo field is set.
+     */
+    @java.lang.Override
+    public boolean hasDungeonInfo() {
+      return dungeonInfo_ != null;
+    }
+    /**
+     * <code>.ChannelerSlabOneoffDungeon dungeon_info = 13;</code>
+     * @return The dungeonInfo.
+     */
+    @java.lang.Override
+    public emu.grasscutter.net.proto.ChannelerSlabOneoffDungeonOuterClass.ChannelerSlabOneoffDungeon getDungeonInfo() {
+      return dungeonInfo_ == null ? emu.grasscutter.net.proto.ChannelerSlabOneoffDungeonOuterClass.ChannelerSlabOneoffDungeon.getDefaultInstance() : dungeonInfo_;
+    }
+    /**
+     * <code>.ChannelerSlabOneoffDungeon dungeon_info = 13;</code>
+     */
+    @java.lang.Override
+    public emu.grasscutter.net.proto.ChannelerSlabOneoffDungeonOuterClass.ChannelerSlabOneoffDungeonOrBuilder getDungeonInfoOrBuilder() {
+      return getDungeonInfo();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -234,22 +311,22 @@ public final class ChannelerSlabChallengeStageOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (openTime_ != 0) {
-        output.writeUInt32(3, openTime_);
-      }
-      if (isOpen_ != false) {
-        output.writeBool(7, isOpen_);
+      if (stageId_ != 0) {
+        output.writeUInt32(4, stageId_);
       }
       for (int i = 0; i < challengeList_.size(); i++) {
-        output.writeMessage(11, challengeList_.get(i));
+        output.writeMessage(8, challengeList_.get(i));
       }
-      if (stageId_ != 0) {
-        output.writeUInt32(12, stageId_);
+      if (isOpen_ != false) {
+        output.writeBool(9, isOpen_);
       }
       if (dungeonInfo_ != null) {
-        output.writeMessage(15, getDungeonInfo());
+        output.writeMessage(13, getDungeonInfo());
       }
-      getUnknownFields().writeTo(output);
+      if (openTime_ != 0) {
+        output.writeUInt32(15, openTime_);
+      }
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -258,27 +335,27 @@ public final class ChannelerSlabChallengeStageOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (openTime_ != 0) {
+      if (stageId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(3, openTime_);
-      }
-      if (isOpen_ != false) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(7, isOpen_);
+          .computeUInt32Size(4, stageId_);
       }
       for (int i = 0; i < challengeList_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(11, challengeList_.get(i));
+          .computeMessageSize(8, challengeList_.get(i));
       }
-      if (stageId_ != 0) {
+      if (isOpen_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(12, stageId_);
+          .computeBoolSize(9, isOpen_);
       }
       if (dungeonInfo_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(15, getDungeonInfo());
+          .computeMessageSize(13, getDungeonInfo());
       }
-      size += getUnknownFields().getSerializedSize();
+      if (openTime_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(15, openTime_);
+      }
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -293,20 +370,20 @@ public final class ChannelerSlabChallengeStageOuterClass {
       }
       emu.grasscutter.net.proto.ChannelerSlabChallengeStageOuterClass.ChannelerSlabChallengeStage other = (emu.grasscutter.net.proto.ChannelerSlabChallengeStageOuterClass.ChannelerSlabChallengeStage) obj;
 
-      if (getIsOpen()
-          != other.getIsOpen()) return false;
-      if (getStageId()
-          != other.getStageId()) return false;
       if (getOpenTime()
           != other.getOpenTime()) return false;
+      if (getStageId()
+          != other.getStageId()) return false;
+      if (getIsOpen()
+          != other.getIsOpen()) return false;
+      if (!getChallengeListList()
+          .equals(other.getChallengeListList())) return false;
       if (hasDungeonInfo() != other.hasDungeonInfo()) return false;
       if (hasDungeonInfo()) {
         if (!getDungeonInfo()
             .equals(other.getDungeonInfo())) return false;
       }
-      if (!getChallengeListList()
-          .equals(other.getChallengeListList())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -317,22 +394,22 @@ public final class ChannelerSlabChallengeStageOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + OPEN_TIME_FIELD_NUMBER;
+      hash = (53 * hash) + getOpenTime();
+      hash = (37 * hash) + STAGE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getStageId();
       hash = (37 * hash) + IS_OPEN_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getIsOpen());
-      hash = (37 * hash) + STAGE_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getStageId();
-      hash = (37 * hash) + OPEN_TIME_FIELD_NUMBER;
-      hash = (53 * hash) + getOpenTime();
-      if (hasDungeonInfo()) {
-        hash = (37 * hash) + DUNGEON_INFO_FIELD_NUMBER;
-        hash = (53 * hash) + getDungeonInfo().hashCode();
-      }
       if (getChallengeListCount() > 0) {
         hash = (37 * hash) + CHALLENGE_LIST_FIELD_NUMBER;
         hash = (53 * hash) + getChallengeListList().hashCode();
       }
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      if (hasDungeonInfo()) {
+        hash = (37 * hash) + DUNGEON_INFO_FIELD_NUMBER;
+        hash = (53 * hash) + getDungeonInfo().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -429,7 +506,7 @@ public final class ChannelerSlabChallengeStageOuterClass {
     }
     /**
      * <pre>
-     * Name: HJBDMAOCNLB
+     * Name: AOLLDEBHDJM
      * </pre>
      *
      * Protobuf type {@code ChannelerSlabChallengeStage}
@@ -453,33 +530,41 @@ public final class ChannelerSlabChallengeStageOuterClass {
 
       // Construct using emu.grasscutter.net.proto.ChannelerSlabChallengeStageOuterClass.ChannelerSlabChallengeStage.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getChallengeListFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        bitField0_ = 0;
-        isOpen_ = false;
-        stageId_ = 0;
         openTime_ = 0;
-        dungeonInfo_ = null;
-        if (dungeonInfoBuilder_ != null) {
-          dungeonInfoBuilder_.dispose();
-          dungeonInfoBuilder_ = null;
-        }
+
+        stageId_ = 0;
+
+        isOpen_ = false;
+
         if (challengeListBuilder_ == null) {
           challengeList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
-          challengeList_ = null;
           challengeListBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000010);
+        if (dungeonInfoBuilder_ == null) {
+          dungeonInfo_ = null;
+        } else {
+          dungeonInfo_ = null;
+          dungeonInfoBuilder_ = null;
+        }
         return this;
       }
 
@@ -506,40 +591,26 @@ public final class ChannelerSlabChallengeStageOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.ChannelerSlabChallengeStageOuterClass.ChannelerSlabChallengeStage buildPartial() {
         emu.grasscutter.net.proto.ChannelerSlabChallengeStageOuterClass.ChannelerSlabChallengeStage result = new emu.grasscutter.net.proto.ChannelerSlabChallengeStageOuterClass.ChannelerSlabChallengeStage(this);
-        buildPartialRepeatedFields(result);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartialRepeatedFields(emu.grasscutter.net.proto.ChannelerSlabChallengeStageOuterClass.ChannelerSlabChallengeStage result) {
+        int from_bitField0_ = bitField0_;
+        result.openTime_ = openTime_;
+        result.stageId_ = stageId_;
+        result.isOpen_ = isOpen_;
         if (challengeListBuilder_ == null) {
-          if (((bitField0_ & 0x00000010) != 0)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             challengeList_ = java.util.Collections.unmodifiableList(challengeList_);
-            bitField0_ = (bitField0_ & ~0x00000010);
+            bitField0_ = (bitField0_ & ~0x00000001);
           }
           result.challengeList_ = challengeList_;
         } else {
           result.challengeList_ = challengeListBuilder_.build();
         }
-      }
-
-      private void buildPartial0(emu.grasscutter.net.proto.ChannelerSlabChallengeStageOuterClass.ChannelerSlabChallengeStage result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.isOpen_ = isOpen_;
+        if (dungeonInfoBuilder_ == null) {
+          result.dungeonInfo_ = dungeonInfo_;
+        } else {
+          result.dungeonInfo_ = dungeonInfoBuilder_.build();
         }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.stageId_ = stageId_;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.openTime_ = openTime_;
-        }
-        if (((from_bitField0_ & 0x00000008) != 0)) {
-          result.dungeonInfo_ = dungeonInfoBuilder_ == null
-              ? dungeonInfo_
-              : dungeonInfoBuilder_.build();
-        }
+        onBuilt();
+        return result;
       }
 
       @java.lang.Override
@@ -586,23 +657,20 @@ public final class ChannelerSlabChallengeStageOuterClass {
 
       public Builder mergeFrom(emu.grasscutter.net.proto.ChannelerSlabChallengeStageOuterClass.ChannelerSlabChallengeStage other) {
         if (other == emu.grasscutter.net.proto.ChannelerSlabChallengeStageOuterClass.ChannelerSlabChallengeStage.getDefaultInstance()) return this;
-        if (other.getIsOpen() != false) {
-          setIsOpen(other.getIsOpen());
+        if (other.getOpenTime() != 0) {
+          setOpenTime(other.getOpenTime());
         }
         if (other.getStageId() != 0) {
           setStageId(other.getStageId());
         }
-        if (other.getOpenTime() != 0) {
-          setOpenTime(other.getOpenTime());
-        }
-        if (other.hasDungeonInfo()) {
-          mergeDungeonInfo(other.getDungeonInfo());
+        if (other.getIsOpen() != false) {
+          setIsOpen(other.getIsOpen());
         }
         if (challengeListBuilder_ == null) {
           if (!other.challengeList_.isEmpty()) {
             if (challengeList_.isEmpty()) {
               challengeList_ = other.challengeList_;
-              bitField0_ = (bitField0_ & ~0x00000010);
+              bitField0_ = (bitField0_ & ~0x00000001);
             } else {
               ensureChallengeListIsMutable();
               challengeList_.addAll(other.challengeList_);
@@ -615,7 +683,7 @@ public final class ChannelerSlabChallengeStageOuterClass {
               challengeListBuilder_.dispose();
               challengeListBuilder_ = null;
               challengeList_ = other.challengeList_;
-              bitField0_ = (bitField0_ & ~0x00000010);
+              bitField0_ = (bitField0_ & ~0x00000001);
               challengeListBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getChallengeListFieldBuilder() : null;
@@ -624,7 +692,10 @@ public final class ChannelerSlabChallengeStageOuterClass {
             }
           }
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        if (other.hasDungeonInfo()) {
+          mergeDungeonInfo(other.getDungeonInfo());
+        }
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -639,136 +710,24 @@ public final class ChannelerSlabChallengeStageOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.ChannelerSlabChallengeStageOuterClass.ChannelerSlabChallengeStage parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 24: {
-                openTime_ = input.readUInt32();
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 24
-              case 56: {
-                isOpen_ = input.readBool();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 56
-              case 90: {
-                emu.grasscutter.net.proto.ChannelerSlabChallengeOuterClass.ChannelerSlabChallenge m =
-                    input.readMessage(
-                        emu.grasscutter.net.proto.ChannelerSlabChallengeOuterClass.ChannelerSlabChallenge.parser(),
-                        extensionRegistry);
-                if (challengeListBuilder_ == null) {
-                  ensureChallengeListIsMutable();
-                  challengeList_.add(m);
-                } else {
-                  challengeListBuilder_.addMessage(m);
-                }
-                break;
-              } // case 90
-              case 96: {
-                stageId_ = input.readUInt32();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 96
-              case 122: {
-                input.readMessage(
-                    getDungeonInfoFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000008;
-                break;
-              } // case 122
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.ChannelerSlabChallengeStageOuterClass.ChannelerSlabChallengeStage) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
       private int bitField0_;
 
-      private boolean isOpen_ ;
-      /**
-       * <code>bool is_open = 7;</code>
-       * @return The isOpen.
-       */
-      @java.lang.Override
-      public boolean getIsOpen() {
-        return isOpen_;
-      }
-      /**
-       * <code>bool is_open = 7;</code>
-       * @param value The isOpen to set.
-       * @return This builder for chaining.
-       */
-      public Builder setIsOpen(boolean value) {
-        
-        isOpen_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>bool is_open = 7;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearIsOpen() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        isOpen_ = false;
-        onChanged();
-        return this;
-      }
-
-      private int stageId_ ;
-      /**
-       * <code>uint32 stage_id = 12;</code>
-       * @return The stageId.
-       */
-      @java.lang.Override
-      public int getStageId() {
-        return stageId_;
-      }
-      /**
-       * <code>uint32 stage_id = 12;</code>
-       * @param value The stageId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setStageId(int value) {
-        
-        stageId_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint32 stage_id = 12;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearStageId() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        stageId_ = 0;
-        onChanged();
-        return this;
-      }
-
       private int openTime_ ;
       /**
-       * <code>uint32 open_time = 3;</code>
+       * <code>uint32 open_time = 15;</code>
        * @return The openTime.
        */
       @java.lang.Override
@@ -776,153 +735,95 @@ public final class ChannelerSlabChallengeStageOuterClass {
         return openTime_;
       }
       /**
-       * <code>uint32 open_time = 3;</code>
+       * <code>uint32 open_time = 15;</code>
        * @param value The openTime to set.
        * @return This builder for chaining.
        */
       public Builder setOpenTime(int value) {
         
         openTime_ = value;
-        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
       /**
-       * <code>uint32 open_time = 3;</code>
+       * <code>uint32 open_time = 15;</code>
        * @return This builder for chaining.
        */
       public Builder clearOpenTime() {
-        bitField0_ = (bitField0_ & ~0x00000004);
+        
         openTime_ = 0;
         onChanged();
         return this;
       }
 
-      private emu.grasscutter.net.proto.ChannelerSlabOneoffDungeonOuterClass.ChannelerSlabOneoffDungeon dungeonInfo_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          emu.grasscutter.net.proto.ChannelerSlabOneoffDungeonOuterClass.ChannelerSlabOneoffDungeon, emu.grasscutter.net.proto.ChannelerSlabOneoffDungeonOuterClass.ChannelerSlabOneoffDungeon.Builder, emu.grasscutter.net.proto.ChannelerSlabOneoffDungeonOuterClass.ChannelerSlabOneoffDungeonOrBuilder> dungeonInfoBuilder_;
+      private int stageId_ ;
       /**
-       * <code>.ChannelerSlabOneoffDungeon dungeon_info = 15;</code>
-       * @return Whether the dungeonInfo field is set.
+       * <code>uint32 stage_id = 4;</code>
+       * @return The stageId.
        */
-      public boolean hasDungeonInfo() {
-        return ((bitField0_ & 0x00000008) != 0);
+      @java.lang.Override
+      public int getStageId() {
+        return stageId_;
       }
       /**
-       * <code>.ChannelerSlabOneoffDungeon dungeon_info = 15;</code>
-       * @return The dungeonInfo.
+       * <code>uint32 stage_id = 4;</code>
+       * @param value The stageId to set.
+       * @return This builder for chaining.
        */
-      public emu.grasscutter.net.proto.ChannelerSlabOneoffDungeonOuterClass.ChannelerSlabOneoffDungeon getDungeonInfo() {
-        if (dungeonInfoBuilder_ == null) {
-          return dungeonInfo_ == null ? emu.grasscutter.net.proto.ChannelerSlabOneoffDungeonOuterClass.ChannelerSlabOneoffDungeon.getDefaultInstance() : dungeonInfo_;
-        } else {
-          return dungeonInfoBuilder_.getMessage();
-        }
-      }
-      /**
-       * <code>.ChannelerSlabOneoffDungeon dungeon_info = 15;</code>
-       */
-      public Builder setDungeonInfo(emu.grasscutter.net.proto.ChannelerSlabOneoffDungeonOuterClass.ChannelerSlabOneoffDungeon value) {
-        if (dungeonInfoBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          dungeonInfo_ = value;
-        } else {
-          dungeonInfoBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000008;
+      public Builder setStageId(int value) {
+        
+        stageId_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>.ChannelerSlabOneoffDungeon dungeon_info = 15;</code>
+       * <code>uint32 stage_id = 4;</code>
+       * @return This builder for chaining.
        */
-      public Builder setDungeonInfo(
-          emu.grasscutter.net.proto.ChannelerSlabOneoffDungeonOuterClass.ChannelerSlabOneoffDungeon.Builder builderForValue) {
-        if (dungeonInfoBuilder_ == null) {
-          dungeonInfo_ = builderForValue.build();
-        } else {
-          dungeonInfoBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000008;
+      public Builder clearStageId() {
+        
+        stageId_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private boolean isOpen_ ;
+      /**
+       * <code>bool is_open = 9;</code>
+       * @return The isOpen.
+       */
+      @java.lang.Override
+      public boolean getIsOpen() {
+        return isOpen_;
+      }
+      /**
+       * <code>bool is_open = 9;</code>
+       * @param value The isOpen to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIsOpen(boolean value) {
+        
+        isOpen_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>.ChannelerSlabOneoffDungeon dungeon_info = 15;</code>
+       * <code>bool is_open = 9;</code>
+       * @return This builder for chaining.
        */
-      public Builder mergeDungeonInfo(emu.grasscutter.net.proto.ChannelerSlabOneoffDungeonOuterClass.ChannelerSlabOneoffDungeon value) {
-        if (dungeonInfoBuilder_ == null) {
-          if (((bitField0_ & 0x00000008) != 0) &&
-            dungeonInfo_ != null &&
-            dungeonInfo_ != emu.grasscutter.net.proto.ChannelerSlabOneoffDungeonOuterClass.ChannelerSlabOneoffDungeon.getDefaultInstance()) {
-            getDungeonInfoBuilder().mergeFrom(value);
-          } else {
-            dungeonInfo_ = value;
-          }
-        } else {
-          dungeonInfoBuilder_.mergeFrom(value);
-        }
-        bitField0_ |= 0x00000008;
+      public Builder clearIsOpen() {
+        
+        isOpen_ = false;
         onChanged();
         return this;
-      }
-      /**
-       * <code>.ChannelerSlabOneoffDungeon dungeon_info = 15;</code>
-       */
-      public Builder clearDungeonInfo() {
-        bitField0_ = (bitField0_ & ~0x00000008);
-        dungeonInfo_ = null;
-        if (dungeonInfoBuilder_ != null) {
-          dungeonInfoBuilder_.dispose();
-          dungeonInfoBuilder_ = null;
-        }
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>.ChannelerSlabOneoffDungeon dungeon_info = 15;</code>
-       */
-      public emu.grasscutter.net.proto.ChannelerSlabOneoffDungeonOuterClass.ChannelerSlabOneoffDungeon.Builder getDungeonInfoBuilder() {
-        bitField0_ |= 0x00000008;
-        onChanged();
-        return getDungeonInfoFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.ChannelerSlabOneoffDungeon dungeon_info = 15;</code>
-       */
-      public emu.grasscutter.net.proto.ChannelerSlabOneoffDungeonOuterClass.ChannelerSlabOneoffDungeonOrBuilder getDungeonInfoOrBuilder() {
-        if (dungeonInfoBuilder_ != null) {
-          return dungeonInfoBuilder_.getMessageOrBuilder();
-        } else {
-          return dungeonInfo_ == null ?
-              emu.grasscutter.net.proto.ChannelerSlabOneoffDungeonOuterClass.ChannelerSlabOneoffDungeon.getDefaultInstance() : dungeonInfo_;
-        }
-      }
-      /**
-       * <code>.ChannelerSlabOneoffDungeon dungeon_info = 15;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          emu.grasscutter.net.proto.ChannelerSlabOneoffDungeonOuterClass.ChannelerSlabOneoffDungeon, emu.grasscutter.net.proto.ChannelerSlabOneoffDungeonOuterClass.ChannelerSlabOneoffDungeon.Builder, emu.grasscutter.net.proto.ChannelerSlabOneoffDungeonOuterClass.ChannelerSlabOneoffDungeonOrBuilder> 
-          getDungeonInfoFieldBuilder() {
-        if (dungeonInfoBuilder_ == null) {
-          dungeonInfoBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              emu.grasscutter.net.proto.ChannelerSlabOneoffDungeonOuterClass.ChannelerSlabOneoffDungeon, emu.grasscutter.net.proto.ChannelerSlabOneoffDungeonOuterClass.ChannelerSlabOneoffDungeon.Builder, emu.grasscutter.net.proto.ChannelerSlabOneoffDungeonOuterClass.ChannelerSlabOneoffDungeonOrBuilder>(
-                  getDungeonInfo(),
-                  getParentForChildren(),
-                  isClean());
-          dungeonInfo_ = null;
-        }
-        return dungeonInfoBuilder_;
       }
 
       private java.util.List<emu.grasscutter.net.proto.ChannelerSlabChallengeOuterClass.ChannelerSlabChallenge> challengeList_ =
         java.util.Collections.emptyList();
       private void ensureChallengeListIsMutable() {
-        if (!((bitField0_ & 0x00000010) != 0)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           challengeList_ = new java.util.ArrayList<emu.grasscutter.net.proto.ChannelerSlabChallengeOuterClass.ChannelerSlabChallenge>(challengeList_);
-          bitField0_ |= 0x00000010;
+          bitField0_ |= 0x00000001;
          }
       }
 
@@ -930,7 +831,7 @@ public final class ChannelerSlabChallengeStageOuterClass {
           emu.grasscutter.net.proto.ChannelerSlabChallengeOuterClass.ChannelerSlabChallenge, emu.grasscutter.net.proto.ChannelerSlabChallengeOuterClass.ChannelerSlabChallenge.Builder, emu.grasscutter.net.proto.ChannelerSlabChallengeOuterClass.ChannelerSlabChallengeOrBuilder> challengeListBuilder_;
 
       /**
-       * <code>repeated .ChannelerSlabChallenge challenge_list = 11;</code>
+       * <code>repeated .ChannelerSlabChallenge challenge_list = 8;</code>
        */
       public java.util.List<emu.grasscutter.net.proto.ChannelerSlabChallengeOuterClass.ChannelerSlabChallenge> getChallengeListList() {
         if (challengeListBuilder_ == null) {
@@ -940,7 +841,7 @@ public final class ChannelerSlabChallengeStageOuterClass {
         }
       }
       /**
-       * <code>repeated .ChannelerSlabChallenge challenge_list = 11;</code>
+       * <code>repeated .ChannelerSlabChallenge challenge_list = 8;</code>
        */
       public int getChallengeListCount() {
         if (challengeListBuilder_ == null) {
@@ -950,7 +851,7 @@ public final class ChannelerSlabChallengeStageOuterClass {
         }
       }
       /**
-       * <code>repeated .ChannelerSlabChallenge challenge_list = 11;</code>
+       * <code>repeated .ChannelerSlabChallenge challenge_list = 8;</code>
        */
       public emu.grasscutter.net.proto.ChannelerSlabChallengeOuterClass.ChannelerSlabChallenge getChallengeList(int index) {
         if (challengeListBuilder_ == null) {
@@ -960,7 +861,7 @@ public final class ChannelerSlabChallengeStageOuterClass {
         }
       }
       /**
-       * <code>repeated .ChannelerSlabChallenge challenge_list = 11;</code>
+       * <code>repeated .ChannelerSlabChallenge challenge_list = 8;</code>
        */
       public Builder setChallengeList(
           int index, emu.grasscutter.net.proto.ChannelerSlabChallengeOuterClass.ChannelerSlabChallenge value) {
@@ -977,7 +878,7 @@ public final class ChannelerSlabChallengeStageOuterClass {
         return this;
       }
       /**
-       * <code>repeated .ChannelerSlabChallenge challenge_list = 11;</code>
+       * <code>repeated .ChannelerSlabChallenge challenge_list = 8;</code>
        */
       public Builder setChallengeList(
           int index, emu.grasscutter.net.proto.ChannelerSlabChallengeOuterClass.ChannelerSlabChallenge.Builder builderForValue) {
@@ -991,7 +892,7 @@ public final class ChannelerSlabChallengeStageOuterClass {
         return this;
       }
       /**
-       * <code>repeated .ChannelerSlabChallenge challenge_list = 11;</code>
+       * <code>repeated .ChannelerSlabChallenge challenge_list = 8;</code>
        */
       public Builder addChallengeList(emu.grasscutter.net.proto.ChannelerSlabChallengeOuterClass.ChannelerSlabChallenge value) {
         if (challengeListBuilder_ == null) {
@@ -1007,7 +908,7 @@ public final class ChannelerSlabChallengeStageOuterClass {
         return this;
       }
       /**
-       * <code>repeated .ChannelerSlabChallenge challenge_list = 11;</code>
+       * <code>repeated .ChannelerSlabChallenge challenge_list = 8;</code>
        */
       public Builder addChallengeList(
           int index, emu.grasscutter.net.proto.ChannelerSlabChallengeOuterClass.ChannelerSlabChallenge value) {
@@ -1024,7 +925,7 @@ public final class ChannelerSlabChallengeStageOuterClass {
         return this;
       }
       /**
-       * <code>repeated .ChannelerSlabChallenge challenge_list = 11;</code>
+       * <code>repeated .ChannelerSlabChallenge challenge_list = 8;</code>
        */
       public Builder addChallengeList(
           emu.grasscutter.net.proto.ChannelerSlabChallengeOuterClass.ChannelerSlabChallenge.Builder builderForValue) {
@@ -1038,7 +939,7 @@ public final class ChannelerSlabChallengeStageOuterClass {
         return this;
       }
       /**
-       * <code>repeated .ChannelerSlabChallenge challenge_list = 11;</code>
+       * <code>repeated .ChannelerSlabChallenge challenge_list = 8;</code>
        */
       public Builder addChallengeList(
           int index, emu.grasscutter.net.proto.ChannelerSlabChallengeOuterClass.ChannelerSlabChallenge.Builder builderForValue) {
@@ -1052,7 +953,7 @@ public final class ChannelerSlabChallengeStageOuterClass {
         return this;
       }
       /**
-       * <code>repeated .ChannelerSlabChallenge challenge_list = 11;</code>
+       * <code>repeated .ChannelerSlabChallenge challenge_list = 8;</code>
        */
       public Builder addAllChallengeList(
           java.lang.Iterable<? extends emu.grasscutter.net.proto.ChannelerSlabChallengeOuterClass.ChannelerSlabChallenge> values) {
@@ -1067,12 +968,12 @@ public final class ChannelerSlabChallengeStageOuterClass {
         return this;
       }
       /**
-       * <code>repeated .ChannelerSlabChallenge challenge_list = 11;</code>
+       * <code>repeated .ChannelerSlabChallenge challenge_list = 8;</code>
        */
       public Builder clearChallengeList() {
         if (challengeListBuilder_ == null) {
           challengeList_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000010);
+          bitField0_ = (bitField0_ & ~0x00000001);
           onChanged();
         } else {
           challengeListBuilder_.clear();
@@ -1080,7 +981,7 @@ public final class ChannelerSlabChallengeStageOuterClass {
         return this;
       }
       /**
-       * <code>repeated .ChannelerSlabChallenge challenge_list = 11;</code>
+       * <code>repeated .ChannelerSlabChallenge challenge_list = 8;</code>
        */
       public Builder removeChallengeList(int index) {
         if (challengeListBuilder_ == null) {
@@ -1093,14 +994,14 @@ public final class ChannelerSlabChallengeStageOuterClass {
         return this;
       }
       /**
-       * <code>repeated .ChannelerSlabChallenge challenge_list = 11;</code>
+       * <code>repeated .ChannelerSlabChallenge challenge_list = 8;</code>
        */
       public emu.grasscutter.net.proto.ChannelerSlabChallengeOuterClass.ChannelerSlabChallenge.Builder getChallengeListBuilder(
           int index) {
         return getChallengeListFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .ChannelerSlabChallenge challenge_list = 11;</code>
+       * <code>repeated .ChannelerSlabChallenge challenge_list = 8;</code>
        */
       public emu.grasscutter.net.proto.ChannelerSlabChallengeOuterClass.ChannelerSlabChallengeOrBuilder getChallengeListOrBuilder(
           int index) {
@@ -1110,7 +1011,7 @@ public final class ChannelerSlabChallengeStageOuterClass {
         }
       }
       /**
-       * <code>repeated .ChannelerSlabChallenge challenge_list = 11;</code>
+       * <code>repeated .ChannelerSlabChallenge challenge_list = 8;</code>
        */
       public java.util.List<? extends emu.grasscutter.net.proto.ChannelerSlabChallengeOuterClass.ChannelerSlabChallengeOrBuilder> 
            getChallengeListOrBuilderList() {
@@ -1121,14 +1022,14 @@ public final class ChannelerSlabChallengeStageOuterClass {
         }
       }
       /**
-       * <code>repeated .ChannelerSlabChallenge challenge_list = 11;</code>
+       * <code>repeated .ChannelerSlabChallenge challenge_list = 8;</code>
        */
       public emu.grasscutter.net.proto.ChannelerSlabChallengeOuterClass.ChannelerSlabChallenge.Builder addChallengeListBuilder() {
         return getChallengeListFieldBuilder().addBuilder(
             emu.grasscutter.net.proto.ChannelerSlabChallengeOuterClass.ChannelerSlabChallenge.getDefaultInstance());
       }
       /**
-       * <code>repeated .ChannelerSlabChallenge challenge_list = 11;</code>
+       * <code>repeated .ChannelerSlabChallenge challenge_list = 8;</code>
        */
       public emu.grasscutter.net.proto.ChannelerSlabChallengeOuterClass.ChannelerSlabChallenge.Builder addChallengeListBuilder(
           int index) {
@@ -1136,7 +1037,7 @@ public final class ChannelerSlabChallengeStageOuterClass {
             index, emu.grasscutter.net.proto.ChannelerSlabChallengeOuterClass.ChannelerSlabChallenge.getDefaultInstance());
       }
       /**
-       * <code>repeated .ChannelerSlabChallenge challenge_list = 11;</code>
+       * <code>repeated .ChannelerSlabChallenge challenge_list = 8;</code>
        */
       public java.util.List<emu.grasscutter.net.proto.ChannelerSlabChallengeOuterClass.ChannelerSlabChallenge.Builder> 
            getChallengeListBuilderList() {
@@ -1149,12 +1050,131 @@ public final class ChannelerSlabChallengeStageOuterClass {
           challengeListBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               emu.grasscutter.net.proto.ChannelerSlabChallengeOuterClass.ChannelerSlabChallenge, emu.grasscutter.net.proto.ChannelerSlabChallengeOuterClass.ChannelerSlabChallenge.Builder, emu.grasscutter.net.proto.ChannelerSlabChallengeOuterClass.ChannelerSlabChallengeOrBuilder>(
                   challengeList_,
-                  ((bitField0_ & 0x00000010) != 0),
+                  ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           challengeList_ = null;
         }
         return challengeListBuilder_;
+      }
+
+      private emu.grasscutter.net.proto.ChannelerSlabOneoffDungeonOuterClass.ChannelerSlabOneoffDungeon dungeonInfo_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          emu.grasscutter.net.proto.ChannelerSlabOneoffDungeonOuterClass.ChannelerSlabOneoffDungeon, emu.grasscutter.net.proto.ChannelerSlabOneoffDungeonOuterClass.ChannelerSlabOneoffDungeon.Builder, emu.grasscutter.net.proto.ChannelerSlabOneoffDungeonOuterClass.ChannelerSlabOneoffDungeonOrBuilder> dungeonInfoBuilder_;
+      /**
+       * <code>.ChannelerSlabOneoffDungeon dungeon_info = 13;</code>
+       * @return Whether the dungeonInfo field is set.
+       */
+      public boolean hasDungeonInfo() {
+        return dungeonInfoBuilder_ != null || dungeonInfo_ != null;
+      }
+      /**
+       * <code>.ChannelerSlabOneoffDungeon dungeon_info = 13;</code>
+       * @return The dungeonInfo.
+       */
+      public emu.grasscutter.net.proto.ChannelerSlabOneoffDungeonOuterClass.ChannelerSlabOneoffDungeon getDungeonInfo() {
+        if (dungeonInfoBuilder_ == null) {
+          return dungeonInfo_ == null ? emu.grasscutter.net.proto.ChannelerSlabOneoffDungeonOuterClass.ChannelerSlabOneoffDungeon.getDefaultInstance() : dungeonInfo_;
+        } else {
+          return dungeonInfoBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.ChannelerSlabOneoffDungeon dungeon_info = 13;</code>
+       */
+      public Builder setDungeonInfo(emu.grasscutter.net.proto.ChannelerSlabOneoffDungeonOuterClass.ChannelerSlabOneoffDungeon value) {
+        if (dungeonInfoBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          dungeonInfo_ = value;
+          onChanged();
+        } else {
+          dungeonInfoBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.ChannelerSlabOneoffDungeon dungeon_info = 13;</code>
+       */
+      public Builder setDungeonInfo(
+          emu.grasscutter.net.proto.ChannelerSlabOneoffDungeonOuterClass.ChannelerSlabOneoffDungeon.Builder builderForValue) {
+        if (dungeonInfoBuilder_ == null) {
+          dungeonInfo_ = builderForValue.build();
+          onChanged();
+        } else {
+          dungeonInfoBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.ChannelerSlabOneoffDungeon dungeon_info = 13;</code>
+       */
+      public Builder mergeDungeonInfo(emu.grasscutter.net.proto.ChannelerSlabOneoffDungeonOuterClass.ChannelerSlabOneoffDungeon value) {
+        if (dungeonInfoBuilder_ == null) {
+          if (dungeonInfo_ != null) {
+            dungeonInfo_ =
+              emu.grasscutter.net.proto.ChannelerSlabOneoffDungeonOuterClass.ChannelerSlabOneoffDungeon.newBuilder(dungeonInfo_).mergeFrom(value).buildPartial();
+          } else {
+            dungeonInfo_ = value;
+          }
+          onChanged();
+        } else {
+          dungeonInfoBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.ChannelerSlabOneoffDungeon dungeon_info = 13;</code>
+       */
+      public Builder clearDungeonInfo() {
+        if (dungeonInfoBuilder_ == null) {
+          dungeonInfo_ = null;
+          onChanged();
+        } else {
+          dungeonInfo_ = null;
+          dungeonInfoBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.ChannelerSlabOneoffDungeon dungeon_info = 13;</code>
+       */
+      public emu.grasscutter.net.proto.ChannelerSlabOneoffDungeonOuterClass.ChannelerSlabOneoffDungeon.Builder getDungeonInfoBuilder() {
+        
+        onChanged();
+        return getDungeonInfoFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.ChannelerSlabOneoffDungeon dungeon_info = 13;</code>
+       */
+      public emu.grasscutter.net.proto.ChannelerSlabOneoffDungeonOuterClass.ChannelerSlabOneoffDungeonOrBuilder getDungeonInfoOrBuilder() {
+        if (dungeonInfoBuilder_ != null) {
+          return dungeonInfoBuilder_.getMessageOrBuilder();
+        } else {
+          return dungeonInfo_ == null ?
+              emu.grasscutter.net.proto.ChannelerSlabOneoffDungeonOuterClass.ChannelerSlabOneoffDungeon.getDefaultInstance() : dungeonInfo_;
+        }
+      }
+      /**
+       * <code>.ChannelerSlabOneoffDungeon dungeon_info = 13;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          emu.grasscutter.net.proto.ChannelerSlabOneoffDungeonOuterClass.ChannelerSlabOneoffDungeon, emu.grasscutter.net.proto.ChannelerSlabOneoffDungeonOuterClass.ChannelerSlabOneoffDungeon.Builder, emu.grasscutter.net.proto.ChannelerSlabOneoffDungeonOuterClass.ChannelerSlabOneoffDungeonOrBuilder> 
+          getDungeonInfoFieldBuilder() {
+        if (dungeonInfoBuilder_ == null) {
+          dungeonInfoBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              emu.grasscutter.net.proto.ChannelerSlabOneoffDungeonOuterClass.ChannelerSlabOneoffDungeon, emu.grasscutter.net.proto.ChannelerSlabOneoffDungeonOuterClass.ChannelerSlabOneoffDungeon.Builder, emu.grasscutter.net.proto.ChannelerSlabOneoffDungeonOuterClass.ChannelerSlabOneoffDungeonOrBuilder>(
+                  getDungeonInfo(),
+                  getParentForChildren(),
+                  isClean());
+          dungeonInfo_ = null;
+        }
+        return dungeonInfoBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -1189,18 +1209,7 @@ public final class ChannelerSlabChallengeStageOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new ChannelerSlabChallengeStage(input, extensionRegistry);
       }
     };
 
@@ -1237,11 +1246,11 @@ public final class ChannelerSlabChallengeStageOuterClass {
       "\n!ChannelerSlabChallengeStage.proto\032\034Cha" +
       "nnelerSlabChallenge.proto\032 ChannelerSlab" +
       "OneoffDungeon.proto\"\267\001\n\033ChannelerSlabCha" +
-      "llengeStage\022\017\n\007is_open\030\007 \001(\010\022\020\n\010stage_id" +
-      "\030\014 \001(\r\022\021\n\topen_time\030\003 \001(\r\0221\n\014dungeon_inf" +
-      "o\030\017 \001(\0132\033.ChannelerSlabOneoffDungeon\022/\n\016" +
-      "challenge_list\030\013 \003(\0132\027.ChannelerSlabChal" +
-      "lengeB\033\n\031emu.grasscutter.net.protob\006prot" +
+      "llengeStage\022\021\n\topen_time\030\017 \001(\r\022\020\n\010stage_" +
+      "id\030\004 \001(\r\022\017\n\007is_open\030\t \001(\010\022/\n\016challenge_l" +
+      "ist\030\010 \003(\0132\027.ChannelerSlabChallenge\0221\n\014du" +
+      "ngeon_info\030\r \001(\0132\033.ChannelerSlabOneoffDu" +
+      "ngeonB\033\n\031emu.grasscutter.net.protob\006prot" +
       "o3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
@@ -1255,7 +1264,7 @@ public final class ChannelerSlabChallengeStageOuterClass {
     internal_static_ChannelerSlabChallengeStage_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ChannelerSlabChallengeStage_descriptor,
-        new java.lang.String[] { "IsOpen", "StageId", "OpenTime", "DungeonInfo", "ChallengeList", });
+        new java.lang.String[] { "OpenTime", "StageId", "IsOpen", "ChallengeList", "DungeonInfo", });
     emu.grasscutter.net.proto.ChannelerSlabChallengeOuterClass.getDescriptor();
     emu.grasscutter.net.proto.ChannelerSlabOneoffDungeonOuterClass.getDescriptor();
   }

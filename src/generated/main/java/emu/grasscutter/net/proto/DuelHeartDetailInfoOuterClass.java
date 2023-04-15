@@ -19,32 +19,32 @@ public final class DuelHeartDetailInfoOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated .DuelHeartLevelInfo level_info_list = 15;</code>
+     * <code>repeated .DuelHeartLevelInfo level_info_list = 4;</code>
      */
     java.util.List<emu.grasscutter.net.proto.DuelHeartLevelInfoOuterClass.DuelHeartLevelInfo> 
         getLevelInfoListList();
     /**
-     * <code>repeated .DuelHeartLevelInfo level_info_list = 15;</code>
+     * <code>repeated .DuelHeartLevelInfo level_info_list = 4;</code>
      */
     emu.grasscutter.net.proto.DuelHeartLevelInfoOuterClass.DuelHeartLevelInfo getLevelInfoList(int index);
     /**
-     * <code>repeated .DuelHeartLevelInfo level_info_list = 15;</code>
+     * <code>repeated .DuelHeartLevelInfo level_info_list = 4;</code>
      */
     int getLevelInfoListCount();
     /**
-     * <code>repeated .DuelHeartLevelInfo level_info_list = 15;</code>
+     * <code>repeated .DuelHeartLevelInfo level_info_list = 4;</code>
      */
     java.util.List<? extends emu.grasscutter.net.proto.DuelHeartLevelInfoOuterClass.DuelHeartLevelInfoOrBuilder> 
         getLevelInfoListOrBuilderList();
     /**
-     * <code>repeated .DuelHeartLevelInfo level_info_list = 15;</code>
+     * <code>repeated .DuelHeartLevelInfo level_info_list = 4;</code>
      */
     emu.grasscutter.net.proto.DuelHeartLevelInfoOuterClass.DuelHeartLevelInfoOrBuilder getLevelInfoListOrBuilder(
         int index);
   }
   /**
    * <pre>
-   * Name: CHHJEPHFEFF
+   * Name: LOOPPPADFFH
    * </pre>
    *
    * Protobuf type {@code DuelHeartDetailInfo}
@@ -74,6 +74,56 @@ public final class DuelHeartDetailInfoOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private DuelHeartDetailInfo(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 34: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                levelInfoList_ = new java.util.ArrayList<emu.grasscutter.net.proto.DuelHeartLevelInfoOuterClass.DuelHeartLevelInfo>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              levelInfoList_.add(
+                  input.readMessage(emu.grasscutter.net.proto.DuelHeartLevelInfoOuterClass.DuelHeartLevelInfo.parser(), extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          levelInfoList_ = java.util.Collections.unmodifiableList(levelInfoList_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.DuelHeartDetailInfoOuterClass.internal_static_DuelHeartDetailInfo_descriptor;
@@ -87,18 +137,17 @@ public final class DuelHeartDetailInfoOuterClass {
               emu.grasscutter.net.proto.DuelHeartDetailInfoOuterClass.DuelHeartDetailInfo.class, emu.grasscutter.net.proto.DuelHeartDetailInfoOuterClass.DuelHeartDetailInfo.Builder.class);
     }
 
-    public static final int LEVEL_INFO_LIST_FIELD_NUMBER = 15;
-    @SuppressWarnings("serial")
+    public static final int LEVEL_INFO_LIST_FIELD_NUMBER = 4;
     private java.util.List<emu.grasscutter.net.proto.DuelHeartLevelInfoOuterClass.DuelHeartLevelInfo> levelInfoList_;
     /**
-     * <code>repeated .DuelHeartLevelInfo level_info_list = 15;</code>
+     * <code>repeated .DuelHeartLevelInfo level_info_list = 4;</code>
      */
     @java.lang.Override
     public java.util.List<emu.grasscutter.net.proto.DuelHeartLevelInfoOuterClass.DuelHeartLevelInfo> getLevelInfoListList() {
       return levelInfoList_;
     }
     /**
-     * <code>repeated .DuelHeartLevelInfo level_info_list = 15;</code>
+     * <code>repeated .DuelHeartLevelInfo level_info_list = 4;</code>
      */
     @java.lang.Override
     public java.util.List<? extends emu.grasscutter.net.proto.DuelHeartLevelInfoOuterClass.DuelHeartLevelInfoOrBuilder> 
@@ -106,21 +155,21 @@ public final class DuelHeartDetailInfoOuterClass {
       return levelInfoList_;
     }
     /**
-     * <code>repeated .DuelHeartLevelInfo level_info_list = 15;</code>
+     * <code>repeated .DuelHeartLevelInfo level_info_list = 4;</code>
      */
     @java.lang.Override
     public int getLevelInfoListCount() {
       return levelInfoList_.size();
     }
     /**
-     * <code>repeated .DuelHeartLevelInfo level_info_list = 15;</code>
+     * <code>repeated .DuelHeartLevelInfo level_info_list = 4;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.DuelHeartLevelInfoOuterClass.DuelHeartLevelInfo getLevelInfoList(int index) {
       return levelInfoList_.get(index);
     }
     /**
-     * <code>repeated .DuelHeartLevelInfo level_info_list = 15;</code>
+     * <code>repeated .DuelHeartLevelInfo level_info_list = 4;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.DuelHeartLevelInfoOuterClass.DuelHeartLevelInfoOrBuilder getLevelInfoListOrBuilder(
@@ -143,9 +192,9 @@ public final class DuelHeartDetailInfoOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       for (int i = 0; i < levelInfoList_.size(); i++) {
-        output.writeMessage(15, levelInfoList_.get(i));
+        output.writeMessage(4, levelInfoList_.get(i));
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -156,9 +205,9 @@ public final class DuelHeartDetailInfoOuterClass {
       size = 0;
       for (int i = 0; i < levelInfoList_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(15, levelInfoList_.get(i));
+          .computeMessageSize(4, levelInfoList_.get(i));
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -175,7 +224,7 @@ public final class DuelHeartDetailInfoOuterClass {
 
       if (!getLevelInfoListList()
           .equals(other.getLevelInfoListList())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -190,7 +239,7 @@ public final class DuelHeartDetailInfoOuterClass {
         hash = (37 * hash) + LEVEL_INFO_LIST_FIELD_NUMBER;
         hash = (53 * hash) + getLevelInfoListList().hashCode();
       }
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -287,7 +336,7 @@ public final class DuelHeartDetailInfoOuterClass {
     }
     /**
      * <pre>
-     * Name: CHHJEPHFEFF
+     * Name: LOOPPPADFFH
      * </pre>
      *
      * Protobuf type {@code DuelHeartDetailInfo}
@@ -311,25 +360,29 @@ public final class DuelHeartDetailInfoOuterClass {
 
       // Construct using emu.grasscutter.net.proto.DuelHeartDetailInfoOuterClass.DuelHeartDetailInfo.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getLevelInfoListFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        bitField0_ = 0;
         if (levelInfoListBuilder_ == null) {
           levelInfoList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
-          levelInfoList_ = null;
           levelInfoListBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
 
@@ -356,13 +409,7 @@ public final class DuelHeartDetailInfoOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.DuelHeartDetailInfoOuterClass.DuelHeartDetailInfo buildPartial() {
         emu.grasscutter.net.proto.DuelHeartDetailInfoOuterClass.DuelHeartDetailInfo result = new emu.grasscutter.net.proto.DuelHeartDetailInfoOuterClass.DuelHeartDetailInfo(this);
-        buildPartialRepeatedFields(result);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartialRepeatedFields(emu.grasscutter.net.proto.DuelHeartDetailInfoOuterClass.DuelHeartDetailInfo result) {
+        int from_bitField0_ = bitField0_;
         if (levelInfoListBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0)) {
             levelInfoList_ = java.util.Collections.unmodifiableList(levelInfoList_);
@@ -372,10 +419,8 @@ public final class DuelHeartDetailInfoOuterClass {
         } else {
           result.levelInfoList_ = levelInfoListBuilder_.build();
         }
-      }
-
-      private void buildPartial0(emu.grasscutter.net.proto.DuelHeartDetailInfoOuterClass.DuelHeartDetailInfo result) {
-        int from_bitField0_ = bitField0_;
+        onBuilt();
+        return result;
       }
 
       @java.lang.Override
@@ -448,7 +493,7 @@ public final class DuelHeartDetailInfoOuterClass {
             }
           }
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -463,43 +508,17 @@ public final class DuelHeartDetailInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.DuelHeartDetailInfoOuterClass.DuelHeartDetailInfo parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 122: {
-                emu.grasscutter.net.proto.DuelHeartLevelInfoOuterClass.DuelHeartLevelInfo m =
-                    input.readMessage(
-                        emu.grasscutter.net.proto.DuelHeartLevelInfoOuterClass.DuelHeartLevelInfo.parser(),
-                        extensionRegistry);
-                if (levelInfoListBuilder_ == null) {
-                  ensureLevelInfoListIsMutable();
-                  levelInfoList_.add(m);
-                } else {
-                  levelInfoListBuilder_.addMessage(m);
-                }
-                break;
-              } // case 122
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.DuelHeartDetailInfoOuterClass.DuelHeartDetailInfo) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
       private int bitField0_;
@@ -517,7 +536,7 @@ public final class DuelHeartDetailInfoOuterClass {
           emu.grasscutter.net.proto.DuelHeartLevelInfoOuterClass.DuelHeartLevelInfo, emu.grasscutter.net.proto.DuelHeartLevelInfoOuterClass.DuelHeartLevelInfo.Builder, emu.grasscutter.net.proto.DuelHeartLevelInfoOuterClass.DuelHeartLevelInfoOrBuilder> levelInfoListBuilder_;
 
       /**
-       * <code>repeated .DuelHeartLevelInfo level_info_list = 15;</code>
+       * <code>repeated .DuelHeartLevelInfo level_info_list = 4;</code>
        */
       public java.util.List<emu.grasscutter.net.proto.DuelHeartLevelInfoOuterClass.DuelHeartLevelInfo> getLevelInfoListList() {
         if (levelInfoListBuilder_ == null) {
@@ -527,7 +546,7 @@ public final class DuelHeartDetailInfoOuterClass {
         }
       }
       /**
-       * <code>repeated .DuelHeartLevelInfo level_info_list = 15;</code>
+       * <code>repeated .DuelHeartLevelInfo level_info_list = 4;</code>
        */
       public int getLevelInfoListCount() {
         if (levelInfoListBuilder_ == null) {
@@ -537,7 +556,7 @@ public final class DuelHeartDetailInfoOuterClass {
         }
       }
       /**
-       * <code>repeated .DuelHeartLevelInfo level_info_list = 15;</code>
+       * <code>repeated .DuelHeartLevelInfo level_info_list = 4;</code>
        */
       public emu.grasscutter.net.proto.DuelHeartLevelInfoOuterClass.DuelHeartLevelInfo getLevelInfoList(int index) {
         if (levelInfoListBuilder_ == null) {
@@ -547,7 +566,7 @@ public final class DuelHeartDetailInfoOuterClass {
         }
       }
       /**
-       * <code>repeated .DuelHeartLevelInfo level_info_list = 15;</code>
+       * <code>repeated .DuelHeartLevelInfo level_info_list = 4;</code>
        */
       public Builder setLevelInfoList(
           int index, emu.grasscutter.net.proto.DuelHeartLevelInfoOuterClass.DuelHeartLevelInfo value) {
@@ -564,7 +583,7 @@ public final class DuelHeartDetailInfoOuterClass {
         return this;
       }
       /**
-       * <code>repeated .DuelHeartLevelInfo level_info_list = 15;</code>
+       * <code>repeated .DuelHeartLevelInfo level_info_list = 4;</code>
        */
       public Builder setLevelInfoList(
           int index, emu.grasscutter.net.proto.DuelHeartLevelInfoOuterClass.DuelHeartLevelInfo.Builder builderForValue) {
@@ -578,7 +597,7 @@ public final class DuelHeartDetailInfoOuterClass {
         return this;
       }
       /**
-       * <code>repeated .DuelHeartLevelInfo level_info_list = 15;</code>
+       * <code>repeated .DuelHeartLevelInfo level_info_list = 4;</code>
        */
       public Builder addLevelInfoList(emu.grasscutter.net.proto.DuelHeartLevelInfoOuterClass.DuelHeartLevelInfo value) {
         if (levelInfoListBuilder_ == null) {
@@ -594,7 +613,7 @@ public final class DuelHeartDetailInfoOuterClass {
         return this;
       }
       /**
-       * <code>repeated .DuelHeartLevelInfo level_info_list = 15;</code>
+       * <code>repeated .DuelHeartLevelInfo level_info_list = 4;</code>
        */
       public Builder addLevelInfoList(
           int index, emu.grasscutter.net.proto.DuelHeartLevelInfoOuterClass.DuelHeartLevelInfo value) {
@@ -611,7 +630,7 @@ public final class DuelHeartDetailInfoOuterClass {
         return this;
       }
       /**
-       * <code>repeated .DuelHeartLevelInfo level_info_list = 15;</code>
+       * <code>repeated .DuelHeartLevelInfo level_info_list = 4;</code>
        */
       public Builder addLevelInfoList(
           emu.grasscutter.net.proto.DuelHeartLevelInfoOuterClass.DuelHeartLevelInfo.Builder builderForValue) {
@@ -625,7 +644,7 @@ public final class DuelHeartDetailInfoOuterClass {
         return this;
       }
       /**
-       * <code>repeated .DuelHeartLevelInfo level_info_list = 15;</code>
+       * <code>repeated .DuelHeartLevelInfo level_info_list = 4;</code>
        */
       public Builder addLevelInfoList(
           int index, emu.grasscutter.net.proto.DuelHeartLevelInfoOuterClass.DuelHeartLevelInfo.Builder builderForValue) {
@@ -639,7 +658,7 @@ public final class DuelHeartDetailInfoOuterClass {
         return this;
       }
       /**
-       * <code>repeated .DuelHeartLevelInfo level_info_list = 15;</code>
+       * <code>repeated .DuelHeartLevelInfo level_info_list = 4;</code>
        */
       public Builder addAllLevelInfoList(
           java.lang.Iterable<? extends emu.grasscutter.net.proto.DuelHeartLevelInfoOuterClass.DuelHeartLevelInfo> values) {
@@ -654,7 +673,7 @@ public final class DuelHeartDetailInfoOuterClass {
         return this;
       }
       /**
-       * <code>repeated .DuelHeartLevelInfo level_info_list = 15;</code>
+       * <code>repeated .DuelHeartLevelInfo level_info_list = 4;</code>
        */
       public Builder clearLevelInfoList() {
         if (levelInfoListBuilder_ == null) {
@@ -667,7 +686,7 @@ public final class DuelHeartDetailInfoOuterClass {
         return this;
       }
       /**
-       * <code>repeated .DuelHeartLevelInfo level_info_list = 15;</code>
+       * <code>repeated .DuelHeartLevelInfo level_info_list = 4;</code>
        */
       public Builder removeLevelInfoList(int index) {
         if (levelInfoListBuilder_ == null) {
@@ -680,14 +699,14 @@ public final class DuelHeartDetailInfoOuterClass {
         return this;
       }
       /**
-       * <code>repeated .DuelHeartLevelInfo level_info_list = 15;</code>
+       * <code>repeated .DuelHeartLevelInfo level_info_list = 4;</code>
        */
       public emu.grasscutter.net.proto.DuelHeartLevelInfoOuterClass.DuelHeartLevelInfo.Builder getLevelInfoListBuilder(
           int index) {
         return getLevelInfoListFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .DuelHeartLevelInfo level_info_list = 15;</code>
+       * <code>repeated .DuelHeartLevelInfo level_info_list = 4;</code>
        */
       public emu.grasscutter.net.proto.DuelHeartLevelInfoOuterClass.DuelHeartLevelInfoOrBuilder getLevelInfoListOrBuilder(
           int index) {
@@ -697,7 +716,7 @@ public final class DuelHeartDetailInfoOuterClass {
         }
       }
       /**
-       * <code>repeated .DuelHeartLevelInfo level_info_list = 15;</code>
+       * <code>repeated .DuelHeartLevelInfo level_info_list = 4;</code>
        */
       public java.util.List<? extends emu.grasscutter.net.proto.DuelHeartLevelInfoOuterClass.DuelHeartLevelInfoOrBuilder> 
            getLevelInfoListOrBuilderList() {
@@ -708,14 +727,14 @@ public final class DuelHeartDetailInfoOuterClass {
         }
       }
       /**
-       * <code>repeated .DuelHeartLevelInfo level_info_list = 15;</code>
+       * <code>repeated .DuelHeartLevelInfo level_info_list = 4;</code>
        */
       public emu.grasscutter.net.proto.DuelHeartLevelInfoOuterClass.DuelHeartLevelInfo.Builder addLevelInfoListBuilder() {
         return getLevelInfoListFieldBuilder().addBuilder(
             emu.grasscutter.net.proto.DuelHeartLevelInfoOuterClass.DuelHeartLevelInfo.getDefaultInstance());
       }
       /**
-       * <code>repeated .DuelHeartLevelInfo level_info_list = 15;</code>
+       * <code>repeated .DuelHeartLevelInfo level_info_list = 4;</code>
        */
       public emu.grasscutter.net.proto.DuelHeartLevelInfoOuterClass.DuelHeartLevelInfo.Builder addLevelInfoListBuilder(
           int index) {
@@ -723,7 +742,7 @@ public final class DuelHeartDetailInfoOuterClass {
             index, emu.grasscutter.net.proto.DuelHeartLevelInfoOuterClass.DuelHeartLevelInfo.getDefaultInstance());
       }
       /**
-       * <code>repeated .DuelHeartLevelInfo level_info_list = 15;</code>
+       * <code>repeated .DuelHeartLevelInfo level_info_list = 4;</code>
        */
       public java.util.List<emu.grasscutter.net.proto.DuelHeartLevelInfoOuterClass.DuelHeartLevelInfo.Builder> 
            getLevelInfoListBuilderList() {
@@ -776,18 +795,7 @@ public final class DuelHeartDetailInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new DuelHeartDetailInfo(input, extensionRegistry);
       }
     };
 
@@ -823,7 +831,7 @@ public final class DuelHeartDetailInfoOuterClass {
     java.lang.String[] descriptorData = {
       "\n\031DuelHeartDetailInfo.proto\032\030DuelHeartLe" +
       "velInfo.proto\"C\n\023DuelHeartDetailInfo\022,\n\017" +
-      "level_info_list\030\017 \003(\0132\023.DuelHeartLevelIn" +
+      "level_info_list\030\004 \003(\0132\023.DuelHeartLevelIn" +
       "foB\033\n\031emu.grasscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

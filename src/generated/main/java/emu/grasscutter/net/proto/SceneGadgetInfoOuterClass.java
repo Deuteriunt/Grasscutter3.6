@@ -494,7 +494,7 @@ public final class SceneGadgetInfoOuterClass {
   }
   /**
    * <pre>
-   * Name: APLBOALHGKD
+   * Name: CAHMGNJLGHD
    * </pre>
    *
    * Protobuf type {@code SceneGadgetInfo}
@@ -2737,7 +2737,7 @@ public final class SceneGadgetInfoOuterClass {
     }
     /**
      * <pre>
-     * Name: APLBOALHGKD
+     * Name: CAHMGNJLGHD
      * </pre>
      *
      * Protobuf type {@code SceneGadgetInfo}

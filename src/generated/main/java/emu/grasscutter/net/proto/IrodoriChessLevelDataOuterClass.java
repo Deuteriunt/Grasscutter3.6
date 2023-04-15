@@ -19,50 +19,50 @@ public final class IrodoriChessLevelDataOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>.MCOPOAMEGCP PMIDHJGPANG = 15;</code>
-     * @return Whether the pMIDHJGPANG field is set.
+     * <code>.IrodoriChessMapData OEMKKEEKONG = 9;</code>
+     * @return Whether the oEMKKEEKONG field is set.
      */
-    boolean hasPMIDHJGPANG();
+    boolean hasOEMKKEEKONG();
     /**
-     * <code>.MCOPOAMEGCP PMIDHJGPANG = 15;</code>
-     * @return The pMIDHJGPANG.
+     * <code>.IrodoriChessMapData OEMKKEEKONG = 9;</code>
+     * @return The oEMKKEEKONG.
      */
-    emu.grasscutter.net.proto.MCOPOAMEGCPOuterClass.MCOPOAMEGCP getPMIDHJGPANG();
+    emu.grasscutter.net.proto.IrodoriChessMapDataOuterClass.IrodoriChessMapData getOEMKKEEKONG();
     /**
-     * <code>.MCOPOAMEGCP PMIDHJGPANG = 15;</code>
+     * <code>.IrodoriChessMapData OEMKKEEKONG = 9;</code>
      */
-    emu.grasscutter.net.proto.MCOPOAMEGCPOuterClass.MCOPOAMEGCPOrBuilder getPMIDHJGPANGOrBuilder();
+    emu.grasscutter.net.proto.IrodoriChessMapDataOuterClass.IrodoriChessMapDataOrBuilder getOEMKKEEKONGOrBuilder();
+
+    /**
+     * <code>uint32 level_id = 8;</code>
+     * @return The levelId.
+     */
+    int getLevelId();
+
+    /**
+     * <code>.IrodoriChessMapData JCCNLMMCENC = 15;</code>
+     * @return Whether the jCCNLMMCENC field is set.
+     */
+    boolean hasJCCNLMMCENC();
+    /**
+     * <code>.IrodoriChessMapData JCCNLMMCENC = 15;</code>
+     * @return The jCCNLMMCENC.
+     */
+    emu.grasscutter.net.proto.IrodoriChessMapDataOuterClass.IrodoriChessMapData getJCCNLMMCENC();
+    /**
+     * <code>.IrodoriChessMapData JCCNLMMCENC = 15;</code>
+     */
+    emu.grasscutter.net.proto.IrodoriChessMapDataOuterClass.IrodoriChessMapDataOrBuilder getJCCNLMMCENCOrBuilder();
 
     /**
      * <code>uint32 open_time = 6;</code>
      * @return The openTime.
      */
     int getOpenTime();
-
-    /**
-     * <code>.MCOPOAMEGCP PLIOEJLDHLF = 14;</code>
-     * @return Whether the pLIOEJLDHLF field is set.
-     */
-    boolean hasPLIOEJLDHLF();
-    /**
-     * <code>.MCOPOAMEGCP PLIOEJLDHLF = 14;</code>
-     * @return The pLIOEJLDHLF.
-     */
-    emu.grasscutter.net.proto.MCOPOAMEGCPOuterClass.MCOPOAMEGCP getPLIOEJLDHLF();
-    /**
-     * <code>.MCOPOAMEGCP PLIOEJLDHLF = 14;</code>
-     */
-    emu.grasscutter.net.proto.MCOPOAMEGCPOuterClass.MCOPOAMEGCPOrBuilder getPLIOEJLDHLFOrBuilder();
-
-    /**
-     * <code>uint32 level_id = 2;</code>
-     * @return The levelId.
-     */
-    int getLevelId();
   }
   /**
    * <pre>
-   * Name: FHPJMFLJECD
+   * Name: BBOCNPLHGAM
    * </pre>
    *
    * Protobuf type {@code IrodoriChessLevelData}
@@ -91,6 +91,79 @@ public final class IrodoriChessLevelDataOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private IrodoriChessLevelData(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 48: {
+
+              openTime_ = input.readUInt32();
+              break;
+            }
+            case 64: {
+
+              levelId_ = input.readUInt32();
+              break;
+            }
+            case 74: {
+              emu.grasscutter.net.proto.IrodoriChessMapDataOuterClass.IrodoriChessMapData.Builder subBuilder = null;
+              if (oEMKKEEKONG_ != null) {
+                subBuilder = oEMKKEEKONG_.toBuilder();
+              }
+              oEMKKEEKONG_ = input.readMessage(emu.grasscutter.net.proto.IrodoriChessMapDataOuterClass.IrodoriChessMapData.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(oEMKKEEKONG_);
+                oEMKKEEKONG_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 122: {
+              emu.grasscutter.net.proto.IrodoriChessMapDataOuterClass.IrodoriChessMapData.Builder subBuilder = null;
+              if (jCCNLMMCENC_ != null) {
+                subBuilder = jCCNLMMCENC_.toBuilder();
+              }
+              jCCNLMMCENC_ = input.readMessage(emu.grasscutter.net.proto.IrodoriChessMapDataOuterClass.IrodoriChessMapData.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(jCCNLMMCENC_);
+                jCCNLMMCENC_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.IrodoriChessLevelDataOuterClass.internal_static_IrodoriChessLevelData_descriptor;
@@ -104,34 +177,71 @@ public final class IrodoriChessLevelDataOuterClass {
               emu.grasscutter.net.proto.IrodoriChessLevelDataOuterClass.IrodoriChessLevelData.class, emu.grasscutter.net.proto.IrodoriChessLevelDataOuterClass.IrodoriChessLevelData.Builder.class);
     }
 
-    public static final int PMIDHJGPANG_FIELD_NUMBER = 15;
-    private emu.grasscutter.net.proto.MCOPOAMEGCPOuterClass.MCOPOAMEGCP pMIDHJGPANG_;
+    public static final int OEMKKEEKONG_FIELD_NUMBER = 9;
+    private emu.grasscutter.net.proto.IrodoriChessMapDataOuterClass.IrodoriChessMapData oEMKKEEKONG_;
     /**
-     * <code>.MCOPOAMEGCP PMIDHJGPANG = 15;</code>
-     * @return Whether the pMIDHJGPANG field is set.
+     * <code>.IrodoriChessMapData OEMKKEEKONG = 9;</code>
+     * @return Whether the oEMKKEEKONG field is set.
      */
     @java.lang.Override
-    public boolean hasPMIDHJGPANG() {
-      return pMIDHJGPANG_ != null;
+    public boolean hasOEMKKEEKONG() {
+      return oEMKKEEKONG_ != null;
     }
     /**
-     * <code>.MCOPOAMEGCP PMIDHJGPANG = 15;</code>
-     * @return The pMIDHJGPANG.
+     * <code>.IrodoriChessMapData OEMKKEEKONG = 9;</code>
+     * @return The oEMKKEEKONG.
      */
     @java.lang.Override
-    public emu.grasscutter.net.proto.MCOPOAMEGCPOuterClass.MCOPOAMEGCP getPMIDHJGPANG() {
-      return pMIDHJGPANG_ == null ? emu.grasscutter.net.proto.MCOPOAMEGCPOuterClass.MCOPOAMEGCP.getDefaultInstance() : pMIDHJGPANG_;
+    public emu.grasscutter.net.proto.IrodoriChessMapDataOuterClass.IrodoriChessMapData getOEMKKEEKONG() {
+      return oEMKKEEKONG_ == null ? emu.grasscutter.net.proto.IrodoriChessMapDataOuterClass.IrodoriChessMapData.getDefaultInstance() : oEMKKEEKONG_;
     }
     /**
-     * <code>.MCOPOAMEGCP PMIDHJGPANG = 15;</code>
+     * <code>.IrodoriChessMapData OEMKKEEKONG = 9;</code>
      */
     @java.lang.Override
-    public emu.grasscutter.net.proto.MCOPOAMEGCPOuterClass.MCOPOAMEGCPOrBuilder getPMIDHJGPANGOrBuilder() {
-      return pMIDHJGPANG_ == null ? emu.grasscutter.net.proto.MCOPOAMEGCPOuterClass.MCOPOAMEGCP.getDefaultInstance() : pMIDHJGPANG_;
+    public emu.grasscutter.net.proto.IrodoriChessMapDataOuterClass.IrodoriChessMapDataOrBuilder getOEMKKEEKONGOrBuilder() {
+      return getOEMKKEEKONG();
+    }
+
+    public static final int LEVEL_ID_FIELD_NUMBER = 8;
+    private int levelId_;
+    /**
+     * <code>uint32 level_id = 8;</code>
+     * @return The levelId.
+     */
+    @java.lang.Override
+    public int getLevelId() {
+      return levelId_;
+    }
+
+    public static final int JCCNLMMCENC_FIELD_NUMBER = 15;
+    private emu.grasscutter.net.proto.IrodoriChessMapDataOuterClass.IrodoriChessMapData jCCNLMMCENC_;
+    /**
+     * <code>.IrodoriChessMapData JCCNLMMCENC = 15;</code>
+     * @return Whether the jCCNLMMCENC field is set.
+     */
+    @java.lang.Override
+    public boolean hasJCCNLMMCENC() {
+      return jCCNLMMCENC_ != null;
+    }
+    /**
+     * <code>.IrodoriChessMapData JCCNLMMCENC = 15;</code>
+     * @return The jCCNLMMCENC.
+     */
+    @java.lang.Override
+    public emu.grasscutter.net.proto.IrodoriChessMapDataOuterClass.IrodoriChessMapData getJCCNLMMCENC() {
+      return jCCNLMMCENC_ == null ? emu.grasscutter.net.proto.IrodoriChessMapDataOuterClass.IrodoriChessMapData.getDefaultInstance() : jCCNLMMCENC_;
+    }
+    /**
+     * <code>.IrodoriChessMapData JCCNLMMCENC = 15;</code>
+     */
+    @java.lang.Override
+    public emu.grasscutter.net.proto.IrodoriChessMapDataOuterClass.IrodoriChessMapDataOrBuilder getJCCNLMMCENCOrBuilder() {
+      return getJCCNLMMCENC();
     }
 
     public static final int OPEN_TIME_FIELD_NUMBER = 6;
-    private int openTime_ = 0;
+    private int openTime_;
     /**
      * <code>uint32 open_time = 6;</code>
      * @return The openTime.
@@ -139,43 +249,6 @@ public final class IrodoriChessLevelDataOuterClass {
     @java.lang.Override
     public int getOpenTime() {
       return openTime_;
-    }
-
-    public static final int PLIOEJLDHLF_FIELD_NUMBER = 14;
-    private emu.grasscutter.net.proto.MCOPOAMEGCPOuterClass.MCOPOAMEGCP pLIOEJLDHLF_;
-    /**
-     * <code>.MCOPOAMEGCP PLIOEJLDHLF = 14;</code>
-     * @return Whether the pLIOEJLDHLF field is set.
-     */
-    @java.lang.Override
-    public boolean hasPLIOEJLDHLF() {
-      return pLIOEJLDHLF_ != null;
-    }
-    /**
-     * <code>.MCOPOAMEGCP PLIOEJLDHLF = 14;</code>
-     * @return The pLIOEJLDHLF.
-     */
-    @java.lang.Override
-    public emu.grasscutter.net.proto.MCOPOAMEGCPOuterClass.MCOPOAMEGCP getPLIOEJLDHLF() {
-      return pLIOEJLDHLF_ == null ? emu.grasscutter.net.proto.MCOPOAMEGCPOuterClass.MCOPOAMEGCP.getDefaultInstance() : pLIOEJLDHLF_;
-    }
-    /**
-     * <code>.MCOPOAMEGCP PLIOEJLDHLF = 14;</code>
-     */
-    @java.lang.Override
-    public emu.grasscutter.net.proto.MCOPOAMEGCPOuterClass.MCOPOAMEGCPOrBuilder getPLIOEJLDHLFOrBuilder() {
-      return pLIOEJLDHLF_ == null ? emu.grasscutter.net.proto.MCOPOAMEGCPOuterClass.MCOPOAMEGCP.getDefaultInstance() : pLIOEJLDHLF_;
-    }
-
-    public static final int LEVEL_ID_FIELD_NUMBER = 2;
-    private int levelId_ = 0;
-    /**
-     * <code>uint32 level_id = 2;</code>
-     * @return The levelId.
-     */
-    @java.lang.Override
-    public int getLevelId() {
-      return levelId_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -192,19 +265,19 @@ public final class IrodoriChessLevelDataOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (levelId_ != 0) {
-        output.writeUInt32(2, levelId_);
-      }
       if (openTime_ != 0) {
         output.writeUInt32(6, openTime_);
       }
-      if (pLIOEJLDHLF_ != null) {
-        output.writeMessage(14, getPLIOEJLDHLF());
+      if (levelId_ != 0) {
+        output.writeUInt32(8, levelId_);
       }
-      if (pMIDHJGPANG_ != null) {
-        output.writeMessage(15, getPMIDHJGPANG());
+      if (oEMKKEEKONG_ != null) {
+        output.writeMessage(9, getOEMKKEEKONG());
       }
-      getUnknownFields().writeTo(output);
+      if (jCCNLMMCENC_ != null) {
+        output.writeMessage(15, getJCCNLMMCENC());
+      }
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -213,23 +286,23 @@ public final class IrodoriChessLevelDataOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (levelId_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(2, levelId_);
-      }
       if (openTime_ != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(6, openTime_);
       }
-      if (pLIOEJLDHLF_ != null) {
+      if (levelId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(14, getPLIOEJLDHLF());
+          .computeUInt32Size(8, levelId_);
       }
-      if (pMIDHJGPANG_ != null) {
+      if (oEMKKEEKONG_ != null) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(15, getPMIDHJGPANG());
+          .computeMessageSize(9, getOEMKKEEKONG());
       }
-      size += getUnknownFields().getSerializedSize();
+      if (jCCNLMMCENC_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(15, getJCCNLMMCENC());
+      }
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -244,21 +317,21 @@ public final class IrodoriChessLevelDataOuterClass {
       }
       emu.grasscutter.net.proto.IrodoriChessLevelDataOuterClass.IrodoriChessLevelData other = (emu.grasscutter.net.proto.IrodoriChessLevelDataOuterClass.IrodoriChessLevelData) obj;
 
-      if (hasPMIDHJGPANG() != other.hasPMIDHJGPANG()) return false;
-      if (hasPMIDHJGPANG()) {
-        if (!getPMIDHJGPANG()
-            .equals(other.getPMIDHJGPANG())) return false;
-      }
-      if (getOpenTime()
-          != other.getOpenTime()) return false;
-      if (hasPLIOEJLDHLF() != other.hasPLIOEJLDHLF()) return false;
-      if (hasPLIOEJLDHLF()) {
-        if (!getPLIOEJLDHLF()
-            .equals(other.getPLIOEJLDHLF())) return false;
+      if (hasOEMKKEEKONG() != other.hasOEMKKEEKONG()) return false;
+      if (hasOEMKKEEKONG()) {
+        if (!getOEMKKEEKONG()
+            .equals(other.getOEMKKEEKONG())) return false;
       }
       if (getLevelId()
           != other.getLevelId()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (hasJCCNLMMCENC() != other.hasJCCNLMMCENC()) return false;
+      if (hasJCCNLMMCENC()) {
+        if (!getJCCNLMMCENC()
+            .equals(other.getJCCNLMMCENC())) return false;
+      }
+      if (getOpenTime()
+          != other.getOpenTime()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -269,19 +342,19 @@ public final class IrodoriChessLevelDataOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      if (hasPMIDHJGPANG()) {
-        hash = (37 * hash) + PMIDHJGPANG_FIELD_NUMBER;
-        hash = (53 * hash) + getPMIDHJGPANG().hashCode();
-      }
-      hash = (37 * hash) + OPEN_TIME_FIELD_NUMBER;
-      hash = (53 * hash) + getOpenTime();
-      if (hasPLIOEJLDHLF()) {
-        hash = (37 * hash) + PLIOEJLDHLF_FIELD_NUMBER;
-        hash = (53 * hash) + getPLIOEJLDHLF().hashCode();
+      if (hasOEMKKEEKONG()) {
+        hash = (37 * hash) + OEMKKEEKONG_FIELD_NUMBER;
+        hash = (53 * hash) + getOEMKKEEKONG().hashCode();
       }
       hash = (37 * hash) + LEVEL_ID_FIELD_NUMBER;
       hash = (53 * hash) + getLevelId();
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      if (hasJCCNLMMCENC()) {
+        hash = (37 * hash) + JCCNLMMCENC_FIELD_NUMBER;
+        hash = (53 * hash) + getJCCNLMMCENC().hashCode();
+      }
+      hash = (37 * hash) + OPEN_TIME_FIELD_NUMBER;
+      hash = (53 * hash) + getOpenTime();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -378,7 +451,7 @@ public final class IrodoriChessLevelDataOuterClass {
     }
     /**
      * <pre>
-     * Name: FHPJMFLJECD
+     * Name: BBOCNPLHGAM
      * </pre>
      *
      * Protobuf type {@code IrodoriChessLevelData}
@@ -402,30 +475,38 @@ public final class IrodoriChessLevelDataOuterClass {
 
       // Construct using emu.grasscutter.net.proto.IrodoriChessLevelDataOuterClass.IrodoriChessLevelData.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        bitField0_ = 0;
-        pMIDHJGPANG_ = null;
-        if (pMIDHJGPANGBuilder_ != null) {
-          pMIDHJGPANGBuilder_.dispose();
-          pMIDHJGPANGBuilder_ = null;
-        }
-        openTime_ = 0;
-        pLIOEJLDHLF_ = null;
-        if (pLIOEJLDHLFBuilder_ != null) {
-          pLIOEJLDHLFBuilder_.dispose();
-          pLIOEJLDHLFBuilder_ = null;
+        if (oEMKKEEKONGBuilder_ == null) {
+          oEMKKEEKONG_ = null;
+        } else {
+          oEMKKEEKONG_ = null;
+          oEMKKEEKONGBuilder_ = null;
         }
         levelId_ = 0;
+
+        if (jCCNLMMCENCBuilder_ == null) {
+          jCCNLMMCENC_ = null;
+        } else {
+          jCCNLMMCENC_ = null;
+          jCCNLMMCENCBuilder_ = null;
+        }
+        openTime_ = 0;
+
         return this;
       }
 
@@ -452,29 +533,20 @@ public final class IrodoriChessLevelDataOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.IrodoriChessLevelDataOuterClass.IrodoriChessLevelData buildPartial() {
         emu.grasscutter.net.proto.IrodoriChessLevelDataOuterClass.IrodoriChessLevelData result = new emu.grasscutter.net.proto.IrodoriChessLevelDataOuterClass.IrodoriChessLevelData(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
+        if (oEMKKEEKONGBuilder_ == null) {
+          result.oEMKKEEKONG_ = oEMKKEEKONG_;
+        } else {
+          result.oEMKKEEKONG_ = oEMKKEEKONGBuilder_.build();
+        }
+        result.levelId_ = levelId_;
+        if (jCCNLMMCENCBuilder_ == null) {
+          result.jCCNLMMCENC_ = jCCNLMMCENC_;
+        } else {
+          result.jCCNLMMCENC_ = jCCNLMMCENCBuilder_.build();
+        }
+        result.openTime_ = openTime_;
         onBuilt();
         return result;
-      }
-
-      private void buildPartial0(emu.grasscutter.net.proto.IrodoriChessLevelDataOuterClass.IrodoriChessLevelData result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.pMIDHJGPANG_ = pMIDHJGPANGBuilder_ == null
-              ? pMIDHJGPANG_
-              : pMIDHJGPANGBuilder_.build();
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.openTime_ = openTime_;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.pLIOEJLDHLF_ = pLIOEJLDHLFBuilder_ == null
-              ? pLIOEJLDHLF_
-              : pLIOEJLDHLFBuilder_.build();
-        }
-        if (((from_bitField0_ & 0x00000008) != 0)) {
-          result.levelId_ = levelId_;
-        }
       }
 
       @java.lang.Override
@@ -521,19 +593,19 @@ public final class IrodoriChessLevelDataOuterClass {
 
       public Builder mergeFrom(emu.grasscutter.net.proto.IrodoriChessLevelDataOuterClass.IrodoriChessLevelData other) {
         if (other == emu.grasscutter.net.proto.IrodoriChessLevelDataOuterClass.IrodoriChessLevelData.getDefaultInstance()) return this;
-        if (other.hasPMIDHJGPANG()) {
-          mergePMIDHJGPANG(other.getPMIDHJGPANG());
-        }
-        if (other.getOpenTime() != 0) {
-          setOpenTime(other.getOpenTime());
-        }
-        if (other.hasPLIOEJLDHLF()) {
-          mergePLIOEJLDHLF(other.getPLIOEJLDHLF());
+        if (other.hasOEMKKEEKONG()) {
+          mergeOEMKKEEKONG(other.getOEMKKEEKONG());
         }
         if (other.getLevelId() != 0) {
           setLevelId(other.getLevelId());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        if (other.hasJCCNLMMCENC()) {
+          mergeJCCNLMMCENC(other.getJCCNLMMCENC());
+        }
+        if (other.getOpenTime() != 0) {
+          setOpenTime(other.getOpenTime());
+        }
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -548,175 +620,287 @@ public final class IrodoriChessLevelDataOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.IrodoriChessLevelDataOuterClass.IrodoriChessLevelData parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 16: {
-                levelId_ = input.readUInt32();
-                bitField0_ |= 0x00000008;
-                break;
-              } // case 16
-              case 48: {
-                openTime_ = input.readUInt32();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 48
-              case 114: {
-                input.readMessage(
-                    getPLIOEJLDHLFFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 114
-              case 122: {
-                input.readMessage(
-                    getPMIDHJGPANGFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 122
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.IrodoriChessLevelDataOuterClass.IrodoriChessLevelData) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
-      private int bitField0_;
 
-      private emu.grasscutter.net.proto.MCOPOAMEGCPOuterClass.MCOPOAMEGCP pMIDHJGPANG_;
+      private emu.grasscutter.net.proto.IrodoriChessMapDataOuterClass.IrodoriChessMapData oEMKKEEKONG_;
       private com.google.protobuf.SingleFieldBuilderV3<
-          emu.grasscutter.net.proto.MCOPOAMEGCPOuterClass.MCOPOAMEGCP, emu.grasscutter.net.proto.MCOPOAMEGCPOuterClass.MCOPOAMEGCP.Builder, emu.grasscutter.net.proto.MCOPOAMEGCPOuterClass.MCOPOAMEGCPOrBuilder> pMIDHJGPANGBuilder_;
+          emu.grasscutter.net.proto.IrodoriChessMapDataOuterClass.IrodoriChessMapData, emu.grasscutter.net.proto.IrodoriChessMapDataOuterClass.IrodoriChessMapData.Builder, emu.grasscutter.net.proto.IrodoriChessMapDataOuterClass.IrodoriChessMapDataOrBuilder> oEMKKEEKONGBuilder_;
       /**
-       * <code>.MCOPOAMEGCP PMIDHJGPANG = 15;</code>
-       * @return Whether the pMIDHJGPANG field is set.
+       * <code>.IrodoriChessMapData OEMKKEEKONG = 9;</code>
+       * @return Whether the oEMKKEEKONG field is set.
        */
-      public boolean hasPMIDHJGPANG() {
-        return ((bitField0_ & 0x00000001) != 0);
+      public boolean hasOEMKKEEKONG() {
+        return oEMKKEEKONGBuilder_ != null || oEMKKEEKONG_ != null;
       }
       /**
-       * <code>.MCOPOAMEGCP PMIDHJGPANG = 15;</code>
-       * @return The pMIDHJGPANG.
+       * <code>.IrodoriChessMapData OEMKKEEKONG = 9;</code>
+       * @return The oEMKKEEKONG.
        */
-      public emu.grasscutter.net.proto.MCOPOAMEGCPOuterClass.MCOPOAMEGCP getPMIDHJGPANG() {
-        if (pMIDHJGPANGBuilder_ == null) {
-          return pMIDHJGPANG_ == null ? emu.grasscutter.net.proto.MCOPOAMEGCPOuterClass.MCOPOAMEGCP.getDefaultInstance() : pMIDHJGPANG_;
+      public emu.grasscutter.net.proto.IrodoriChessMapDataOuterClass.IrodoriChessMapData getOEMKKEEKONG() {
+        if (oEMKKEEKONGBuilder_ == null) {
+          return oEMKKEEKONG_ == null ? emu.grasscutter.net.proto.IrodoriChessMapDataOuterClass.IrodoriChessMapData.getDefaultInstance() : oEMKKEEKONG_;
         } else {
-          return pMIDHJGPANGBuilder_.getMessage();
+          return oEMKKEEKONGBuilder_.getMessage();
         }
       }
       /**
-       * <code>.MCOPOAMEGCP PMIDHJGPANG = 15;</code>
+       * <code>.IrodoriChessMapData OEMKKEEKONG = 9;</code>
        */
-      public Builder setPMIDHJGPANG(emu.grasscutter.net.proto.MCOPOAMEGCPOuterClass.MCOPOAMEGCP value) {
-        if (pMIDHJGPANGBuilder_ == null) {
+      public Builder setOEMKKEEKONG(emu.grasscutter.net.proto.IrodoriChessMapDataOuterClass.IrodoriChessMapData value) {
+        if (oEMKKEEKONGBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          pMIDHJGPANG_ = value;
+          oEMKKEEKONG_ = value;
+          onChanged();
         } else {
-          pMIDHJGPANGBuilder_.setMessage(value);
+          oEMKKEEKONGBuilder_.setMessage(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+
         return this;
       }
       /**
-       * <code>.MCOPOAMEGCP PMIDHJGPANG = 15;</code>
+       * <code>.IrodoriChessMapData OEMKKEEKONG = 9;</code>
        */
-      public Builder setPMIDHJGPANG(
-          emu.grasscutter.net.proto.MCOPOAMEGCPOuterClass.MCOPOAMEGCP.Builder builderForValue) {
-        if (pMIDHJGPANGBuilder_ == null) {
-          pMIDHJGPANG_ = builderForValue.build();
+      public Builder setOEMKKEEKONG(
+          emu.grasscutter.net.proto.IrodoriChessMapDataOuterClass.IrodoriChessMapData.Builder builderForValue) {
+        if (oEMKKEEKONGBuilder_ == null) {
+          oEMKKEEKONG_ = builderForValue.build();
+          onChanged();
         } else {
-          pMIDHJGPANGBuilder_.setMessage(builderForValue.build());
+          oEMKKEEKONGBuilder_.setMessage(builderForValue.build());
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+
         return this;
       }
       /**
-       * <code>.MCOPOAMEGCP PMIDHJGPANG = 15;</code>
+       * <code>.IrodoriChessMapData OEMKKEEKONG = 9;</code>
        */
-      public Builder mergePMIDHJGPANG(emu.grasscutter.net.proto.MCOPOAMEGCPOuterClass.MCOPOAMEGCP value) {
-        if (pMIDHJGPANGBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0) &&
-            pMIDHJGPANG_ != null &&
-            pMIDHJGPANG_ != emu.grasscutter.net.proto.MCOPOAMEGCPOuterClass.MCOPOAMEGCP.getDefaultInstance()) {
-            getPMIDHJGPANGBuilder().mergeFrom(value);
+      public Builder mergeOEMKKEEKONG(emu.grasscutter.net.proto.IrodoriChessMapDataOuterClass.IrodoriChessMapData value) {
+        if (oEMKKEEKONGBuilder_ == null) {
+          if (oEMKKEEKONG_ != null) {
+            oEMKKEEKONG_ =
+              emu.grasscutter.net.proto.IrodoriChessMapDataOuterClass.IrodoriChessMapData.newBuilder(oEMKKEEKONG_).mergeFrom(value).buildPartial();
           } else {
-            pMIDHJGPANG_ = value;
+            oEMKKEEKONG_ = value;
           }
+          onChanged();
         } else {
-          pMIDHJGPANGBuilder_.mergeFrom(value);
+          oEMKKEEKONGBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00000001;
-        onChanged();
+
         return this;
       }
       /**
-       * <code>.MCOPOAMEGCP PMIDHJGPANG = 15;</code>
+       * <code>.IrodoriChessMapData OEMKKEEKONG = 9;</code>
        */
-      public Builder clearPMIDHJGPANG() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        pMIDHJGPANG_ = null;
-        if (pMIDHJGPANGBuilder_ != null) {
-          pMIDHJGPANGBuilder_.dispose();
-          pMIDHJGPANGBuilder_ = null;
+      public Builder clearOEMKKEEKONG() {
+        if (oEMKKEEKONGBuilder_ == null) {
+          oEMKKEEKONG_ = null;
+          onChanged();
+        } else {
+          oEMKKEEKONG_ = null;
+          oEMKKEEKONGBuilder_ = null;
         }
-        onChanged();
+
         return this;
       }
       /**
-       * <code>.MCOPOAMEGCP PMIDHJGPANG = 15;</code>
+       * <code>.IrodoriChessMapData OEMKKEEKONG = 9;</code>
        */
-      public emu.grasscutter.net.proto.MCOPOAMEGCPOuterClass.MCOPOAMEGCP.Builder getPMIDHJGPANGBuilder() {
-        bitField0_ |= 0x00000001;
+      public emu.grasscutter.net.proto.IrodoriChessMapDataOuterClass.IrodoriChessMapData.Builder getOEMKKEEKONGBuilder() {
+        
         onChanged();
-        return getPMIDHJGPANGFieldBuilder().getBuilder();
+        return getOEMKKEEKONGFieldBuilder().getBuilder();
       }
       /**
-       * <code>.MCOPOAMEGCP PMIDHJGPANG = 15;</code>
+       * <code>.IrodoriChessMapData OEMKKEEKONG = 9;</code>
        */
-      public emu.grasscutter.net.proto.MCOPOAMEGCPOuterClass.MCOPOAMEGCPOrBuilder getPMIDHJGPANGOrBuilder() {
-        if (pMIDHJGPANGBuilder_ != null) {
-          return pMIDHJGPANGBuilder_.getMessageOrBuilder();
+      public emu.grasscutter.net.proto.IrodoriChessMapDataOuterClass.IrodoriChessMapDataOrBuilder getOEMKKEEKONGOrBuilder() {
+        if (oEMKKEEKONGBuilder_ != null) {
+          return oEMKKEEKONGBuilder_.getMessageOrBuilder();
         } else {
-          return pMIDHJGPANG_ == null ?
-              emu.grasscutter.net.proto.MCOPOAMEGCPOuterClass.MCOPOAMEGCP.getDefaultInstance() : pMIDHJGPANG_;
+          return oEMKKEEKONG_ == null ?
+              emu.grasscutter.net.proto.IrodoriChessMapDataOuterClass.IrodoriChessMapData.getDefaultInstance() : oEMKKEEKONG_;
         }
       }
       /**
-       * <code>.MCOPOAMEGCP PMIDHJGPANG = 15;</code>
+       * <code>.IrodoriChessMapData OEMKKEEKONG = 9;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          emu.grasscutter.net.proto.MCOPOAMEGCPOuterClass.MCOPOAMEGCP, emu.grasscutter.net.proto.MCOPOAMEGCPOuterClass.MCOPOAMEGCP.Builder, emu.grasscutter.net.proto.MCOPOAMEGCPOuterClass.MCOPOAMEGCPOrBuilder> 
-          getPMIDHJGPANGFieldBuilder() {
-        if (pMIDHJGPANGBuilder_ == null) {
-          pMIDHJGPANGBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              emu.grasscutter.net.proto.MCOPOAMEGCPOuterClass.MCOPOAMEGCP, emu.grasscutter.net.proto.MCOPOAMEGCPOuterClass.MCOPOAMEGCP.Builder, emu.grasscutter.net.proto.MCOPOAMEGCPOuterClass.MCOPOAMEGCPOrBuilder>(
-                  getPMIDHJGPANG(),
+          emu.grasscutter.net.proto.IrodoriChessMapDataOuterClass.IrodoriChessMapData, emu.grasscutter.net.proto.IrodoriChessMapDataOuterClass.IrodoriChessMapData.Builder, emu.grasscutter.net.proto.IrodoriChessMapDataOuterClass.IrodoriChessMapDataOrBuilder> 
+          getOEMKKEEKONGFieldBuilder() {
+        if (oEMKKEEKONGBuilder_ == null) {
+          oEMKKEEKONGBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              emu.grasscutter.net.proto.IrodoriChessMapDataOuterClass.IrodoriChessMapData, emu.grasscutter.net.proto.IrodoriChessMapDataOuterClass.IrodoriChessMapData.Builder, emu.grasscutter.net.proto.IrodoriChessMapDataOuterClass.IrodoriChessMapDataOrBuilder>(
+                  getOEMKKEEKONG(),
                   getParentForChildren(),
                   isClean());
-          pMIDHJGPANG_ = null;
+          oEMKKEEKONG_ = null;
         }
-        return pMIDHJGPANGBuilder_;
+        return oEMKKEEKONGBuilder_;
+      }
+
+      private int levelId_ ;
+      /**
+       * <code>uint32 level_id = 8;</code>
+       * @return The levelId.
+       */
+      @java.lang.Override
+      public int getLevelId() {
+        return levelId_;
+      }
+      /**
+       * <code>uint32 level_id = 8;</code>
+       * @param value The levelId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLevelId(int value) {
+        
+        levelId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 level_id = 8;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLevelId() {
+        
+        levelId_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private emu.grasscutter.net.proto.IrodoriChessMapDataOuterClass.IrodoriChessMapData jCCNLMMCENC_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          emu.grasscutter.net.proto.IrodoriChessMapDataOuterClass.IrodoriChessMapData, emu.grasscutter.net.proto.IrodoriChessMapDataOuterClass.IrodoriChessMapData.Builder, emu.grasscutter.net.proto.IrodoriChessMapDataOuterClass.IrodoriChessMapDataOrBuilder> jCCNLMMCENCBuilder_;
+      /**
+       * <code>.IrodoriChessMapData JCCNLMMCENC = 15;</code>
+       * @return Whether the jCCNLMMCENC field is set.
+       */
+      public boolean hasJCCNLMMCENC() {
+        return jCCNLMMCENCBuilder_ != null || jCCNLMMCENC_ != null;
+      }
+      /**
+       * <code>.IrodoriChessMapData JCCNLMMCENC = 15;</code>
+       * @return The jCCNLMMCENC.
+       */
+      public emu.grasscutter.net.proto.IrodoriChessMapDataOuterClass.IrodoriChessMapData getJCCNLMMCENC() {
+        if (jCCNLMMCENCBuilder_ == null) {
+          return jCCNLMMCENC_ == null ? emu.grasscutter.net.proto.IrodoriChessMapDataOuterClass.IrodoriChessMapData.getDefaultInstance() : jCCNLMMCENC_;
+        } else {
+          return jCCNLMMCENCBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.IrodoriChessMapData JCCNLMMCENC = 15;</code>
+       */
+      public Builder setJCCNLMMCENC(emu.grasscutter.net.proto.IrodoriChessMapDataOuterClass.IrodoriChessMapData value) {
+        if (jCCNLMMCENCBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          jCCNLMMCENC_ = value;
+          onChanged();
+        } else {
+          jCCNLMMCENCBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.IrodoriChessMapData JCCNLMMCENC = 15;</code>
+       */
+      public Builder setJCCNLMMCENC(
+          emu.grasscutter.net.proto.IrodoriChessMapDataOuterClass.IrodoriChessMapData.Builder builderForValue) {
+        if (jCCNLMMCENCBuilder_ == null) {
+          jCCNLMMCENC_ = builderForValue.build();
+          onChanged();
+        } else {
+          jCCNLMMCENCBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.IrodoriChessMapData JCCNLMMCENC = 15;</code>
+       */
+      public Builder mergeJCCNLMMCENC(emu.grasscutter.net.proto.IrodoriChessMapDataOuterClass.IrodoriChessMapData value) {
+        if (jCCNLMMCENCBuilder_ == null) {
+          if (jCCNLMMCENC_ != null) {
+            jCCNLMMCENC_ =
+              emu.grasscutter.net.proto.IrodoriChessMapDataOuterClass.IrodoriChessMapData.newBuilder(jCCNLMMCENC_).mergeFrom(value).buildPartial();
+          } else {
+            jCCNLMMCENC_ = value;
+          }
+          onChanged();
+        } else {
+          jCCNLMMCENCBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.IrodoriChessMapData JCCNLMMCENC = 15;</code>
+       */
+      public Builder clearJCCNLMMCENC() {
+        if (jCCNLMMCENCBuilder_ == null) {
+          jCCNLMMCENC_ = null;
+          onChanged();
+        } else {
+          jCCNLMMCENC_ = null;
+          jCCNLMMCENCBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.IrodoriChessMapData JCCNLMMCENC = 15;</code>
+       */
+      public emu.grasscutter.net.proto.IrodoriChessMapDataOuterClass.IrodoriChessMapData.Builder getJCCNLMMCENCBuilder() {
+        
+        onChanged();
+        return getJCCNLMMCENCFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.IrodoriChessMapData JCCNLMMCENC = 15;</code>
+       */
+      public emu.grasscutter.net.proto.IrodoriChessMapDataOuterClass.IrodoriChessMapDataOrBuilder getJCCNLMMCENCOrBuilder() {
+        if (jCCNLMMCENCBuilder_ != null) {
+          return jCCNLMMCENCBuilder_.getMessageOrBuilder();
+        } else {
+          return jCCNLMMCENC_ == null ?
+              emu.grasscutter.net.proto.IrodoriChessMapDataOuterClass.IrodoriChessMapData.getDefaultInstance() : jCCNLMMCENC_;
+        }
+      }
+      /**
+       * <code>.IrodoriChessMapData JCCNLMMCENC = 15;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          emu.grasscutter.net.proto.IrodoriChessMapDataOuterClass.IrodoriChessMapData, emu.grasscutter.net.proto.IrodoriChessMapDataOuterClass.IrodoriChessMapData.Builder, emu.grasscutter.net.proto.IrodoriChessMapDataOuterClass.IrodoriChessMapDataOrBuilder> 
+          getJCCNLMMCENCFieldBuilder() {
+        if (jCCNLMMCENCBuilder_ == null) {
+          jCCNLMMCENCBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              emu.grasscutter.net.proto.IrodoriChessMapDataOuterClass.IrodoriChessMapData, emu.grasscutter.net.proto.IrodoriChessMapDataOuterClass.IrodoriChessMapData.Builder, emu.grasscutter.net.proto.IrodoriChessMapDataOuterClass.IrodoriChessMapDataOrBuilder>(
+                  getJCCNLMMCENC(),
+                  getParentForChildren(),
+                  isClean());
+          jCCNLMMCENC_ = null;
+        }
+        return jCCNLMMCENCBuilder_;
       }
 
       private int openTime_ ;
@@ -736,7 +920,6 @@ public final class IrodoriChessLevelDataOuterClass {
       public Builder setOpenTime(int value) {
         
         openTime_ = value;
-        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -745,159 +928,8 @@ public final class IrodoriChessLevelDataOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearOpenTime() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        openTime_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private emu.grasscutter.net.proto.MCOPOAMEGCPOuterClass.MCOPOAMEGCP pLIOEJLDHLF_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          emu.grasscutter.net.proto.MCOPOAMEGCPOuterClass.MCOPOAMEGCP, emu.grasscutter.net.proto.MCOPOAMEGCPOuterClass.MCOPOAMEGCP.Builder, emu.grasscutter.net.proto.MCOPOAMEGCPOuterClass.MCOPOAMEGCPOrBuilder> pLIOEJLDHLFBuilder_;
-      /**
-       * <code>.MCOPOAMEGCP PLIOEJLDHLF = 14;</code>
-       * @return Whether the pLIOEJLDHLF field is set.
-       */
-      public boolean hasPLIOEJLDHLF() {
-        return ((bitField0_ & 0x00000004) != 0);
-      }
-      /**
-       * <code>.MCOPOAMEGCP PLIOEJLDHLF = 14;</code>
-       * @return The pLIOEJLDHLF.
-       */
-      public emu.grasscutter.net.proto.MCOPOAMEGCPOuterClass.MCOPOAMEGCP getPLIOEJLDHLF() {
-        if (pLIOEJLDHLFBuilder_ == null) {
-          return pLIOEJLDHLF_ == null ? emu.grasscutter.net.proto.MCOPOAMEGCPOuterClass.MCOPOAMEGCP.getDefaultInstance() : pLIOEJLDHLF_;
-        } else {
-          return pLIOEJLDHLFBuilder_.getMessage();
-        }
-      }
-      /**
-       * <code>.MCOPOAMEGCP PLIOEJLDHLF = 14;</code>
-       */
-      public Builder setPLIOEJLDHLF(emu.grasscutter.net.proto.MCOPOAMEGCPOuterClass.MCOPOAMEGCP value) {
-        if (pLIOEJLDHLFBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          pLIOEJLDHLF_ = value;
-        } else {
-          pLIOEJLDHLFBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000004;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>.MCOPOAMEGCP PLIOEJLDHLF = 14;</code>
-       */
-      public Builder setPLIOEJLDHLF(
-          emu.grasscutter.net.proto.MCOPOAMEGCPOuterClass.MCOPOAMEGCP.Builder builderForValue) {
-        if (pLIOEJLDHLFBuilder_ == null) {
-          pLIOEJLDHLF_ = builderForValue.build();
-        } else {
-          pLIOEJLDHLFBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000004;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>.MCOPOAMEGCP PLIOEJLDHLF = 14;</code>
-       */
-      public Builder mergePLIOEJLDHLF(emu.grasscutter.net.proto.MCOPOAMEGCPOuterClass.MCOPOAMEGCP value) {
-        if (pLIOEJLDHLFBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) != 0) &&
-            pLIOEJLDHLF_ != null &&
-            pLIOEJLDHLF_ != emu.grasscutter.net.proto.MCOPOAMEGCPOuterClass.MCOPOAMEGCP.getDefaultInstance()) {
-            getPLIOEJLDHLFBuilder().mergeFrom(value);
-          } else {
-            pLIOEJLDHLF_ = value;
-          }
-        } else {
-          pLIOEJLDHLFBuilder_.mergeFrom(value);
-        }
-        bitField0_ |= 0x00000004;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>.MCOPOAMEGCP PLIOEJLDHLF = 14;</code>
-       */
-      public Builder clearPLIOEJLDHLF() {
-        bitField0_ = (bitField0_ & ~0x00000004);
-        pLIOEJLDHLF_ = null;
-        if (pLIOEJLDHLFBuilder_ != null) {
-          pLIOEJLDHLFBuilder_.dispose();
-          pLIOEJLDHLFBuilder_ = null;
-        }
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>.MCOPOAMEGCP PLIOEJLDHLF = 14;</code>
-       */
-      public emu.grasscutter.net.proto.MCOPOAMEGCPOuterClass.MCOPOAMEGCP.Builder getPLIOEJLDHLFBuilder() {
-        bitField0_ |= 0x00000004;
-        onChanged();
-        return getPLIOEJLDHLFFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.MCOPOAMEGCP PLIOEJLDHLF = 14;</code>
-       */
-      public emu.grasscutter.net.proto.MCOPOAMEGCPOuterClass.MCOPOAMEGCPOrBuilder getPLIOEJLDHLFOrBuilder() {
-        if (pLIOEJLDHLFBuilder_ != null) {
-          return pLIOEJLDHLFBuilder_.getMessageOrBuilder();
-        } else {
-          return pLIOEJLDHLF_ == null ?
-              emu.grasscutter.net.proto.MCOPOAMEGCPOuterClass.MCOPOAMEGCP.getDefaultInstance() : pLIOEJLDHLF_;
-        }
-      }
-      /**
-       * <code>.MCOPOAMEGCP PLIOEJLDHLF = 14;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          emu.grasscutter.net.proto.MCOPOAMEGCPOuterClass.MCOPOAMEGCP, emu.grasscutter.net.proto.MCOPOAMEGCPOuterClass.MCOPOAMEGCP.Builder, emu.grasscutter.net.proto.MCOPOAMEGCPOuterClass.MCOPOAMEGCPOrBuilder> 
-          getPLIOEJLDHLFFieldBuilder() {
-        if (pLIOEJLDHLFBuilder_ == null) {
-          pLIOEJLDHLFBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              emu.grasscutter.net.proto.MCOPOAMEGCPOuterClass.MCOPOAMEGCP, emu.grasscutter.net.proto.MCOPOAMEGCPOuterClass.MCOPOAMEGCP.Builder, emu.grasscutter.net.proto.MCOPOAMEGCPOuterClass.MCOPOAMEGCPOrBuilder>(
-                  getPLIOEJLDHLF(),
-                  getParentForChildren(),
-                  isClean());
-          pLIOEJLDHLF_ = null;
-        }
-        return pLIOEJLDHLFBuilder_;
-      }
-
-      private int levelId_ ;
-      /**
-       * <code>uint32 level_id = 2;</code>
-       * @return The levelId.
-       */
-      @java.lang.Override
-      public int getLevelId() {
-        return levelId_;
-      }
-      /**
-       * <code>uint32 level_id = 2;</code>
-       * @param value The levelId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setLevelId(int value) {
         
-        levelId_ = value;
-        bitField0_ |= 0x00000008;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint32 level_id = 2;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearLevelId() {
-        bitField0_ = (bitField0_ & ~0x00000008);
-        levelId_ = 0;
+        openTime_ = 0;
         onChanged();
         return this;
       }
@@ -934,18 +966,7 @@ public final class IrodoriChessLevelDataOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new IrodoriChessLevelData(input, extensionRegistry);
       }
     };
 
@@ -979,25 +1000,26 @@ public final class IrodoriChessLevelDataOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\033IrodoriChessLevelData.proto\032\021MCOPOAMEG" +
-      "CP.proto\"\202\001\n\025IrodoriChessLevelData\022!\n\013PM" +
-      "IDHJGPANG\030\017 \001(\0132\014.MCOPOAMEGCP\022\021\n\topen_ti" +
-      "me\030\006 \001(\r\022!\n\013PLIOEJLDHLF\030\016 \001(\0132\014.MCOPOAME" +
-      "GCP\022\020\n\010level_id\030\002 \001(\rB\033\n\031emu.grasscutter" +
-      ".net.protob\006proto3"
+      "\n\033IrodoriChessLevelData.proto\032\031IrodoriCh" +
+      "essMapData.proto\"\222\001\n\025IrodoriChessLevelDa" +
+      "ta\022)\n\013OEMKKEEKONG\030\t \001(\0132\024.IrodoriChessMa" +
+      "pData\022\020\n\010level_id\030\010 \001(\r\022)\n\013JCCNLMMCENC\030\017" +
+      " \001(\0132\024.IrodoriChessMapData\022\021\n\topen_time\030" +
+      "\006 \001(\rB\033\n\031emu.grasscutter.net.protob\006prot" +
+      "o3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          emu.grasscutter.net.proto.MCOPOAMEGCPOuterClass.getDescriptor(),
+          emu.grasscutter.net.proto.IrodoriChessMapDataOuterClass.getDescriptor(),
         });
     internal_static_IrodoriChessLevelData_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_IrodoriChessLevelData_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_IrodoriChessLevelData_descriptor,
-        new java.lang.String[] { "PMIDHJGPANG", "OpenTime", "PLIOEJLDHLF", "LevelId", });
-    emu.grasscutter.net.proto.MCOPOAMEGCPOuterClass.getDescriptor();
+        new java.lang.String[] { "OEMKKEEKONG", "LevelId", "JCCNLMMCENC", "OpenTime", });
+    emu.grasscutter.net.proto.IrodoriChessMapDataOuterClass.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

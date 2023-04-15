@@ -19,29 +19,29 @@ public final class VintagePresentStageDataOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>bool isFinish = 4;</code>
-     * @return The isFinish.
+     * <code>uint32 stage_id = 12;</code>
+     * @return The stageId.
      */
-    boolean getIsFinish();
+    int getStageId();
 
     /**
-     * <code>uint32 openTime = 14;</code>
-     * @return The openTime.
-     */
-    int getOpenTime();
-
-    /**
-     * <code>bool isOpen = 9;</code>
+     * <code>bool is_open = 11;</code>
      * @return The isOpen.
      */
     boolean getIsOpen();
 
     /**
-     * <code>map&lt;uint32, .VintagePresentLevelData&gt; presentLevelMap = 7;</code>
+     * <code>uint32 open_time = 15;</code>
+     * @return The openTime.
+     */
+    int getOpenTime();
+
+    /**
+     * <code>map&lt;uint32, .VintagePresentLevelData&gt; present_level_map = 3;</code>
      */
     int getPresentLevelMapCount();
     /**
-     * <code>map&lt;uint32, .VintagePresentLevelData&gt; presentLevelMap = 7;</code>
+     * <code>map&lt;uint32, .VintagePresentLevelData&gt; present_level_map = 3;</code>
      */
     boolean containsPresentLevelMap(
         int key);
@@ -52,31 +52,35 @@ public final class VintagePresentStageDataOuterClass {
     java.util.Map<java.lang.Integer, emu.grasscutter.net.proto.VintagePresentLevelDataOuterClass.VintagePresentLevelData>
     getPresentLevelMap();
     /**
-     * <code>map&lt;uint32, .VintagePresentLevelData&gt; presentLevelMap = 7;</code>
+     * <code>map&lt;uint32, .VintagePresentLevelData&gt; present_level_map = 3;</code>
      */
     java.util.Map<java.lang.Integer, emu.grasscutter.net.proto.VintagePresentLevelDataOuterClass.VintagePresentLevelData>
     getPresentLevelMapMap();
     /**
-     * <code>map&lt;uint32, .VintagePresentLevelData&gt; presentLevelMap = 7;</code>
+     * <code>map&lt;uint32, .VintagePresentLevelData&gt; present_level_map = 3;</code>
      */
-    /* nullable */
-emu.grasscutter.net.proto.VintagePresentLevelDataOuterClass.VintagePresentLevelData getPresentLevelMapOrDefault(
+
+    emu.grasscutter.net.proto.VintagePresentLevelDataOuterClass.VintagePresentLevelData getPresentLevelMapOrDefault(
         int key,
-        /* nullable */
-emu.grasscutter.net.proto.VintagePresentLevelDataOuterClass.VintagePresentLevelData defaultValue);
+        emu.grasscutter.net.proto.VintagePresentLevelDataOuterClass.VintagePresentLevelData defaultValue);
     /**
-     * <code>map&lt;uint32, .VintagePresentLevelData&gt; presentLevelMap = 7;</code>
+     * <code>map&lt;uint32, .VintagePresentLevelData&gt; present_level_map = 3;</code>
      */
+
     emu.grasscutter.net.proto.VintagePresentLevelDataOuterClass.VintagePresentLevelData getPresentLevelMapOrThrow(
         int key);
 
     /**
-     * <code>uint32 stageId = 15;</code>
-     * @return The stageId.
+     * <code>bool is_finish = 4;</code>
+     * @return The isFinish.
      */
-    int getStageId();
+    boolean getIsFinish();
   }
   /**
+   * <pre>
+   * Name: LAFPNNGPPME
+   * </pre>
+   *
    * Protobuf type {@code VintagePresentStageData}
    */
   public static final class VintagePresentStageData extends
@@ -103,6 +107,77 @@ emu.grasscutter.net.proto.VintagePresentLevelDataOuterClass.VintagePresentLevelD
     getUnknownFields() {
       return this.unknownFields;
     }
+    private VintagePresentStageData(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 26: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                presentLevelMap_ = com.google.protobuf.MapField.newMapField(
+                    PresentLevelMapDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000001;
+              }
+              com.google.protobuf.MapEntry<java.lang.Integer, emu.grasscutter.net.proto.VintagePresentLevelDataOuterClass.VintagePresentLevelData>
+              presentLevelMap__ = input.readMessage(
+                  PresentLevelMapDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              presentLevelMap_.getMutableMap().put(
+                  presentLevelMap__.getKey(), presentLevelMap__.getValue());
+              break;
+            }
+            case 32: {
+
+              isFinish_ = input.readBool();
+              break;
+            }
+            case 88: {
+
+              isOpen_ = input.readBool();
+              break;
+            }
+            case 96: {
+
+              stageId_ = input.readUInt32();
+              break;
+            }
+            case 120: {
+
+              openTime_ = input.readUInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.VintagePresentStageDataOuterClass.internal_static_VintagePresentStageData_descriptor;
@@ -113,7 +188,7 @@ emu.grasscutter.net.proto.VintagePresentLevelDataOuterClass.VintagePresentLevelD
     protected com.google.protobuf.MapField internalGetMapField(
         int number) {
       switch (number) {
-        case 7:
+        case 3:
           return internalGetPresentLevelMap();
         default:
           throw new RuntimeException(
@@ -128,32 +203,21 @@ emu.grasscutter.net.proto.VintagePresentLevelDataOuterClass.VintagePresentLevelD
               emu.grasscutter.net.proto.VintagePresentStageDataOuterClass.VintagePresentStageData.class, emu.grasscutter.net.proto.VintagePresentStageDataOuterClass.VintagePresentStageData.Builder.class);
     }
 
-    public static final int ISFINISH_FIELD_NUMBER = 4;
-    private boolean isFinish_ = false;
+    public static final int STAGE_ID_FIELD_NUMBER = 12;
+    private int stageId_;
     /**
-     * <code>bool isFinish = 4;</code>
-     * @return The isFinish.
+     * <code>uint32 stage_id = 12;</code>
+     * @return The stageId.
      */
     @java.lang.Override
-    public boolean getIsFinish() {
-      return isFinish_;
+    public int getStageId() {
+      return stageId_;
     }
 
-    public static final int OPENTIME_FIELD_NUMBER = 14;
-    private int openTime_ = 0;
+    public static final int IS_OPEN_FIELD_NUMBER = 11;
+    private boolean isOpen_;
     /**
-     * <code>uint32 openTime = 14;</code>
-     * @return The openTime.
-     */
-    @java.lang.Override
-    public int getOpenTime() {
-      return openTime_;
-    }
-
-    public static final int ISOPEN_FIELD_NUMBER = 9;
-    private boolean isOpen_ = false;
-    /**
-     * <code>bool isOpen = 9;</code>
+     * <code>bool is_open = 11;</code>
      * @return The isOpen.
      */
     @java.lang.Override
@@ -161,7 +225,18 @@ emu.grasscutter.net.proto.VintagePresentLevelDataOuterClass.VintagePresentLevelD
       return isOpen_;
     }
 
-    public static final int PRESENTLEVELMAP_FIELD_NUMBER = 7;
+    public static final int OPEN_TIME_FIELD_NUMBER = 15;
+    private int openTime_;
+    /**
+     * <code>uint32 open_time = 15;</code>
+     * @return The openTime.
+     */
+    @java.lang.Override
+    public int getOpenTime() {
+      return openTime_;
+    }
+
+    public static final int PRESENT_LEVEL_MAP_FIELD_NUMBER = 3;
     private static final class PresentLevelMapDefaultEntryHolder {
       static final com.google.protobuf.MapEntry<
           java.lang.Integer, emu.grasscutter.net.proto.VintagePresentLevelDataOuterClass.VintagePresentLevelData> defaultEntry =
@@ -173,7 +248,6 @@ emu.grasscutter.net.proto.VintagePresentLevelDataOuterClass.VintagePresentLevelD
                   com.google.protobuf.WireFormat.FieldType.MESSAGE,
                   emu.grasscutter.net.proto.VintagePresentLevelDataOuterClass.VintagePresentLevelData.getDefaultInstance());
     }
-    @SuppressWarnings("serial")
     private com.google.protobuf.MapField<
         java.lang.Integer, emu.grasscutter.net.proto.VintagePresentLevelDataOuterClass.VintagePresentLevelData> presentLevelMap_;
     private com.google.protobuf.MapField<java.lang.Integer, emu.grasscutter.net.proto.VintagePresentLevelDataOuterClass.VintagePresentLevelData>
@@ -184,12 +258,14 @@ emu.grasscutter.net.proto.VintagePresentLevelDataOuterClass.VintagePresentLevelD
       }
       return presentLevelMap_;
     }
+
     public int getPresentLevelMapCount() {
       return internalGetPresentLevelMap().getMap().size();
     }
     /**
-     * <code>map&lt;uint32, .VintagePresentLevelData&gt; presentLevelMap = 7;</code>
+     * <code>map&lt;uint32, .VintagePresentLevelData&gt; present_level_map = 3;</code>
      */
+
     @java.lang.Override
     public boolean containsPresentLevelMap(
         int key) {
@@ -205,30 +281,31 @@ emu.grasscutter.net.proto.VintagePresentLevelDataOuterClass.VintagePresentLevelD
       return getPresentLevelMapMap();
     }
     /**
-     * <code>map&lt;uint32, .VintagePresentLevelData&gt; presentLevelMap = 7;</code>
+     * <code>map&lt;uint32, .VintagePresentLevelData&gt; present_level_map = 3;</code>
      */
     @java.lang.Override
+
     public java.util.Map<java.lang.Integer, emu.grasscutter.net.proto.VintagePresentLevelDataOuterClass.VintagePresentLevelData> getPresentLevelMapMap() {
       return internalGetPresentLevelMap().getMap();
     }
     /**
-     * <code>map&lt;uint32, .VintagePresentLevelData&gt; presentLevelMap = 7;</code>
+     * <code>map&lt;uint32, .VintagePresentLevelData&gt; present_level_map = 3;</code>
      */
     @java.lang.Override
-    public /* nullable */
-emu.grasscutter.net.proto.VintagePresentLevelDataOuterClass.VintagePresentLevelData getPresentLevelMapOrDefault(
+
+    public emu.grasscutter.net.proto.VintagePresentLevelDataOuterClass.VintagePresentLevelData getPresentLevelMapOrDefault(
         int key,
-        /* nullable */
-emu.grasscutter.net.proto.VintagePresentLevelDataOuterClass.VintagePresentLevelData defaultValue) {
+        emu.grasscutter.net.proto.VintagePresentLevelDataOuterClass.VintagePresentLevelData defaultValue) {
       
       java.util.Map<java.lang.Integer, emu.grasscutter.net.proto.VintagePresentLevelDataOuterClass.VintagePresentLevelData> map =
           internalGetPresentLevelMap().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
-     * <code>map&lt;uint32, .VintagePresentLevelData&gt; presentLevelMap = 7;</code>
+     * <code>map&lt;uint32, .VintagePresentLevelData&gt; present_level_map = 3;</code>
      */
     @java.lang.Override
+
     public emu.grasscutter.net.proto.VintagePresentLevelDataOuterClass.VintagePresentLevelData getPresentLevelMapOrThrow(
         int key) {
       
@@ -240,15 +317,15 @@ emu.grasscutter.net.proto.VintagePresentLevelDataOuterClass.VintagePresentLevelD
       return map.get(key);
     }
 
-    public static final int STAGEID_FIELD_NUMBER = 15;
-    private int stageId_ = 0;
+    public static final int IS_FINISH_FIELD_NUMBER = 4;
+    private boolean isFinish_;
     /**
-     * <code>uint32 stageId = 15;</code>
-     * @return The stageId.
+     * <code>bool is_finish = 4;</code>
+     * @return The isFinish.
      */
     @java.lang.Override
-    public int getStageId() {
-      return stageId_;
+    public boolean getIsFinish() {
+      return isFinish_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -265,25 +342,25 @@ emu.grasscutter.net.proto.VintagePresentLevelDataOuterClass.VintagePresentLevelD
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (isFinish_ != false) {
-        output.writeBool(4, isFinish_);
-      }
       com.google.protobuf.GeneratedMessageV3
         .serializeIntegerMapTo(
           output,
           internalGetPresentLevelMap(),
           PresentLevelMapDefaultEntryHolder.defaultEntry,
-          7);
-      if (isOpen_ != false) {
-        output.writeBool(9, isOpen_);
+          3);
+      if (isFinish_ != false) {
+        output.writeBool(4, isFinish_);
       }
-      if (openTime_ != 0) {
-        output.writeUInt32(14, openTime_);
+      if (isOpen_ != false) {
+        output.writeBool(11, isOpen_);
       }
       if (stageId_ != 0) {
-        output.writeUInt32(15, stageId_);
+        output.writeUInt32(12, stageId_);
       }
-      getUnknownFields().writeTo(output);
+      if (openTime_ != 0) {
+        output.writeUInt32(15, openTime_);
+      }
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -292,10 +369,6 @@ emu.grasscutter.net.proto.VintagePresentLevelDataOuterClass.VintagePresentLevelD
       if (size != -1) return size;
 
       size = 0;
-      if (isFinish_ != false) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(4, isFinish_);
-      }
       for (java.util.Map.Entry<java.lang.Integer, emu.grasscutter.net.proto.VintagePresentLevelDataOuterClass.VintagePresentLevelData> entry
            : internalGetPresentLevelMap().getMap().entrySet()) {
         com.google.protobuf.MapEntry<java.lang.Integer, emu.grasscutter.net.proto.VintagePresentLevelDataOuterClass.VintagePresentLevelData>
@@ -304,21 +377,25 @@ emu.grasscutter.net.proto.VintagePresentLevelDataOuterClass.VintagePresentLevelD
             .setValue(entry.getValue())
             .build();
         size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(7, presentLevelMap__);
+            .computeMessageSize(3, presentLevelMap__);
+      }
+      if (isFinish_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(4, isFinish_);
       }
       if (isOpen_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(9, isOpen_);
-      }
-      if (openTime_ != 0) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(14, openTime_);
+          .computeBoolSize(11, isOpen_);
       }
       if (stageId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(15, stageId_);
+          .computeUInt32Size(12, stageId_);
       }
-      size += getUnknownFields().getSerializedSize();
+      if (openTime_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(15, openTime_);
+      }
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -333,17 +410,17 @@ emu.grasscutter.net.proto.VintagePresentLevelDataOuterClass.VintagePresentLevelD
       }
       emu.grasscutter.net.proto.VintagePresentStageDataOuterClass.VintagePresentStageData other = (emu.grasscutter.net.proto.VintagePresentStageDataOuterClass.VintagePresentStageData) obj;
 
-      if (getIsFinish()
-          != other.getIsFinish()) return false;
-      if (getOpenTime()
-          != other.getOpenTime()) return false;
-      if (getIsOpen()
-          != other.getIsOpen()) return false;
-      if (!internalGetPresentLevelMap().equals(
-          other.internalGetPresentLevelMap())) return false;
       if (getStageId()
           != other.getStageId()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (getIsOpen()
+          != other.getIsOpen()) return false;
+      if (getOpenTime()
+          != other.getOpenTime()) return false;
+      if (!internalGetPresentLevelMap().equals(
+          other.internalGetPresentLevelMap())) return false;
+      if (getIsFinish()
+          != other.getIsFinish()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -354,21 +431,21 @@ emu.grasscutter.net.proto.VintagePresentLevelDataOuterClass.VintagePresentLevelD
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + ISFINISH_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getIsFinish());
-      hash = (37 * hash) + OPENTIME_FIELD_NUMBER;
-      hash = (53 * hash) + getOpenTime();
-      hash = (37 * hash) + ISOPEN_FIELD_NUMBER;
+      hash = (37 * hash) + STAGE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getStageId();
+      hash = (37 * hash) + IS_OPEN_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getIsOpen());
+      hash = (37 * hash) + OPEN_TIME_FIELD_NUMBER;
+      hash = (53 * hash) + getOpenTime();
       if (!internalGetPresentLevelMap().getMap().isEmpty()) {
-        hash = (37 * hash) + PRESENTLEVELMAP_FIELD_NUMBER;
+        hash = (37 * hash) + PRESENT_LEVEL_MAP_FIELD_NUMBER;
         hash = (53 * hash) + internalGetPresentLevelMap().hashCode();
       }
-      hash = (37 * hash) + STAGEID_FIELD_NUMBER;
-      hash = (53 * hash) + getStageId();
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (37 * hash) + IS_FINISH_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getIsFinish());
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -464,6 +541,10 @@ emu.grasscutter.net.proto.VintagePresentLevelDataOuterClass.VintagePresentLevelD
       return builder;
     }
     /**
+     * <pre>
+     * Name: LAFPNNGPPME
+     * </pre>
+     *
      * Protobuf type {@code VintagePresentStageData}
      */
     public static final class Builder extends
@@ -479,7 +560,7 @@ emu.grasscutter.net.proto.VintagePresentLevelDataOuterClass.VintagePresentLevelD
       protected com.google.protobuf.MapField internalGetMapField(
           int number) {
         switch (number) {
-          case 7:
+          case 3:
             return internalGetPresentLevelMap();
           default:
             throw new RuntimeException(
@@ -490,7 +571,7 @@ emu.grasscutter.net.proto.VintagePresentLevelDataOuterClass.VintagePresentLevelD
       protected com.google.protobuf.MapField internalGetMutableMapField(
           int number) {
         switch (number) {
-          case 7:
+          case 3:
             return internalGetMutablePresentLevelMap();
           default:
             throw new RuntimeException(
@@ -507,23 +588,31 @@ emu.grasscutter.net.proto.VintagePresentLevelDataOuterClass.VintagePresentLevelD
 
       // Construct using emu.grasscutter.net.proto.VintagePresentStageDataOuterClass.VintagePresentStageData.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        bitField0_ = 0;
-        isFinish_ = false;
-        openTime_ = 0;
-        isOpen_ = false;
-        internalGetMutablePresentLevelMap().clear();
         stageId_ = 0;
+
+        isOpen_ = false;
+
+        openTime_ = 0;
+
+        internalGetMutablePresentLevelMap().clear();
+        isFinish_ = false;
+
         return this;
       }
 
@@ -550,29 +639,15 @@ emu.grasscutter.net.proto.VintagePresentLevelDataOuterClass.VintagePresentLevelD
       @java.lang.Override
       public emu.grasscutter.net.proto.VintagePresentStageDataOuterClass.VintagePresentStageData buildPartial() {
         emu.grasscutter.net.proto.VintagePresentStageDataOuterClass.VintagePresentStageData result = new emu.grasscutter.net.proto.VintagePresentStageDataOuterClass.VintagePresentStageData(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
+        int from_bitField0_ = bitField0_;
+        result.stageId_ = stageId_;
+        result.isOpen_ = isOpen_;
+        result.openTime_ = openTime_;
+        result.presentLevelMap_ = internalGetPresentLevelMap();
+        result.presentLevelMap_.makeImmutable();
+        result.isFinish_ = isFinish_;
         onBuilt();
         return result;
-      }
-
-      private void buildPartial0(emu.grasscutter.net.proto.VintagePresentStageDataOuterClass.VintagePresentStageData result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.isFinish_ = isFinish_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.openTime_ = openTime_;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.isOpen_ = isOpen_;
-        }
-        if (((from_bitField0_ & 0x00000008) != 0)) {
-          result.presentLevelMap_ = internalGetPresentLevelMap();
-          result.presentLevelMap_.makeImmutable();
-        }
-        if (((from_bitField0_ & 0x00000010) != 0)) {
-          result.stageId_ = stageId_;
-        }
       }
 
       @java.lang.Override
@@ -619,22 +694,21 @@ emu.grasscutter.net.proto.VintagePresentLevelDataOuterClass.VintagePresentLevelD
 
       public Builder mergeFrom(emu.grasscutter.net.proto.VintagePresentStageDataOuterClass.VintagePresentStageData other) {
         if (other == emu.grasscutter.net.proto.VintagePresentStageDataOuterClass.VintagePresentStageData.getDefaultInstance()) return this;
-        if (other.getIsFinish() != false) {
-          setIsFinish(other.getIsFinish());
-        }
-        if (other.getOpenTime() != 0) {
-          setOpenTime(other.getOpenTime());
+        if (other.getStageId() != 0) {
+          setStageId(other.getStageId());
         }
         if (other.getIsOpen() != false) {
           setIsOpen(other.getIsOpen());
         }
+        if (other.getOpenTime() != 0) {
+          setOpenTime(other.getOpenTime());
+        }
         internalGetMutablePresentLevelMap().mergeFrom(
             other.internalGetPresentLevelMap());
-        bitField0_ |= 0x00000008;
-        if (other.getStageId() != 0) {
-          setStageId(other.getStageId());
+        if (other.getIsFinish() != false) {
+          setIsFinish(other.getIsFinish());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -649,130 +723,55 @@ emu.grasscutter.net.proto.VintagePresentLevelDataOuterClass.VintagePresentLevelD
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.VintagePresentStageDataOuterClass.VintagePresentStageData parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 32: {
-                isFinish_ = input.readBool();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 32
-              case 58: {
-                com.google.protobuf.MapEntry<java.lang.Integer, emu.grasscutter.net.proto.VintagePresentLevelDataOuterClass.VintagePresentLevelData>
-                presentLevelMap__ = input.readMessage(
-                    PresentLevelMapDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-                internalGetMutablePresentLevelMap().getMutableMap().put(
-                    presentLevelMap__.getKey(), presentLevelMap__.getValue());
-                bitField0_ |= 0x00000008;
-                break;
-              } // case 58
-              case 72: {
-                isOpen_ = input.readBool();
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 72
-              case 112: {
-                openTime_ = input.readUInt32();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 112
-              case 120: {
-                stageId_ = input.readUInt32();
-                bitField0_ |= 0x00000010;
-                break;
-              } // case 120
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.VintagePresentStageDataOuterClass.VintagePresentStageData) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
       private int bitField0_;
 
-      private boolean isFinish_ ;
+      private int stageId_ ;
       /**
-       * <code>bool isFinish = 4;</code>
-       * @return The isFinish.
+       * <code>uint32 stage_id = 12;</code>
+       * @return The stageId.
        */
       @java.lang.Override
-      public boolean getIsFinish() {
-        return isFinish_;
+      public int getStageId() {
+        return stageId_;
       }
       /**
-       * <code>bool isFinish = 4;</code>
-       * @param value The isFinish to set.
+       * <code>uint32 stage_id = 12;</code>
+       * @param value The stageId to set.
        * @return This builder for chaining.
        */
-      public Builder setIsFinish(boolean value) {
+      public Builder setStageId(int value) {
         
-        isFinish_ = value;
-        bitField0_ |= 0x00000001;
+        stageId_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>bool isFinish = 4;</code>
+       * <code>uint32 stage_id = 12;</code>
        * @return This builder for chaining.
        */
-      public Builder clearIsFinish() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        isFinish_ = false;
-        onChanged();
-        return this;
-      }
-
-      private int openTime_ ;
-      /**
-       * <code>uint32 openTime = 14;</code>
-       * @return The openTime.
-       */
-      @java.lang.Override
-      public int getOpenTime() {
-        return openTime_;
-      }
-      /**
-       * <code>uint32 openTime = 14;</code>
-       * @param value The openTime to set.
-       * @return This builder for chaining.
-       */
-      public Builder setOpenTime(int value) {
+      public Builder clearStageId() {
         
-        openTime_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint32 openTime = 14;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearOpenTime() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        openTime_ = 0;
+        stageId_ = 0;
         onChanged();
         return this;
       }
 
       private boolean isOpen_ ;
       /**
-       * <code>bool isOpen = 9;</code>
+       * <code>bool is_open = 11;</code>
        * @return The isOpen.
        */
       @java.lang.Override
@@ -780,24 +779,54 @@ emu.grasscutter.net.proto.VintagePresentLevelDataOuterClass.VintagePresentLevelD
         return isOpen_;
       }
       /**
-       * <code>bool isOpen = 9;</code>
+       * <code>bool is_open = 11;</code>
        * @param value The isOpen to set.
        * @return This builder for chaining.
        */
       public Builder setIsOpen(boolean value) {
         
         isOpen_ = value;
-        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
       /**
-       * <code>bool isOpen = 9;</code>
+       * <code>bool is_open = 11;</code>
        * @return This builder for chaining.
        */
       public Builder clearIsOpen() {
-        bitField0_ = (bitField0_ & ~0x00000004);
+        
         isOpen_ = false;
+        onChanged();
+        return this;
+      }
+
+      private int openTime_ ;
+      /**
+       * <code>uint32 open_time = 15;</code>
+       * @return The openTime.
+       */
+      @java.lang.Override
+      public int getOpenTime() {
+        return openTime_;
+      }
+      /**
+       * <code>uint32 open_time = 15;</code>
+       * @param value The openTime to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOpenTime(int value) {
+        
+        openTime_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 open_time = 15;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOpenTime() {
+        
+        openTime_ = 0;
         onChanged();
         return this;
       }
@@ -805,7 +834,7 @@ emu.grasscutter.net.proto.VintagePresentLevelDataOuterClass.VintagePresentLevelD
       private com.google.protobuf.MapField<
           java.lang.Integer, emu.grasscutter.net.proto.VintagePresentLevelDataOuterClass.VintagePresentLevelData> presentLevelMap_;
       private com.google.protobuf.MapField<java.lang.Integer, emu.grasscutter.net.proto.VintagePresentLevelDataOuterClass.VintagePresentLevelData>
-          internalGetPresentLevelMap() {
+      internalGetPresentLevelMap() {
         if (presentLevelMap_ == null) {
           return com.google.protobuf.MapField.emptyMapField(
               PresentLevelMapDefaultEntryHolder.defaultEntry);
@@ -813,7 +842,8 @@ emu.grasscutter.net.proto.VintagePresentLevelDataOuterClass.VintagePresentLevelD
         return presentLevelMap_;
       }
       private com.google.protobuf.MapField<java.lang.Integer, emu.grasscutter.net.proto.VintagePresentLevelDataOuterClass.VintagePresentLevelData>
-          internalGetMutablePresentLevelMap() {
+      internalGetMutablePresentLevelMap() {
+        onChanged();;
         if (presentLevelMap_ == null) {
           presentLevelMap_ = com.google.protobuf.MapField.newMapField(
               PresentLevelMapDefaultEntryHolder.defaultEntry);
@@ -821,16 +851,16 @@ emu.grasscutter.net.proto.VintagePresentLevelDataOuterClass.VintagePresentLevelD
         if (!presentLevelMap_.isMutable()) {
           presentLevelMap_ = presentLevelMap_.copy();
         }
-        bitField0_ |= 0x00000008;
-        onChanged();
         return presentLevelMap_;
       }
+
       public int getPresentLevelMapCount() {
         return internalGetPresentLevelMap().getMap().size();
       }
       /**
-       * <code>map&lt;uint32, .VintagePresentLevelData&gt; presentLevelMap = 7;</code>
+       * <code>map&lt;uint32, .VintagePresentLevelData&gt; present_level_map = 3;</code>
        */
+
       @java.lang.Override
       public boolean containsPresentLevelMap(
           int key) {
@@ -846,30 +876,31 @@ emu.grasscutter.net.proto.VintagePresentLevelDataOuterClass.VintagePresentLevelD
         return getPresentLevelMapMap();
       }
       /**
-       * <code>map&lt;uint32, .VintagePresentLevelData&gt; presentLevelMap = 7;</code>
+       * <code>map&lt;uint32, .VintagePresentLevelData&gt; present_level_map = 3;</code>
        */
       @java.lang.Override
+
       public java.util.Map<java.lang.Integer, emu.grasscutter.net.proto.VintagePresentLevelDataOuterClass.VintagePresentLevelData> getPresentLevelMapMap() {
         return internalGetPresentLevelMap().getMap();
       }
       /**
-       * <code>map&lt;uint32, .VintagePresentLevelData&gt; presentLevelMap = 7;</code>
+       * <code>map&lt;uint32, .VintagePresentLevelData&gt; present_level_map = 3;</code>
        */
       @java.lang.Override
-      public /* nullable */
-emu.grasscutter.net.proto.VintagePresentLevelDataOuterClass.VintagePresentLevelData getPresentLevelMapOrDefault(
+
+      public emu.grasscutter.net.proto.VintagePresentLevelDataOuterClass.VintagePresentLevelData getPresentLevelMapOrDefault(
           int key,
-          /* nullable */
-emu.grasscutter.net.proto.VintagePresentLevelDataOuterClass.VintagePresentLevelData defaultValue) {
+          emu.grasscutter.net.proto.VintagePresentLevelDataOuterClass.VintagePresentLevelData defaultValue) {
         
         java.util.Map<java.lang.Integer, emu.grasscutter.net.proto.VintagePresentLevelDataOuterClass.VintagePresentLevelData> map =
             internalGetPresentLevelMap().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
-       * <code>map&lt;uint32, .VintagePresentLevelData&gt; presentLevelMap = 7;</code>
+       * <code>map&lt;uint32, .VintagePresentLevelData&gt; present_level_map = 3;</code>
        */
       @java.lang.Override
+
       public emu.grasscutter.net.proto.VintagePresentLevelDataOuterClass.VintagePresentLevelData getPresentLevelMapOrThrow(
           int key) {
         
@@ -880,15 +911,16 @@ emu.grasscutter.net.proto.VintagePresentLevelDataOuterClass.VintagePresentLevelD
         }
         return map.get(key);
       }
+
       public Builder clearPresentLevelMap() {
-        bitField0_ = (bitField0_ & ~0x00000008);
         internalGetMutablePresentLevelMap().getMutableMap()
             .clear();
         return this;
       }
       /**
-       * <code>map&lt;uint32, .VintagePresentLevelData&gt; presentLevelMap = 7;</code>
+       * <code>map&lt;uint32, .VintagePresentLevelData&gt; present_level_map = 3;</code>
        */
+
       public Builder removePresentLevelMap(
           int key) {
         
@@ -901,62 +933,59 @@ emu.grasscutter.net.proto.VintagePresentLevelDataOuterClass.VintagePresentLevelD
        */
       @java.lang.Deprecated
       public java.util.Map<java.lang.Integer, emu.grasscutter.net.proto.VintagePresentLevelDataOuterClass.VintagePresentLevelData>
-          getMutablePresentLevelMap() {
-        bitField0_ |= 0x00000008;
+      getMutablePresentLevelMap() {
         return internalGetMutablePresentLevelMap().getMutableMap();
       }
       /**
-       * <code>map&lt;uint32, .VintagePresentLevelData&gt; presentLevelMap = 7;</code>
+       * <code>map&lt;uint32, .VintagePresentLevelData&gt; present_level_map = 3;</code>
        */
       public Builder putPresentLevelMap(
           int key,
           emu.grasscutter.net.proto.VintagePresentLevelDataOuterClass.VintagePresentLevelData value) {
         
-        if (value == null) { throw new NullPointerException("map value"); }
+        if (value == null) { throw new java.lang.NullPointerException(); }
         internalGetMutablePresentLevelMap().getMutableMap()
             .put(key, value);
-        bitField0_ |= 0x00000008;
         return this;
       }
       /**
-       * <code>map&lt;uint32, .VintagePresentLevelData&gt; presentLevelMap = 7;</code>
+       * <code>map&lt;uint32, .VintagePresentLevelData&gt; present_level_map = 3;</code>
        */
+
       public Builder putAllPresentLevelMap(
           java.util.Map<java.lang.Integer, emu.grasscutter.net.proto.VintagePresentLevelDataOuterClass.VintagePresentLevelData> values) {
         internalGetMutablePresentLevelMap().getMutableMap()
             .putAll(values);
-        bitField0_ |= 0x00000008;
         return this;
       }
 
-      private int stageId_ ;
+      private boolean isFinish_ ;
       /**
-       * <code>uint32 stageId = 15;</code>
-       * @return The stageId.
+       * <code>bool is_finish = 4;</code>
+       * @return The isFinish.
        */
       @java.lang.Override
-      public int getStageId() {
-        return stageId_;
+      public boolean getIsFinish() {
+        return isFinish_;
       }
       /**
-       * <code>uint32 stageId = 15;</code>
-       * @param value The stageId to set.
+       * <code>bool is_finish = 4;</code>
+       * @param value The isFinish to set.
        * @return This builder for chaining.
        */
-      public Builder setStageId(int value) {
+      public Builder setIsFinish(boolean value) {
         
-        stageId_ = value;
-        bitField0_ |= 0x00000010;
+        isFinish_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>uint32 stageId = 15;</code>
+       * <code>bool is_finish = 4;</code>
        * @return This builder for chaining.
        */
-      public Builder clearStageId() {
-        bitField0_ = (bitField0_ & ~0x00000010);
-        stageId_ = 0;
+      public Builder clearIsFinish() {
+        
+        isFinish_ = false;
         onChanged();
         return this;
       }
@@ -993,18 +1022,7 @@ emu.grasscutter.net.proto.VintagePresentLevelDataOuterClass.VintagePresentLevelD
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new VintagePresentStageData(input, extensionRegistry);
       }
     };
 
@@ -1044,14 +1062,14 @@ emu.grasscutter.net.proto.VintagePresentLevelDataOuterClass.VintagePresentLevelD
   static {
     java.lang.String[] descriptorData = {
       "\n\035VintagePresentStageData.proto\032\035Vintage" +
-      "PresentLevelData.proto\"\370\001\n\027VintagePresen" +
-      "tStageData\022\020\n\010isFinish\030\004 \001(\010\022\020\n\010openTime" +
-      "\030\016 \001(\r\022\016\n\006isOpen\030\t \001(\010\022F\n\017presentLevelMa" +
-      "p\030\007 \003(\0132-.VintagePresentStageData.Presen" +
-      "tLevelMapEntry\022\017\n\007stageId\030\017 \001(\r\032P\n\024Prese" +
-      "ntLevelMapEntry\022\013\n\003key\030\001 \001(\r\022\'\n\005value\030\002 " +
-      "\001(\0132\030.VintagePresentLevelData:\0028\001B\033\n\031emu" +
-      ".grasscutter.net.protob\006proto3"
+      "PresentLevelData.proto\"\376\001\n\027VintagePresen" +
+      "tStageData\022\020\n\010stage_id\030\014 \001(\r\022\017\n\007is_open\030" +
+      "\013 \001(\010\022\021\n\topen_time\030\017 \001(\r\022H\n\021present_leve" +
+      "l_map\030\003 \003(\0132-.VintagePresentStageData.Pr" +
+      "esentLevelMapEntry\022\021\n\tis_finish\030\004 \001(\010\032P\n" +
+      "\024PresentLevelMapEntry\022\013\n\003key\030\001 \001(\r\022\'\n\005va" +
+      "lue\030\002 \001(\0132\030.VintagePresentLevelData:\0028\001B" +
+      "\033\n\031emu.grasscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1063,7 +1081,7 @@ emu.grasscutter.net.proto.VintagePresentLevelDataOuterClass.VintagePresentLevelD
     internal_static_VintagePresentStageData_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_VintagePresentStageData_descriptor,
-        new java.lang.String[] { "IsFinish", "OpenTime", "IsOpen", "PresentLevelMap", "StageId", });
+        new java.lang.String[] { "StageId", "IsOpen", "OpenTime", "PresentLevelMap", "IsFinish", });
     internal_static_VintagePresentStageData_PresentLevelMapEntry_descriptor =
       internal_static_VintagePresentStageData_descriptor.getNestedTypes().get(0);
     internal_static_VintagePresentStageData_PresentLevelMapEntry_fieldAccessorTable = new

@@ -43,32 +43,32 @@ public final class CrystalLinkTeamInfoOuterClass {
         int index);
 
     /**
-     * <code>repeated .CrystalLinkAvatarInfo avatar_info_list = 10;</code>
+     * <code>repeated .CrystalLinkAvatarInfo avatar_info_list = 8;</code>
      */
     java.util.List<emu.grasscutter.net.proto.CrystalLinkAvatarInfoOuterClass.CrystalLinkAvatarInfo> 
         getAvatarInfoListList();
     /**
-     * <code>repeated .CrystalLinkAvatarInfo avatar_info_list = 10;</code>
+     * <code>repeated .CrystalLinkAvatarInfo avatar_info_list = 8;</code>
      */
     emu.grasscutter.net.proto.CrystalLinkAvatarInfoOuterClass.CrystalLinkAvatarInfo getAvatarInfoList(int index);
     /**
-     * <code>repeated .CrystalLinkAvatarInfo avatar_info_list = 10;</code>
+     * <code>repeated .CrystalLinkAvatarInfo avatar_info_list = 8;</code>
      */
     int getAvatarInfoListCount();
     /**
-     * <code>repeated .CrystalLinkAvatarInfo avatar_info_list = 10;</code>
+     * <code>repeated .CrystalLinkAvatarInfo avatar_info_list = 8;</code>
      */
     java.util.List<? extends emu.grasscutter.net.proto.CrystalLinkAvatarInfoOuterClass.CrystalLinkAvatarInfoOrBuilder> 
         getAvatarInfoListOrBuilderList();
     /**
-     * <code>repeated .CrystalLinkAvatarInfo avatar_info_list = 10;</code>
+     * <code>repeated .CrystalLinkAvatarInfo avatar_info_list = 8;</code>
      */
     emu.grasscutter.net.proto.CrystalLinkAvatarInfoOuterClass.CrystalLinkAvatarInfoOrBuilder getAvatarInfoListOrBuilder(
         int index);
   }
   /**
    * <pre>
-   * Name: FLHBFICFCCM
+   * Name: CBHAJLMEILM
    * </pre>
    *
    * Protobuf type {@code CrystalLinkTeamInfo}
@@ -99,6 +99,68 @@ public final class CrystalLinkTeamInfoOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private CrystalLinkTeamInfo(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 50: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                buffInfoList_ = new java.util.ArrayList<emu.grasscutter.net.proto.CrystalLinkBuffInfoOuterClass.CrystalLinkBuffInfo>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              buffInfoList_.add(
+                  input.readMessage(emu.grasscutter.net.proto.CrystalLinkBuffInfoOuterClass.CrystalLinkBuffInfo.parser(), extensionRegistry));
+              break;
+            }
+            case 66: {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                avatarInfoList_ = new java.util.ArrayList<emu.grasscutter.net.proto.CrystalLinkAvatarInfoOuterClass.CrystalLinkAvatarInfo>();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              avatarInfoList_.add(
+                  input.readMessage(emu.grasscutter.net.proto.CrystalLinkAvatarInfoOuterClass.CrystalLinkAvatarInfo.parser(), extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          buffInfoList_ = java.util.Collections.unmodifiableList(buffInfoList_);
+        }
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
+          avatarInfoList_ = java.util.Collections.unmodifiableList(avatarInfoList_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.CrystalLinkTeamInfoOuterClass.internal_static_CrystalLinkTeamInfo_descriptor;
@@ -113,7 +175,6 @@ public final class CrystalLinkTeamInfoOuterClass {
     }
 
     public static final int BUFF_INFO_LIST_FIELD_NUMBER = 6;
-    @SuppressWarnings("serial")
     private java.util.List<emu.grasscutter.net.proto.CrystalLinkBuffInfoOuterClass.CrystalLinkBuffInfo> buffInfoList_;
     /**
      * <code>repeated .CrystalLinkBuffInfo buff_info_list = 6;</code>
@@ -153,18 +214,17 @@ public final class CrystalLinkTeamInfoOuterClass {
       return buffInfoList_.get(index);
     }
 
-    public static final int AVATAR_INFO_LIST_FIELD_NUMBER = 10;
-    @SuppressWarnings("serial")
+    public static final int AVATAR_INFO_LIST_FIELD_NUMBER = 8;
     private java.util.List<emu.grasscutter.net.proto.CrystalLinkAvatarInfoOuterClass.CrystalLinkAvatarInfo> avatarInfoList_;
     /**
-     * <code>repeated .CrystalLinkAvatarInfo avatar_info_list = 10;</code>
+     * <code>repeated .CrystalLinkAvatarInfo avatar_info_list = 8;</code>
      */
     @java.lang.Override
     public java.util.List<emu.grasscutter.net.proto.CrystalLinkAvatarInfoOuterClass.CrystalLinkAvatarInfo> getAvatarInfoListList() {
       return avatarInfoList_;
     }
     /**
-     * <code>repeated .CrystalLinkAvatarInfo avatar_info_list = 10;</code>
+     * <code>repeated .CrystalLinkAvatarInfo avatar_info_list = 8;</code>
      */
     @java.lang.Override
     public java.util.List<? extends emu.grasscutter.net.proto.CrystalLinkAvatarInfoOuterClass.CrystalLinkAvatarInfoOrBuilder> 
@@ -172,21 +232,21 @@ public final class CrystalLinkTeamInfoOuterClass {
       return avatarInfoList_;
     }
     /**
-     * <code>repeated .CrystalLinkAvatarInfo avatar_info_list = 10;</code>
+     * <code>repeated .CrystalLinkAvatarInfo avatar_info_list = 8;</code>
      */
     @java.lang.Override
     public int getAvatarInfoListCount() {
       return avatarInfoList_.size();
     }
     /**
-     * <code>repeated .CrystalLinkAvatarInfo avatar_info_list = 10;</code>
+     * <code>repeated .CrystalLinkAvatarInfo avatar_info_list = 8;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.CrystalLinkAvatarInfoOuterClass.CrystalLinkAvatarInfo getAvatarInfoList(int index) {
       return avatarInfoList_.get(index);
     }
     /**
-     * <code>repeated .CrystalLinkAvatarInfo avatar_info_list = 10;</code>
+     * <code>repeated .CrystalLinkAvatarInfo avatar_info_list = 8;</code>
      */
     @java.lang.Override
     public emu.grasscutter.net.proto.CrystalLinkAvatarInfoOuterClass.CrystalLinkAvatarInfoOrBuilder getAvatarInfoListOrBuilder(
@@ -212,9 +272,9 @@ public final class CrystalLinkTeamInfoOuterClass {
         output.writeMessage(6, buffInfoList_.get(i));
       }
       for (int i = 0; i < avatarInfoList_.size(); i++) {
-        output.writeMessage(10, avatarInfoList_.get(i));
+        output.writeMessage(8, avatarInfoList_.get(i));
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -229,9 +289,9 @@ public final class CrystalLinkTeamInfoOuterClass {
       }
       for (int i = 0; i < avatarInfoList_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(10, avatarInfoList_.get(i));
+          .computeMessageSize(8, avatarInfoList_.get(i));
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -250,7 +310,7 @@ public final class CrystalLinkTeamInfoOuterClass {
           .equals(other.getBuffInfoListList())) return false;
       if (!getAvatarInfoListList()
           .equals(other.getAvatarInfoListList())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -269,7 +329,7 @@ public final class CrystalLinkTeamInfoOuterClass {
         hash = (37 * hash) + AVATAR_INFO_LIST_FIELD_NUMBER;
         hash = (53 * hash) + getAvatarInfoListList().hashCode();
       }
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -366,7 +426,7 @@ public final class CrystalLinkTeamInfoOuterClass {
     }
     /**
      * <pre>
-     * Name: FLHBFICFCCM
+     * Name: CBHAJLMEILM
      * </pre>
      *
      * Protobuf type {@code CrystalLinkTeamInfo}
@@ -390,32 +450,36 @@ public final class CrystalLinkTeamInfoOuterClass {
 
       // Construct using emu.grasscutter.net.proto.CrystalLinkTeamInfoOuterClass.CrystalLinkTeamInfo.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getBuffInfoListFieldBuilder();
+          getAvatarInfoListFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        bitField0_ = 0;
         if (buffInfoListBuilder_ == null) {
           buffInfoList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
-          buffInfoList_ = null;
           buffInfoListBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000001);
         if (avatarInfoListBuilder_ == null) {
           avatarInfoList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
         } else {
-          avatarInfoList_ = null;
           avatarInfoListBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
 
@@ -442,13 +506,7 @@ public final class CrystalLinkTeamInfoOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.CrystalLinkTeamInfoOuterClass.CrystalLinkTeamInfo buildPartial() {
         emu.grasscutter.net.proto.CrystalLinkTeamInfoOuterClass.CrystalLinkTeamInfo result = new emu.grasscutter.net.proto.CrystalLinkTeamInfoOuterClass.CrystalLinkTeamInfo(this);
-        buildPartialRepeatedFields(result);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartialRepeatedFields(emu.grasscutter.net.proto.CrystalLinkTeamInfoOuterClass.CrystalLinkTeamInfo result) {
+        int from_bitField0_ = bitField0_;
         if (buffInfoListBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0)) {
             buffInfoList_ = java.util.Collections.unmodifiableList(buffInfoList_);
@@ -467,10 +525,8 @@ public final class CrystalLinkTeamInfoOuterClass {
         } else {
           result.avatarInfoList_ = avatarInfoListBuilder_.build();
         }
-      }
-
-      private void buildPartial0(emu.grasscutter.net.proto.CrystalLinkTeamInfoOuterClass.CrystalLinkTeamInfo result) {
-        int from_bitField0_ = bitField0_;
+        onBuilt();
+        return result;
       }
 
       @java.lang.Override
@@ -569,7 +625,7 @@ public final class CrystalLinkTeamInfoOuterClass {
             }
           }
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -584,56 +640,17 @@ public final class CrystalLinkTeamInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.CrystalLinkTeamInfoOuterClass.CrystalLinkTeamInfo parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 50: {
-                emu.grasscutter.net.proto.CrystalLinkBuffInfoOuterClass.CrystalLinkBuffInfo m =
-                    input.readMessage(
-                        emu.grasscutter.net.proto.CrystalLinkBuffInfoOuterClass.CrystalLinkBuffInfo.parser(),
-                        extensionRegistry);
-                if (buffInfoListBuilder_ == null) {
-                  ensureBuffInfoListIsMutable();
-                  buffInfoList_.add(m);
-                } else {
-                  buffInfoListBuilder_.addMessage(m);
-                }
-                break;
-              } // case 50
-              case 82: {
-                emu.grasscutter.net.proto.CrystalLinkAvatarInfoOuterClass.CrystalLinkAvatarInfo m =
-                    input.readMessage(
-                        emu.grasscutter.net.proto.CrystalLinkAvatarInfoOuterClass.CrystalLinkAvatarInfo.parser(),
-                        extensionRegistry);
-                if (avatarInfoListBuilder_ == null) {
-                  ensureAvatarInfoListIsMutable();
-                  avatarInfoList_.add(m);
-                } else {
-                  avatarInfoListBuilder_.addMessage(m);
-                }
-                break;
-              } // case 82
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.CrystalLinkTeamInfoOuterClass.CrystalLinkTeamInfo) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
       private int bitField0_;
@@ -891,7 +908,7 @@ public final class CrystalLinkTeamInfoOuterClass {
           emu.grasscutter.net.proto.CrystalLinkAvatarInfoOuterClass.CrystalLinkAvatarInfo, emu.grasscutter.net.proto.CrystalLinkAvatarInfoOuterClass.CrystalLinkAvatarInfo.Builder, emu.grasscutter.net.proto.CrystalLinkAvatarInfoOuterClass.CrystalLinkAvatarInfoOrBuilder> avatarInfoListBuilder_;
 
       /**
-       * <code>repeated .CrystalLinkAvatarInfo avatar_info_list = 10;</code>
+       * <code>repeated .CrystalLinkAvatarInfo avatar_info_list = 8;</code>
        */
       public java.util.List<emu.grasscutter.net.proto.CrystalLinkAvatarInfoOuterClass.CrystalLinkAvatarInfo> getAvatarInfoListList() {
         if (avatarInfoListBuilder_ == null) {
@@ -901,7 +918,7 @@ public final class CrystalLinkTeamInfoOuterClass {
         }
       }
       /**
-       * <code>repeated .CrystalLinkAvatarInfo avatar_info_list = 10;</code>
+       * <code>repeated .CrystalLinkAvatarInfo avatar_info_list = 8;</code>
        */
       public int getAvatarInfoListCount() {
         if (avatarInfoListBuilder_ == null) {
@@ -911,7 +928,7 @@ public final class CrystalLinkTeamInfoOuterClass {
         }
       }
       /**
-       * <code>repeated .CrystalLinkAvatarInfo avatar_info_list = 10;</code>
+       * <code>repeated .CrystalLinkAvatarInfo avatar_info_list = 8;</code>
        */
       public emu.grasscutter.net.proto.CrystalLinkAvatarInfoOuterClass.CrystalLinkAvatarInfo getAvatarInfoList(int index) {
         if (avatarInfoListBuilder_ == null) {
@@ -921,7 +938,7 @@ public final class CrystalLinkTeamInfoOuterClass {
         }
       }
       /**
-       * <code>repeated .CrystalLinkAvatarInfo avatar_info_list = 10;</code>
+       * <code>repeated .CrystalLinkAvatarInfo avatar_info_list = 8;</code>
        */
       public Builder setAvatarInfoList(
           int index, emu.grasscutter.net.proto.CrystalLinkAvatarInfoOuterClass.CrystalLinkAvatarInfo value) {
@@ -938,7 +955,7 @@ public final class CrystalLinkTeamInfoOuterClass {
         return this;
       }
       /**
-       * <code>repeated .CrystalLinkAvatarInfo avatar_info_list = 10;</code>
+       * <code>repeated .CrystalLinkAvatarInfo avatar_info_list = 8;</code>
        */
       public Builder setAvatarInfoList(
           int index, emu.grasscutter.net.proto.CrystalLinkAvatarInfoOuterClass.CrystalLinkAvatarInfo.Builder builderForValue) {
@@ -952,7 +969,7 @@ public final class CrystalLinkTeamInfoOuterClass {
         return this;
       }
       /**
-       * <code>repeated .CrystalLinkAvatarInfo avatar_info_list = 10;</code>
+       * <code>repeated .CrystalLinkAvatarInfo avatar_info_list = 8;</code>
        */
       public Builder addAvatarInfoList(emu.grasscutter.net.proto.CrystalLinkAvatarInfoOuterClass.CrystalLinkAvatarInfo value) {
         if (avatarInfoListBuilder_ == null) {
@@ -968,7 +985,7 @@ public final class CrystalLinkTeamInfoOuterClass {
         return this;
       }
       /**
-       * <code>repeated .CrystalLinkAvatarInfo avatar_info_list = 10;</code>
+       * <code>repeated .CrystalLinkAvatarInfo avatar_info_list = 8;</code>
        */
       public Builder addAvatarInfoList(
           int index, emu.grasscutter.net.proto.CrystalLinkAvatarInfoOuterClass.CrystalLinkAvatarInfo value) {
@@ -985,7 +1002,7 @@ public final class CrystalLinkTeamInfoOuterClass {
         return this;
       }
       /**
-       * <code>repeated .CrystalLinkAvatarInfo avatar_info_list = 10;</code>
+       * <code>repeated .CrystalLinkAvatarInfo avatar_info_list = 8;</code>
        */
       public Builder addAvatarInfoList(
           emu.grasscutter.net.proto.CrystalLinkAvatarInfoOuterClass.CrystalLinkAvatarInfo.Builder builderForValue) {
@@ -999,7 +1016,7 @@ public final class CrystalLinkTeamInfoOuterClass {
         return this;
       }
       /**
-       * <code>repeated .CrystalLinkAvatarInfo avatar_info_list = 10;</code>
+       * <code>repeated .CrystalLinkAvatarInfo avatar_info_list = 8;</code>
        */
       public Builder addAvatarInfoList(
           int index, emu.grasscutter.net.proto.CrystalLinkAvatarInfoOuterClass.CrystalLinkAvatarInfo.Builder builderForValue) {
@@ -1013,7 +1030,7 @@ public final class CrystalLinkTeamInfoOuterClass {
         return this;
       }
       /**
-       * <code>repeated .CrystalLinkAvatarInfo avatar_info_list = 10;</code>
+       * <code>repeated .CrystalLinkAvatarInfo avatar_info_list = 8;</code>
        */
       public Builder addAllAvatarInfoList(
           java.lang.Iterable<? extends emu.grasscutter.net.proto.CrystalLinkAvatarInfoOuterClass.CrystalLinkAvatarInfo> values) {
@@ -1028,7 +1045,7 @@ public final class CrystalLinkTeamInfoOuterClass {
         return this;
       }
       /**
-       * <code>repeated .CrystalLinkAvatarInfo avatar_info_list = 10;</code>
+       * <code>repeated .CrystalLinkAvatarInfo avatar_info_list = 8;</code>
        */
       public Builder clearAvatarInfoList() {
         if (avatarInfoListBuilder_ == null) {
@@ -1041,7 +1058,7 @@ public final class CrystalLinkTeamInfoOuterClass {
         return this;
       }
       /**
-       * <code>repeated .CrystalLinkAvatarInfo avatar_info_list = 10;</code>
+       * <code>repeated .CrystalLinkAvatarInfo avatar_info_list = 8;</code>
        */
       public Builder removeAvatarInfoList(int index) {
         if (avatarInfoListBuilder_ == null) {
@@ -1054,14 +1071,14 @@ public final class CrystalLinkTeamInfoOuterClass {
         return this;
       }
       /**
-       * <code>repeated .CrystalLinkAvatarInfo avatar_info_list = 10;</code>
+       * <code>repeated .CrystalLinkAvatarInfo avatar_info_list = 8;</code>
        */
       public emu.grasscutter.net.proto.CrystalLinkAvatarInfoOuterClass.CrystalLinkAvatarInfo.Builder getAvatarInfoListBuilder(
           int index) {
         return getAvatarInfoListFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .CrystalLinkAvatarInfo avatar_info_list = 10;</code>
+       * <code>repeated .CrystalLinkAvatarInfo avatar_info_list = 8;</code>
        */
       public emu.grasscutter.net.proto.CrystalLinkAvatarInfoOuterClass.CrystalLinkAvatarInfoOrBuilder getAvatarInfoListOrBuilder(
           int index) {
@@ -1071,7 +1088,7 @@ public final class CrystalLinkTeamInfoOuterClass {
         }
       }
       /**
-       * <code>repeated .CrystalLinkAvatarInfo avatar_info_list = 10;</code>
+       * <code>repeated .CrystalLinkAvatarInfo avatar_info_list = 8;</code>
        */
       public java.util.List<? extends emu.grasscutter.net.proto.CrystalLinkAvatarInfoOuterClass.CrystalLinkAvatarInfoOrBuilder> 
            getAvatarInfoListOrBuilderList() {
@@ -1082,14 +1099,14 @@ public final class CrystalLinkTeamInfoOuterClass {
         }
       }
       /**
-       * <code>repeated .CrystalLinkAvatarInfo avatar_info_list = 10;</code>
+       * <code>repeated .CrystalLinkAvatarInfo avatar_info_list = 8;</code>
        */
       public emu.grasscutter.net.proto.CrystalLinkAvatarInfoOuterClass.CrystalLinkAvatarInfo.Builder addAvatarInfoListBuilder() {
         return getAvatarInfoListFieldBuilder().addBuilder(
             emu.grasscutter.net.proto.CrystalLinkAvatarInfoOuterClass.CrystalLinkAvatarInfo.getDefaultInstance());
       }
       /**
-       * <code>repeated .CrystalLinkAvatarInfo avatar_info_list = 10;</code>
+       * <code>repeated .CrystalLinkAvatarInfo avatar_info_list = 8;</code>
        */
       public emu.grasscutter.net.proto.CrystalLinkAvatarInfoOuterClass.CrystalLinkAvatarInfo.Builder addAvatarInfoListBuilder(
           int index) {
@@ -1097,7 +1114,7 @@ public final class CrystalLinkTeamInfoOuterClass {
             index, emu.grasscutter.net.proto.CrystalLinkAvatarInfoOuterClass.CrystalLinkAvatarInfo.getDefaultInstance());
       }
       /**
-       * <code>repeated .CrystalLinkAvatarInfo avatar_info_list = 10;</code>
+       * <code>repeated .CrystalLinkAvatarInfo avatar_info_list = 8;</code>
        */
       public java.util.List<emu.grasscutter.net.proto.CrystalLinkAvatarInfoOuterClass.CrystalLinkAvatarInfo.Builder> 
            getAvatarInfoListBuilderList() {
@@ -1150,18 +1167,7 @@ public final class CrystalLinkTeamInfoOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new CrystalLinkTeamInfo(input, extensionRegistry);
       }
     };
 
@@ -1199,7 +1205,7 @@ public final class CrystalLinkTeamInfoOuterClass {
       "AvatarInfo.proto\032\031CrystalLinkBuffInfo.pr" +
       "oto\"u\n\023CrystalLinkTeamInfo\022,\n\016buff_info_" +
       "list\030\006 \003(\0132\024.CrystalLinkBuffInfo\0220\n\020avat" +
-      "ar_info_list\030\n \003(\0132\026.CrystalLinkAvatarIn" +
+      "ar_info_list\030\010 \003(\0132\026.CrystalLinkAvatarIn" +
       "foB\033\n\031emu.grasscutter.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor

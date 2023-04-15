@@ -19,32 +19,32 @@ public final class VintageCampChallengeLevelDataOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>bool is_open = 4;</code>
-     * @return The isOpen.
+     * <code>uint32 level_id = 2;</code>
+     * @return The levelId.
      */
-    boolean getIsOpen();
+    int getLevelId();
 
     /**
-     * <code>bool is_finish = 3;</code>
-     * @return The isFinish.
-     */
-    boolean getIsFinish();
-
-    /**
-     * <code>uint32 stage_id = 6;</code>
+     * <code>uint32 stage_id = 7;</code>
      * @return The stageId.
      */
     int getStageId();
 
     /**
-     * <code>uint32 level_id = 9;</code>
-     * @return The levelId.
+     * <code>bool is_finish = 9;</code>
+     * @return The isFinish.
      */
-    int getLevelId();
+    boolean getIsFinish();
+
+    /**
+     * <code>bool is_open = 15;</code>
+     * @return The isOpen.
+     */
+    boolean getIsOpen();
   }
   /**
    * <pre>
-   * Name: AOMIIMMNEGI
+   * Name: OMEEHDGICHO
    * </pre>
    *
    * Protobuf type {@code VintageCampChallengeLevelData}
@@ -73,6 +73,63 @@ public final class VintageCampChallengeLevelDataOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private VintageCampChallengeLevelData(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 16: {
+
+              levelId_ = input.readUInt32();
+              break;
+            }
+            case 56: {
+
+              stageId_ = input.readUInt32();
+              break;
+            }
+            case 72: {
+
+              isFinish_ = input.readBool();
+              break;
+            }
+            case 120: {
+
+              isOpen_ = input.readBool();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.VintageCampChallengeLevelDataOuterClass.internal_static_VintageCampChallengeLevelData_descriptor;
@@ -86,32 +143,21 @@ public final class VintageCampChallengeLevelDataOuterClass {
               emu.grasscutter.net.proto.VintageCampChallengeLevelDataOuterClass.VintageCampChallengeLevelData.class, emu.grasscutter.net.proto.VintageCampChallengeLevelDataOuterClass.VintageCampChallengeLevelData.Builder.class);
     }
 
-    public static final int IS_OPEN_FIELD_NUMBER = 4;
-    private boolean isOpen_ = false;
+    public static final int LEVEL_ID_FIELD_NUMBER = 2;
+    private int levelId_;
     /**
-     * <code>bool is_open = 4;</code>
-     * @return The isOpen.
+     * <code>uint32 level_id = 2;</code>
+     * @return The levelId.
      */
     @java.lang.Override
-    public boolean getIsOpen() {
-      return isOpen_;
+    public int getLevelId() {
+      return levelId_;
     }
 
-    public static final int IS_FINISH_FIELD_NUMBER = 3;
-    private boolean isFinish_ = false;
+    public static final int STAGE_ID_FIELD_NUMBER = 7;
+    private int stageId_;
     /**
-     * <code>bool is_finish = 3;</code>
-     * @return The isFinish.
-     */
-    @java.lang.Override
-    public boolean getIsFinish() {
-      return isFinish_;
-    }
-
-    public static final int STAGE_ID_FIELD_NUMBER = 6;
-    private int stageId_ = 0;
-    /**
-     * <code>uint32 stage_id = 6;</code>
+     * <code>uint32 stage_id = 7;</code>
      * @return The stageId.
      */
     @java.lang.Override
@@ -119,15 +165,26 @@ public final class VintageCampChallengeLevelDataOuterClass {
       return stageId_;
     }
 
-    public static final int LEVEL_ID_FIELD_NUMBER = 9;
-    private int levelId_ = 0;
+    public static final int IS_FINISH_FIELD_NUMBER = 9;
+    private boolean isFinish_;
     /**
-     * <code>uint32 level_id = 9;</code>
-     * @return The levelId.
+     * <code>bool is_finish = 9;</code>
+     * @return The isFinish.
      */
     @java.lang.Override
-    public int getLevelId() {
-      return levelId_;
+    public boolean getIsFinish() {
+      return isFinish_;
+    }
+
+    public static final int IS_OPEN_FIELD_NUMBER = 15;
+    private boolean isOpen_;
+    /**
+     * <code>bool is_open = 15;</code>
+     * @return The isOpen.
+     */
+    @java.lang.Override
+    public boolean getIsOpen() {
+      return isOpen_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -144,19 +201,19 @@ public final class VintageCampChallengeLevelDataOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (isFinish_ != false) {
-        output.writeBool(3, isFinish_);
-      }
-      if (isOpen_ != false) {
-        output.writeBool(4, isOpen_);
+      if (levelId_ != 0) {
+        output.writeUInt32(2, levelId_);
       }
       if (stageId_ != 0) {
-        output.writeUInt32(6, stageId_);
+        output.writeUInt32(7, stageId_);
       }
-      if (levelId_ != 0) {
-        output.writeUInt32(9, levelId_);
+      if (isFinish_ != false) {
+        output.writeBool(9, isFinish_);
       }
-      getUnknownFields().writeTo(output);
+      if (isOpen_ != false) {
+        output.writeBool(15, isOpen_);
+      }
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -165,23 +222,23 @@ public final class VintageCampChallengeLevelDataOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      if (isFinish_ != false) {
+      if (levelId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(3, isFinish_);
-      }
-      if (isOpen_ != false) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(4, isOpen_);
+          .computeUInt32Size(2, levelId_);
       }
       if (stageId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(6, stageId_);
+          .computeUInt32Size(7, stageId_);
       }
-      if (levelId_ != 0) {
+      if (isFinish_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(9, levelId_);
+          .computeBoolSize(9, isFinish_);
       }
-      size += getUnknownFields().getSerializedSize();
+      if (isOpen_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(15, isOpen_);
+      }
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -196,15 +253,15 @@ public final class VintageCampChallengeLevelDataOuterClass {
       }
       emu.grasscutter.net.proto.VintageCampChallengeLevelDataOuterClass.VintageCampChallengeLevelData other = (emu.grasscutter.net.proto.VintageCampChallengeLevelDataOuterClass.VintageCampChallengeLevelData) obj;
 
-      if (getIsOpen()
-          != other.getIsOpen()) return false;
-      if (getIsFinish()
-          != other.getIsFinish()) return false;
-      if (getStageId()
-          != other.getStageId()) return false;
       if (getLevelId()
           != other.getLevelId()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (getStageId()
+          != other.getStageId()) return false;
+      if (getIsFinish()
+          != other.getIsFinish()) return false;
+      if (getIsOpen()
+          != other.getIsOpen()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -215,17 +272,17 @@ public final class VintageCampChallengeLevelDataOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + IS_OPEN_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-          getIsOpen());
+      hash = (37 * hash) + LEVEL_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getLevelId();
+      hash = (37 * hash) + STAGE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getStageId();
       hash = (37 * hash) + IS_FINISH_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getIsFinish());
-      hash = (37 * hash) + STAGE_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getStageId();
-      hash = (37 * hash) + LEVEL_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getLevelId();
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (37 * hash) + IS_OPEN_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getIsOpen());
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -322,7 +379,7 @@ public final class VintageCampChallengeLevelDataOuterClass {
     }
     /**
      * <pre>
-     * Name: AOMIIMMNEGI
+     * Name: OMEEHDGICHO
      * </pre>
      *
      * Protobuf type {@code VintageCampChallengeLevelData}
@@ -346,22 +403,30 @@ public final class VintageCampChallengeLevelDataOuterClass {
 
       // Construct using emu.grasscutter.net.proto.VintageCampChallengeLevelDataOuterClass.VintageCampChallengeLevelData.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        bitField0_ = 0;
-        isOpen_ = false;
-        isFinish_ = false;
-        stageId_ = 0;
         levelId_ = 0;
+
+        stageId_ = 0;
+
+        isFinish_ = false;
+
+        isOpen_ = false;
+
         return this;
       }
 
@@ -388,25 +453,12 @@ public final class VintageCampChallengeLevelDataOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.VintageCampChallengeLevelDataOuterClass.VintageCampChallengeLevelData buildPartial() {
         emu.grasscutter.net.proto.VintageCampChallengeLevelDataOuterClass.VintageCampChallengeLevelData result = new emu.grasscutter.net.proto.VintageCampChallengeLevelDataOuterClass.VintageCampChallengeLevelData(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
+        result.levelId_ = levelId_;
+        result.stageId_ = stageId_;
+        result.isFinish_ = isFinish_;
+        result.isOpen_ = isOpen_;
         onBuilt();
         return result;
-      }
-
-      private void buildPartial0(emu.grasscutter.net.proto.VintageCampChallengeLevelDataOuterClass.VintageCampChallengeLevelData result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.isOpen_ = isOpen_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.isFinish_ = isFinish_;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.stageId_ = stageId_;
-        }
-        if (((from_bitField0_ & 0x00000008) != 0)) {
-          result.levelId_ = levelId_;
-        }
       }
 
       @java.lang.Override
@@ -453,19 +505,19 @@ public final class VintageCampChallengeLevelDataOuterClass {
 
       public Builder mergeFrom(emu.grasscutter.net.proto.VintageCampChallengeLevelDataOuterClass.VintageCampChallengeLevelData other) {
         if (other == emu.grasscutter.net.proto.VintageCampChallengeLevelDataOuterClass.VintageCampChallengeLevelData.getDefaultInstance()) return this;
-        if (other.getIsOpen() != false) {
-          setIsOpen(other.getIsOpen());
-        }
-        if (other.getIsFinish() != false) {
-          setIsFinish(other.getIsFinish());
+        if (other.getLevelId() != 0) {
+          setLevelId(other.getLevelId());
         }
         if (other.getStageId() != 0) {
           setStageId(other.getStageId());
         }
-        if (other.getLevelId() != 0) {
-          setLevelId(other.getLevelId());
+        if (other.getIsFinish() != false) {
+          setIsFinish(other.getIsFinish());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        if (other.getIsOpen() != false) {
+          setIsOpen(other.getIsOpen());
+        }
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -480,153 +532,23 @@ public final class VintageCampChallengeLevelDataOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.VintageCampChallengeLevelDataOuterClass.VintageCampChallengeLevelData parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 24: {
-                isFinish_ = input.readBool();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 24
-              case 32: {
-                isOpen_ = input.readBool();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 32
-              case 48: {
-                stageId_ = input.readUInt32();
-                bitField0_ |= 0x00000004;
-                break;
-              } // case 48
-              case 72: {
-                levelId_ = input.readUInt32();
-                bitField0_ |= 0x00000008;
-                break;
-              } // case 72
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.VintageCampChallengeLevelDataOuterClass.VintageCampChallengeLevelData) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private boolean isOpen_ ;
-      /**
-       * <code>bool is_open = 4;</code>
-       * @return The isOpen.
-       */
-      @java.lang.Override
-      public boolean getIsOpen() {
-        return isOpen_;
-      }
-      /**
-       * <code>bool is_open = 4;</code>
-       * @param value The isOpen to set.
-       * @return This builder for chaining.
-       */
-      public Builder setIsOpen(boolean value) {
-        
-        isOpen_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>bool is_open = 4;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearIsOpen() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        isOpen_ = false;
-        onChanged();
-        return this;
-      }
-
-      private boolean isFinish_ ;
-      /**
-       * <code>bool is_finish = 3;</code>
-       * @return The isFinish.
-       */
-      @java.lang.Override
-      public boolean getIsFinish() {
-        return isFinish_;
-      }
-      /**
-       * <code>bool is_finish = 3;</code>
-       * @param value The isFinish to set.
-       * @return This builder for chaining.
-       */
-      public Builder setIsFinish(boolean value) {
-        
-        isFinish_ = value;
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>bool is_finish = 3;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearIsFinish() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        isFinish_ = false;
-        onChanged();
-        return this;
-      }
-
-      private int stageId_ ;
-      /**
-       * <code>uint32 stage_id = 6;</code>
-       * @return The stageId.
-       */
-      @java.lang.Override
-      public int getStageId() {
-        return stageId_;
-      }
-      /**
-       * <code>uint32 stage_id = 6;</code>
-       * @param value The stageId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setStageId(int value) {
-        
-        stageId_ = value;
-        bitField0_ |= 0x00000004;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint32 stage_id = 6;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearStageId() {
-        bitField0_ = (bitField0_ & ~0x00000004);
-        stageId_ = 0;
-        onChanged();
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
 
       private int levelId_ ;
       /**
-       * <code>uint32 level_id = 9;</code>
+       * <code>uint32 level_id = 2;</code>
        * @return The levelId.
        */
       @java.lang.Override
@@ -634,24 +556,116 @@ public final class VintageCampChallengeLevelDataOuterClass {
         return levelId_;
       }
       /**
-       * <code>uint32 level_id = 9;</code>
+       * <code>uint32 level_id = 2;</code>
        * @param value The levelId to set.
        * @return This builder for chaining.
        */
       public Builder setLevelId(int value) {
         
         levelId_ = value;
-        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
       /**
-       * <code>uint32 level_id = 9;</code>
+       * <code>uint32 level_id = 2;</code>
        * @return This builder for chaining.
        */
       public Builder clearLevelId() {
-        bitField0_ = (bitField0_ & ~0x00000008);
+        
         levelId_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int stageId_ ;
+      /**
+       * <code>uint32 stage_id = 7;</code>
+       * @return The stageId.
+       */
+      @java.lang.Override
+      public int getStageId() {
+        return stageId_;
+      }
+      /**
+       * <code>uint32 stage_id = 7;</code>
+       * @param value The stageId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStageId(int value) {
+        
+        stageId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 stage_id = 7;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStageId() {
+        
+        stageId_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private boolean isFinish_ ;
+      /**
+       * <code>bool is_finish = 9;</code>
+       * @return The isFinish.
+       */
+      @java.lang.Override
+      public boolean getIsFinish() {
+        return isFinish_;
+      }
+      /**
+       * <code>bool is_finish = 9;</code>
+       * @param value The isFinish to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIsFinish(boolean value) {
+        
+        isFinish_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool is_finish = 9;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIsFinish() {
+        
+        isFinish_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean isOpen_ ;
+      /**
+       * <code>bool is_open = 15;</code>
+       * @return The isOpen.
+       */
+      @java.lang.Override
+      public boolean getIsOpen() {
+        return isOpen_;
+      }
+      /**
+       * <code>bool is_open = 15;</code>
+       * @param value The isOpen to set.
+       * @return This builder for chaining.
+       */
+      public Builder setIsOpen(boolean value) {
+        
+        isOpen_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool is_open = 15;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearIsOpen() {
+        
+        isOpen_ = false;
         onChanged();
         return this;
       }
@@ -688,18 +702,7 @@ public final class VintageCampChallengeLevelDataOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new VintageCampChallengeLevelData(input, extensionRegistry);
       }
     };
 
@@ -734,9 +737,9 @@ public final class VintageCampChallengeLevelDataOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n#VintageCampChallengeLevelData.proto\"g\n" +
-      "\035VintageCampChallengeLevelData\022\017\n\007is_ope" +
-      "n\030\004 \001(\010\022\021\n\tis_finish\030\003 \001(\010\022\020\n\010stage_id\030\006" +
-      " \001(\r\022\020\n\010level_id\030\t \001(\rB\033\n\031emu.grasscutte" +
+      "\035VintageCampChallengeLevelData\022\020\n\010level_" +
+      "id\030\002 \001(\r\022\020\n\010stage_id\030\007 \001(\r\022\021\n\tis_finish\030" +
+      "\t \001(\010\022\017\n\007is_open\030\017 \001(\010B\033\n\031emu.grasscutte" +
       "r.net.protob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
@@ -748,7 +751,7 @@ public final class VintageCampChallengeLevelDataOuterClass {
     internal_static_VintageCampChallengeLevelData_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_VintageCampChallengeLevelData_descriptor,
-        new java.lang.String[] { "IsOpen", "IsFinish", "StageId", "LevelId", });
+        new java.lang.String[] { "LevelId", "StageId", "IsFinish", "IsOpen", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

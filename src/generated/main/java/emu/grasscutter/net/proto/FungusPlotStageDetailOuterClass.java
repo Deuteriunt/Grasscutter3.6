@@ -19,18 +19,22 @@ public final class FungusPlotStageDetailOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>uint32 stageId = 3;</code>
-     * @return The stageId.
-     */
-    int getStageId();
-
-    /**
-     * <code>bool isOpen = 15;</code>
+     * <code>bool is_open = 14;</code>
      * @return The isOpen.
      */
     boolean getIsOpen();
+
+    /**
+     * <code>uint32 stage_id = 9;</code>
+     * @return The stageId.
+     */
+    int getStageId();
   }
   /**
+   * <pre>
+   * Name: COHJIIJBAGM
+   * </pre>
+   *
    * Protobuf type {@code FungusPlotStageDetail}
    */
   public static final class FungusPlotStageDetail extends
@@ -57,6 +61,53 @@ public final class FungusPlotStageDetailOuterClass {
     getUnknownFields() {
       return this.unknownFields;
     }
+    private FungusPlotStageDetail(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 72: {
+
+              stageId_ = input.readUInt32();
+              break;
+            }
+            case 112: {
+
+              isOpen_ = input.readBool();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return emu.grasscutter.net.proto.FungusPlotStageDetailOuterClass.internal_static_FungusPlotStageDetail_descriptor;
@@ -70,26 +121,26 @@ public final class FungusPlotStageDetailOuterClass {
               emu.grasscutter.net.proto.FungusPlotStageDetailOuterClass.FungusPlotStageDetail.class, emu.grasscutter.net.proto.FungusPlotStageDetailOuterClass.FungusPlotStageDetail.Builder.class);
     }
 
-    public static final int STAGEID_FIELD_NUMBER = 3;
-    private int stageId_ = 0;
+    public static final int IS_OPEN_FIELD_NUMBER = 14;
+    private boolean isOpen_;
     /**
-     * <code>uint32 stageId = 3;</code>
-     * @return The stageId.
-     */
-    @java.lang.Override
-    public int getStageId() {
-      return stageId_;
-    }
-
-    public static final int ISOPEN_FIELD_NUMBER = 15;
-    private boolean isOpen_ = false;
-    /**
-     * <code>bool isOpen = 15;</code>
+     * <code>bool is_open = 14;</code>
      * @return The isOpen.
      */
     @java.lang.Override
     public boolean getIsOpen() {
       return isOpen_;
+    }
+
+    public static final int STAGE_ID_FIELD_NUMBER = 9;
+    private int stageId_;
+    /**
+     * <code>uint32 stage_id = 9;</code>
+     * @return The stageId.
+     */
+    @java.lang.Override
+    public int getStageId() {
+      return stageId_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -107,12 +158,12 @@ public final class FungusPlotStageDetailOuterClass {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (stageId_ != 0) {
-        output.writeUInt32(3, stageId_);
+        output.writeUInt32(9, stageId_);
       }
       if (isOpen_ != false) {
-        output.writeBool(15, isOpen_);
+        output.writeBool(14, isOpen_);
       }
-      getUnknownFields().writeTo(output);
+      unknownFields.writeTo(output);
     }
 
     @java.lang.Override
@@ -123,13 +174,13 @@ public final class FungusPlotStageDetailOuterClass {
       size = 0;
       if (stageId_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(3, stageId_);
+          .computeUInt32Size(9, stageId_);
       }
       if (isOpen_ != false) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(15, isOpen_);
+          .computeBoolSize(14, isOpen_);
       }
-      size += getUnknownFields().getSerializedSize();
+      size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -144,11 +195,11 @@ public final class FungusPlotStageDetailOuterClass {
       }
       emu.grasscutter.net.proto.FungusPlotStageDetailOuterClass.FungusPlotStageDetail other = (emu.grasscutter.net.proto.FungusPlotStageDetailOuterClass.FungusPlotStageDetail) obj;
 
-      if (getStageId()
-          != other.getStageId()) return false;
       if (getIsOpen()
           != other.getIsOpen()) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (getStageId()
+          != other.getStageId()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
 
@@ -159,12 +210,12 @@ public final class FungusPlotStageDetailOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + STAGEID_FIELD_NUMBER;
-      hash = (53 * hash) + getStageId();
-      hash = (37 * hash) + ISOPEN_FIELD_NUMBER;
+      hash = (37 * hash) + IS_OPEN_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
           getIsOpen());
-      hash = (29 * hash) + getUnknownFields().hashCode();
+      hash = (37 * hash) + STAGE_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getStageId();
+      hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -260,6 +311,10 @@ public final class FungusPlotStageDetailOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * Name: COHJIIJBAGM
+     * </pre>
+     *
      * Protobuf type {@code FungusPlotStageDetail}
      */
     public static final class Builder extends
@@ -281,20 +336,26 @@ public final class FungusPlotStageDetailOuterClass {
 
       // Construct using emu.grasscutter.net.proto.FungusPlotStageDetailOuterClass.FungusPlotStageDetail.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        bitField0_ = 0;
-        stageId_ = 0;
         isOpen_ = false;
+
+        stageId_ = 0;
+
         return this;
       }
 
@@ -321,19 +382,10 @@ public final class FungusPlotStageDetailOuterClass {
       @java.lang.Override
       public emu.grasscutter.net.proto.FungusPlotStageDetailOuterClass.FungusPlotStageDetail buildPartial() {
         emu.grasscutter.net.proto.FungusPlotStageDetailOuterClass.FungusPlotStageDetail result = new emu.grasscutter.net.proto.FungusPlotStageDetailOuterClass.FungusPlotStageDetail(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
+        result.isOpen_ = isOpen_;
+        result.stageId_ = stageId_;
         onBuilt();
         return result;
-      }
-
-      private void buildPartial0(emu.grasscutter.net.proto.FungusPlotStageDetailOuterClass.FungusPlotStageDetail result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.stageId_ = stageId_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.isOpen_ = isOpen_;
-        }
       }
 
       @java.lang.Override
@@ -380,13 +432,13 @@ public final class FungusPlotStageDetailOuterClass {
 
       public Builder mergeFrom(emu.grasscutter.net.proto.FungusPlotStageDetailOuterClass.FungusPlotStageDetail other) {
         if (other == emu.grasscutter.net.proto.FungusPlotStageDetailOuterClass.FungusPlotStageDetail.getDefaultInstance()) return this;
-        if (other.getStageId() != 0) {
-          setStageId(other.getStageId());
-        }
         if (other.getIsOpen() != false) {
           setIsOpen(other.getIsOpen());
         }
-        this.mergeUnknownFields(other.getUnknownFields());
+        if (other.getStageId() != 0) {
+          setStageId(other.getStageId());
+        }
+        this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
       }
@@ -401,79 +453,23 @@ public final class FungusPlotStageDetailOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
+        emu.grasscutter.net.proto.FungusPlotStageDetailOuterClass.FungusPlotStageDetail parsedMessage = null;
         try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 24: {
-                stageId_ = input.readUInt32();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 24
-              case 120: {
-                isOpen_ = input.readBool();
-                bitField0_ |= 0x00000002;
-                break;
-              } // case 120
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (emu.grasscutter.net.proto.FungusPlotStageDetailOuterClass.FungusPlotStageDetail) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private int stageId_ ;
-      /**
-       * <code>uint32 stageId = 3;</code>
-       * @return The stageId.
-       */
-      @java.lang.Override
-      public int getStageId() {
-        return stageId_;
-      }
-      /**
-       * <code>uint32 stageId = 3;</code>
-       * @param value The stageId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setStageId(int value) {
-        
-        stageId_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>uint32 stageId = 3;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearStageId() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        stageId_ = 0;
-        onChanged();
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
         return this;
       }
 
       private boolean isOpen_ ;
       /**
-       * <code>bool isOpen = 15;</code>
+       * <code>bool is_open = 14;</code>
        * @return The isOpen.
        */
       @java.lang.Override
@@ -481,24 +477,54 @@ public final class FungusPlotStageDetailOuterClass {
         return isOpen_;
       }
       /**
-       * <code>bool isOpen = 15;</code>
+       * <code>bool is_open = 14;</code>
        * @param value The isOpen to set.
        * @return This builder for chaining.
        */
       public Builder setIsOpen(boolean value) {
         
         isOpen_ = value;
-        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
       /**
-       * <code>bool isOpen = 15;</code>
+       * <code>bool is_open = 14;</code>
        * @return This builder for chaining.
        */
       public Builder clearIsOpen() {
-        bitField0_ = (bitField0_ & ~0x00000002);
+        
         isOpen_ = false;
+        onChanged();
+        return this;
+      }
+
+      private int stageId_ ;
+      /**
+       * <code>uint32 stage_id = 9;</code>
+       * @return The stageId.
+       */
+      @java.lang.Override
+      public int getStageId() {
+        return stageId_;
+      }
+      /**
+       * <code>uint32 stage_id = 9;</code>
+       * @param value The stageId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStageId(int value) {
+        
+        stageId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>uint32 stage_id = 9;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStageId() {
+        
+        stageId_ = 0;
         onChanged();
         return this;
       }
@@ -535,18 +561,7 @@ public final class FungusPlotStageDetailOuterClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
+        return new FungusPlotStageDetail(input, extensionRegistry);
       }
     };
 
@@ -580,10 +595,10 @@ public final class FungusPlotStageDetailOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\033FungusPlotStageDetail.proto\"8\n\025FungusP" +
-      "lotStageDetail\022\017\n\007stageId\030\003 \001(\r\022\016\n\006isOpe" +
-      "n\030\017 \001(\010B\033\n\031emu.grasscutter.net.protob\006pr" +
-      "oto3"
+      "\n\033FungusPlotStageDetail.proto\":\n\025FungusP" +
+      "lotStageDetail\022\017\n\007is_open\030\016 \001(\010\022\020\n\010stage" +
+      "_id\030\t \001(\rB\033\n\031emu.grasscutter.net.protob\006" +
+      "proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -594,7 +609,7 @@ public final class FungusPlotStageDetailOuterClass {
     internal_static_FungusPlotStageDetail_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_FungusPlotStageDetail_descriptor,
-        new java.lang.String[] { "StageId", "IsOpen", });
+        new java.lang.String[] { "IsOpen", "StageId", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)
